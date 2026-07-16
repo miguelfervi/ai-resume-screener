@@ -20,22 +20,28 @@ Local-only; no deployment required.
 
 ## How it works
 
+Full workflow diagram (Mermaid + ASCII): **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
+
+```mermaid
+flowchart LR
+  Seed[profiles.json] --> PDFs[30 CV PDFs]
+  PDFs --> Ingest[Ingest agent]
+  Ingest --> Chroma[(ChromaDB)]
+  UI[Chat UI] -->|POST /api/chat| Chat[Chat agent]
+  Chroma --> Chat
+  Chat -->|answer + sources| UI
+  UI -->|click source| Preview[PDF preview]
+  PDFs --> Preview
 ```
-data/seed/profiles.json
-        │
-        ▼
-scripts/generate_cvs.py  ──►  data/cvs/*.pdf  (30 CVs, 5 layouts)
-        │
-        ▼
-scripts/ingest.py (LangGraph ingest agent)
-  extract → chunk → embed → ChromaDB
-        │
-        ▼
-Chat UI  ──►  POST /api/chat  (LangGraph chat agent)
-  retrieve (+ boosters) → validate_context → generate → cite_sources
-        │
-        ▼
-Answer + sources  ──►  click source  ──►  GET /api/cvs/{file}  (PDF preview)
+
+```
+profiles.json → generate_cvs.py → data/cvs/*.pdf
+        ↓
+ingest.py: extract → chunk → embed → ChromaDB
+        ↓
+Chat UI → retrieve (+ boosters) → validate → generate → cite
+        ↓
+Answer + sources → click → GET /api/cvs/{file}
 ```
 
 **Grounding:** if retrieval scores are too low, the API returns an explicit “not enough evidence” message instead of inventing facts.

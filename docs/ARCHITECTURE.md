@@ -1,86 +1,120 @@
 # Architecture
 
-> Design document for the AI Resume Screener.
+Overview of the AI Resume Screener end-to-end workflow.
 
-## High-level flow
+## Overview diagram
+
+```mermaid
+flowchart TB
+  subgraph Offline["1 · Offline data preparation"]
+    Seed["data/seed/profiles.json"]
+    Gen["scripts/generate_cvs.py\n+ ReportLab (+ optional AI photos)"]
+    PDFs["data/cvs/*.pdf\n30 résumés · 5 layouts"]
+    Seed --> Gen --> PDFs
+  end
+
+  subgraph Index["2 · Offline RAG indexing"]
+    Ingest["scripts/ingest.py\nLangGraph ingest_agent"]
+    Extract["extract_text\npymupdf4llm"]
+    Chunk["chunk_by_section"]
+    Embed["embed\nGemini gemini-embedding-001"]
+    Chroma["ChromaDB\ndata/chroma/"]
+    PDFs --> Ingest --> Extract --> Chunk --> Embed --> Chroma
+  end
+
+  subgraph Runtime["3 · Runtime Q&A"]
+    UI["React chat UI\nlocalhost:5173"]
+    API["FastAPI\nPOST /api/chat"]
+    Retrieve["retrieve\n(+ boosters)"]
+    Validate["validate_context\nmin score gate"]
+    Generate["generate_answer\nGemini chat"]
+    Cite["cite_sources"]
+    Answer["Answer + source badges"]
+    Preview["GET /api/cvs/{file}\nPDF side panel"]
+
+    UI -->|question| API
+    API --> Retrieve
+    Chroma --> Retrieve
+    Retrieve --> Validate
+    Validate -->|enough evidence| Generate --> Cite --> Answer
+    Validate -->|weak retrieval| NoEv["No-evidence reply"]
+    Answer --> UI
+    UI -->|click source| Preview
+    PDFs --> Preview
+  end
+```
+
+### Same flow (ASCII)
 
 ```
-1. Generate 28 demo CV PDFs from seed JSON (offline, no LLM)
-2. Extract text → chunk → embed → store in ChromaDB (offline)
-3. User asks questions via chat UI → retrieve chunks → LLM answer + sources
+┌─────────────────────────────────────────────────────────────────┐
+│  OFFLINE                                                         │
+│  profiles.json → generate_cvs.py → 30 PDFs                       │
+│       ↓                                                          │
+│  ingest.py: extract → chunk → embed → ChromaDB                   │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  RUNTIME                                                         │
+│  Chat UI ──POST /api/chat──► retrieve (+ boosters)               │
+│                               → validate_context                 │
+│                               → generate_answer (Gemini)         │
+│                               → cite_sources                     │
+│  UI shows answer + sources                                       │
+│  Click source ──GET /api/cvs/{file}──► PDF preview panel         │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## Backend structure
+## LangGraph agents
+
+| Agent | When | Nodes |
+|-------|------|-------|
+| **ingest** | `scripts/ingest.py` or `POST /api/reindex` | extract → chunk → embed/store → verify |
+| **chat** | each user question | retrieve → validate → generate → cite |
+
+CV PDFs are **not** generated inside LangGraph — only offline from seed JSON.
+
+## Backend layout
 
 ```
 backend/app/
-├── main.py                 # FastAPI app factory, mounts routers
-├── config.py               # pydantic-settings
-├── llm.py                  # Gemini chat + embeddings factory
-├── cv_renderer.py          # ReportLab PDF builder (seed → PDF)
-├── invariants.py           # runtime guards
-├── metrics.py              # RunMetrics + Timer
-├── extractors.py           # PDF → text
-├── schemas/
-│   ├── chat.py             # API types
-│   ├── cv.py               # CV / manifest types
-│   └── rag.py              # RAG domain
-├── api/
-│   ├── deps.py
-│   └── routes/
-│       ├── health.py
-│       ├── chat.py         # planned
-│       └── reindex.py      # planned
-├── agents/
-│   ├── ingest_agent.py     # offline RAG indexing
-│   └── chat_agent.py       # runtime Q&A
-└── rag/
-    ├── chunker.py
-    ├── store.py
-    └── retriever.py
+├── main.py
+├── config.py / llm.py / invariants.py / metrics.py
+├── cv_renderer.py / photo_generator.py / extractors.py
+├── schemas/          # chat, cv, rag
+├── api/routes/       # health, chat, reindex, cvs
+├── agents/           # ingest_agent, chat_agent
+└── rag/              # chunker, store, retriever
 ```
 
-## CV generation (simplified)
-
-No LangGraph, no Gemini, no browser. One script:
-
-```
-data/seed/profiles.json  →  scripts/generate_cvs.py  →  data/cvs/*.pdf + manifest.json
-```
-
-`cv_renderer.py` uses ReportLab to render a clean A4 PDF per profile.
-
-## LangGraph agents (2, not 3)
-
-| Agent | Purpose | Nodes |
-|-------|---------|-------|
-| **ingest** | Build vector index | extract → chunk → embed → store → verify |
-| **chat** | Answer questions | retrieve → validate context → generate → cite sources |
-
-## Key design decisions
-
-| Decision | Rationale |
-|----------|-----------|
-| Seed PDFs + ReportLab | Fastest path to demo data; RAG is the core deliverable |
-| Vite + React (not Next.js) | Single-page chat; no SSR needed |
-| `schemas/` + `api/routes/` | Keeps main.py thin |
-| ChromaDB | Zero infra; fine for local prototype |
-| Runtime invariants | Guard against hallucinations and empty indexes |
-
-## Data layout
-
-- `data/seed/profiles.json` — 28 hand-crafted candidate profiles
-- `data/cvs/*.pdf` — generated resumes (committed for demo)
-- `data/cvs/manifest.json` — metadata index for validation and citations
-- `data/chroma/` — persistent vector store (gitignored)
-
-## API (planned)
+## API
 
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/health` | Liveness + index status |
-| POST | `/api/chat` | Question → answer + sources |
-| POST | `/api/reindex` | Rebuild ChromaDB index |
+| `GET` | `/health` | Liveness + `indexReady` |
+| `POST` | `/api/chat` | Question → grounded answer + sources + metrics |
+| `POST` | `/api/reindex` | Rebuild Chroma index from `data/cvs/` |
+| `GET` | `/api/cvs/{filename}` | Serve CV PDF for the side panel |
+
+## Key decisions
+
+| Decision | Why |
+|----------|-----|
+| Seed JSON + ReportLab | Fast, reproducible demo CVs; RAG is the core deliverable |
+| Two LangGraph agents | Clear split: index offline vs answer online |
+| `validate_context` | Blocks low-score retrieval → fewer hallucinations |
+| Retrieval boosters | Names, skills, roles, sections, institutions without dumping the global threshold |
+| ChromaDB local | Zero infra for a local prototype |
+| Vite + React | SPA chat; no SSR needed |
+
+## Data layout
+
+- `data/seed/profiles.json` — candidate profiles
+- `data/cvs/*.pdf` — 30 generated résumés (committed)
+- `data/cvs/photos/` — AI headshots for sample CVs
+- `data/cvs/manifest.json` — generation metadata
+- `data/chroma/` — vector index (gitignored)
 
 ## Demo questions
 

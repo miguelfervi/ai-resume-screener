@@ -102,6 +102,49 @@ def test_cite_sources_prefers_mentioned_candidates() -> None:
     assert names == {"Jane Doe"}
 
 
+def test_cite_sources_one_chip_per_candidate() -> None:
+    chunks = [
+        make_retrieved(
+            candidate_name="Emma Wright",
+            section="Skills",
+            score=0.92,
+            text="React TypeScript",
+        ).model_dump(),
+        make_retrieved(
+            candidate_name="Emma Wright",
+            section="Experience",
+            score=0.90,
+            text="React at Pixel Labs",
+        ).model_dump(),
+        make_retrieved(
+            candidate_name="Emma Wright",
+            section="Projects",
+            score=0.91,
+            text="React dashboard",
+        ).model_dump(),
+        make_retrieved(
+            candidate_name="Lucía Fernández",
+            source_file="lucia-fernandez.pdf",
+            section="Habilidades",
+            score=0.89,
+            text="React",
+        ).model_dump(),
+    ]
+    out = cite_sources(
+        {
+            "context_ok": True,
+            "answer": "Emma Wright and Lucía Fernández have React experience.",
+            "retrieved": chunks,
+            "metrics": {},
+        }
+    )
+    assert len(out["sources"]) == 2
+    by_name = {s["candidate_name"]: s for s in out["sources"]}
+    assert by_name["Emma Wright"]["section"] == "Skills"
+    assert by_name["Emma Wright"]["score"] == 0.92
+    assert by_name["Lucía Fernández"]["section"] == "Habilidades"
+
+
 def test_cite_sources_ana_not_matched_inside_granada() -> None:
     """Regression: bare first name 'Ana' must not match substring in 'Granada'."""
     chunks = [

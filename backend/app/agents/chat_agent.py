@@ -169,23 +169,27 @@ def cite_sources(state: ChatState) -> dict:
     if not selected:
         selected = chunks[:3]
 
-    # Deduplicate by candidate+file+section
-    seen: set[tuple[str, str, str]] = set()
-    sources: list[Source] = []
+    # One chip per candidate: keep the highest-scoring chunk.
+    best_by_candidate: dict[str, RetrievedChunk] = {}
     for chunk in selected:
-        key = (chunk.candidate_name, chunk.source_file, chunk.section)
-        if key in seen:
-            continue
-        seen.add(key)
-        sources.append(
-            Source(
-                candidate_name=chunk.candidate_name,
-                file=chunk.source_file,
-                section=chunk.section,
-                snippet=chunk.snippet or chunk.text[:220],
-                score=chunk.score,
-            )
+        prev = best_by_candidate.get(chunk.candidate_name)
+        if prev is None or chunk.score > prev.score:
+            best_by_candidate[chunk.candidate_name] = chunk
+
+    sources: list[Source] = [
+        Source(
+            candidate_name=chunk.candidate_name,
+            file=chunk.source_file,
+            section=chunk.section,
+            snippet=chunk.snippet or chunk.text[:220],
+            score=chunk.score,
         )
+        for chunk in sorted(
+            best_by_candidate.values(),
+            key=lambda c: c.score,
+            reverse=True,
+        )
+    ]
 
     check_sources_from_retrieved(sources, chunks)
     metrics.sources_cited = len(sources)

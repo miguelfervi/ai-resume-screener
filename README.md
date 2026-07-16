@@ -10,7 +10,7 @@ Local-only; no deployment required.
 
 | Layer | Technology |
 |-------|------------|
-| Frontend | Vite 6 · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui |
+| Frontend | Vite 8 · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui |
 | Backend | FastAPI · LangGraph · Python 3.11+ |
 | LLM | Google Gemini (`gemini-flash-latest`, configurable) |
 | Embeddings | Google `gemini-embedding-001` |
@@ -166,9 +166,12 @@ Copy `backend/.env.example` → `backend/.env`. Important keys:
 | `GEMINI_MODEL` | `gemini-flash-latest` | Chat model |
 | `GEMINI_EMBEDDING_MODEL` | `gemini-embedding-001` | Embeddings |
 | `RETRIEVAL_TOP_K` | `6` | Chunks returned |
-| `RETRIEVAL_MIN_SCORE` | `0.65` | Grounding threshold |
+| `RETRIEVAL_MIN_SCORE` | `0.65` | Cosine similarity floor for grounded answers |
+| `EMBED_BATCH_PAUSE_SEC` | `2` | Pause between ingest embed batches (raise on free-tier 429s) |
 
-Never commit `.env`. Free-tier Gemini quotas can return `429`; wait and retry or enable billing.
+Never commit `.env`. Free-tier Gemini quotas can return `429`; the chat UI shows a clear message — wait and retry or enable billing.
+
+**Index note:** Chroma uses cosine space (`score = 1 − distance`). After upgrading the store, wipe `data/chroma/` and re-run `scripts/ingest.py` so the collection metadata matches.
 
 ## License
 

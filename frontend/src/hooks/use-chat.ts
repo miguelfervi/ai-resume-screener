@@ -49,12 +49,17 @@ export function useChat() {
       }
       setMessages((prev) => [...prev, assistantMsg])
     } catch (err) {
-      const message =
+      let message =
         err instanceof ApiError
           ? err.message
           : err instanceof Error
             ? err.message
             : 'Something went wrong'
+      if (err instanceof ApiError && err.status === 429) {
+        message =
+          err.message ||
+          'Gemini quota exceeded (free tier). Wait a minute and try again.'
+      }
       setError(message)
     } finally {
       setLoading(false)

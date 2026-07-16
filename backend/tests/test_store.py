@@ -2,8 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from app.rag.store import ChromaStore
+from app.rag.store import ChromaStore, distance_to_score
 from tests.conftest import FakeEmbeddings, make_chunk
+
+
+def test_distance_to_score_cosine() -> None:
+    assert distance_to_score(0.0) == 1.0
+    assert distance_to_score(0.35) == 0.65
+    assert distance_to_score(1.5) == 0.0
 
 
 def test_store_add_query_count(tmp_chroma: Path, fake_embeddings: FakeEmbeddings) -> None:

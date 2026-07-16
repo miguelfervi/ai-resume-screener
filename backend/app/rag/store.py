@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import time
 from pathlib import Path
 from typing import Sequence
@@ -12,9 +13,29 @@ from ..invariants import check_index_populated
 from ..schemas import DocumentChunk, RetrievedChunk
 
 COLLECTION_NAME = "cv_chunks"
+# Cosine space: Chroma distance is ``1 - cos_sim``, so ``score = 1 - distance``
+# lands in [0, 1] and matches ``RETRIEVAL_MIN_SCORE`` (default 0.65).
+COLLECTION_METADATA: dict[str, str] = {"hnsw:space": "cosine"}
 # Free-tier Gemini embed quota is ~100 RPM; keep batches small.
 _UPSERT_BATCH_SIZE = 40
 _EMBED_MAX_RETRIES = 5
+# Pause between embed batches (seconds). Override with EMBED_BATCH_PAUSE_SEC.
+_DEFAULT_BATCH_PAUSE_SEC = 2.0
+
+
+def _batch_pause_sec() -> float:
+    raw = os.environ.get("EMBED_BATCH_PAUSE_SEC")
+    if raw is None or raw.strip() == "":
+        return _DEFAULT_BATCH_PAUSE_SEC
+    try:
+        return max(0.0, float(raw))
+    except ValueError:
+        return _DEFAULT_BATCH_PAUSE_SEC
+
+
+def distance_to_score(distance: float) -> float:
+    """Convert Chroma cosine distance to similarity in [0, 1]."""
+    return max(0.0, min(1.0, 1.0 - float(distance)))
 
 
 class _LangChainEmbeddingAdapter(EmbeddingFunction[Documents]):
@@ -23,11 +44,14 @@ class _LangChainEmbeddingAdapter(EmbeddingFunction[Documents]):
     def __init__(self, embeddings: object) -> None:
         self._embeddings = embeddings
 
+    def name(self) -> str:
+        return "langchain_adapter"
+
     def __call__(self, input: Documents) -> Embeddings:
         texts = list(input)
         delay = 40.0
         last_exc: Exception | None = None
-        for attempt in range(_EMBED_MAX_RETRIES):
+        for _attempt in range(_EMBED_MAX_RETRIES):
             try:
                 return self._embeddings.embed_documents(texts)  # type: ignore[attr-defined]
             except Exception as exc:  # noqa: BLE001 — retry only on quota
@@ -53,10 +77,20 @@ class ChromaStore:
         self.persist_dir.mkdir(parents=True, exist_ok=True)
         self._client = chromadb.PersistentClient(path=str(self.persist_dir))
         self._embeddings = embeddings
-        kwargs: dict = {"name": collection_name}
-        if embeddings is not None:
-            kwargs["embedding_function"] = _LangChainEmbeddingAdapter(embeddings)
-        self._collection: Collection = self._client.get_or_create_collection(**kwargs)
+        self._collection_name = collection_name
+        self._collection: Collection = self._get_or_create_collection()
+
+    def _collection_kwargs(self) -> dict:
+        kwargs: dict = {
+            "name": self._collection_name,
+            "metadata": dict(COLLECTION_METADATA),
+        }
+        if self._embeddings is not None:
+            kwargs["embedding_function"] = _LangChainEmbeddingAdapter(self._embeddings)
+        return kwargs
+
+    def _get_or_create_collection(self) -> Collection:
+        return self._client.get_or_create_collection(**self._collection_kwargs())
 
     @property
     def collection(self) -> Collection:
@@ -68,14 +102,12 @@ class ChromaStore:
     def reset(self) -> None:
         name = self._collection.name
         self._client.delete_collection(name)
-        kwargs: dict = {"name": name}
-        if self._embeddings is not None:
-            kwargs["embedding_function"] = _LangChainEmbeddingAdapter(self._embeddings)
-        self._collection = self._client.get_or_create_collection(**kwargs)
+        self._collection = self._get_or_create_collection()
 
     def add_chunks(self, chunks: Sequence[DocumentChunk]) -> int:
         if not chunks:
             return 0
+        pause = _batch_pause_sec()
         for start in range(0, len(chunks), _UPSERT_BATCH_SIZE):
             batch = chunks[start : start + _UPSERT_BATCH_SIZE]
             ids = [
@@ -93,8 +125,8 @@ class ChromaStore:
                 for c in batch
             ]
             self._collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
-            if start + _UPSERT_BATCH_SIZE < len(chunks):
-                time.sleep(15)
+            if start + _UPSERT_BATCH_SIZE < len(chunks) and pause > 0:
+                time.sleep(pause)
         return len(chunks)
 
     def candidate_names(self) -> list[str]:
@@ -149,8 +181,7 @@ class ChromaStore:
 
         chunks: list[RetrievedChunk] = []
         for doc, meta, dist in zip(documents, metadatas, distances):
-            # Chroma cosine distance → similarity score in [0, 1]-ish
-            score = max(0.0, 1.0 - float(dist))
+            score = distance_to_score(dist)
             if score < min_score:
                 continue
             text = doc or ""

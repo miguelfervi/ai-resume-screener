@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from ..deps import get_cached_settings, index_ready
 from ...agents.chat_agent import run_chat
 from ...config import Settings
+from ...errors import QUOTA_DETAIL, is_quota_error
 from ...schemas import ChatRequest, ChatResponse, Source, metrics_to_response
 
 router = APIRouter(prefix="/api", tags=["chat"])
@@ -25,6 +26,8 @@ def chat(
     try:
         result = run_chat(body.question, history, settings=settings)
     except Exception as exc:
+        if is_quota_error(exc):
+            raise HTTPException(status_code=429, detail=QUOTA_DETAIL) from exc
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     sources = [Source.model_validate(s) for s in result.get("sources") or []]

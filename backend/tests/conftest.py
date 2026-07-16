@@ -16,7 +16,7 @@ class FakeEmbeddings:
     """Token-bag embeddings so overlapping text scores high in Chroma.
 
     Important demo tokens get fixed high-weight dimensions so name/skill
-    queries clear the retriever's score floors under L2 distance.
+    queries clear the retriever's score floors under cosine distance.
     """
 
     _ANCHORS = {

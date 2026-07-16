@@ -70,6 +70,25 @@ describe('useChat', () => {
     expect(result.current.error).toBe('index empty')
   })
 
+  it('sets a clear message on 429 quota errors', async () => {
+    mockedSendChat.mockRejectedValue(
+      new ApiError(
+        'Gemini quota exceeded (free tier). Wait a minute and try again.',
+        429,
+      ),
+    )
+
+    const { result } = renderHook(() => useChat())
+
+    await act(async () => {
+      await result.current.ask('Who?')
+    })
+
+    await waitFor(() => {
+      expect(result.current.error).toMatch(/quota/i)
+    })
+  })
+
   it('ignores blank questions', async () => {
     const { result } = renderHook(() => useChat())
     await act(async () => {

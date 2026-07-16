@@ -13,14 +13,14 @@ export function SuggestedQuestions({
     <div className="animate-fade-up mx-auto flex w-full flex-col gap-5 pt-3 pb-2 sm:max-w-xl sm:gap-6 sm:pt-8">
       <div className="text-left sm:text-center">
         <p className="font-heading text-foreground text-[1.7rem] leading-[1.15] tracking-tight sm:text-3xl md:text-4xl">
-          Ask the résumé set
+          Ask the resume set
         </p>
         <p className="text-muted-foreground mt-2.5 max-w-md text-sm leading-relaxed sm:mx-auto sm:mt-3">
           Answers are grounded in the indexed CVs only — no guessing when evidence
           is weak.
         </p>
         <p className="text-primary/80 mt-3 text-[0.65rem] font-medium tracking-[0.16em] uppercase sm:mt-4">
-          Sample questions from the brief
+          Sample questions
         </p>
       </div>
 

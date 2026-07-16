@@ -39,7 +39,7 @@ def build_chat_model(settings: Settings | None = None) -> BaseChatModel:
 
 
 def build_embeddings(settings: Settings | None = None) -> Embeddings:
-    """Return a LangChain embeddings model backed by Google text-embedding-004."""
+    """Return a LangChain embeddings model (default: gemini-embedding-001)."""
     settings = settings or get_settings()
     api_key = _require_api_key(settings)
 

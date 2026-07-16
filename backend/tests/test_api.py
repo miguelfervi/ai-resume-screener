@@ -92,6 +92,22 @@ def test_chat_success(client: TestClient) -> None:
     assert body["metrics"]["success"] is True
 
 
+def test_chat_maps_quota_to_429(client: TestClient) -> None:
+    with (
+        patch("app.api.routes.chat.index_ready", return_value=True),
+        patch(
+            "app.api.routes.chat.run_chat",
+            side_effect=RuntimeError("429 ResourceExhausted: quota exceeded"),
+        ),
+    ):
+        res = client.post(
+            "/api/chat",
+            json={"question": "Who knows Python?", "history": []},
+        )
+    assert res.status_code == 429
+    assert "quota" in res.json()["detail"].lower()
+
+
 def test_reindex_success(client: TestClient) -> None:
     with patch(
         "app.api.routes.reindex.run_ingest",

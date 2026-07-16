@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 from ..deps import get_cached_settings
 from ...agents.ingest_agent import run_ingest
 from ...config import Settings
+from ...errors import QUOTA_DETAIL, is_quota_error
 
 router = APIRouter(prefix="/api", tags=["reindex"])
 
@@ -26,6 +27,8 @@ def reindex(settings: Settings = Depends(get_cached_settings)) -> ReindexRespons
     try:
         result = run_ingest(reset=True, settings=settings)
     except Exception as exc:
+        if is_quota_error(exc):
+            raise HTTPException(status_code=429, detail=QUOTA_DETAIL) from exc
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
     return ReindexResponse(

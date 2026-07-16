@@ -29,6 +29,16 @@ def test_detect_skills_and_institutions() -> None:
     assert "upc" in terms
 
 
+def test_spanish_intent_and_vague_cues() -> None:
+    secs = preferred_sections("Resume el perfil de Jane Doe")
+    assert "Resumen" in secs or "Summary" in secs
+    edu = preferred_sections("¿Quién se graduó de la UPC?")
+    assert "Education" in edu or "Formación" in edu
+    from app.rag.retriever import adaptive_floor
+
+    assert adaptive_floor("¿Alguien del equipo?", 0.65) < 0.65
+
+
 def test_preferred_sections_for_education() -> None:
     secs = preferred_sections("Which candidate graduated from UPC?")
     assert "Education" in secs or "Formación" in secs

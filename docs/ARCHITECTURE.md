@@ -104,9 +104,10 @@ backend/app/
 | Seed JSON + ReportLab | Fast, reproducible demo CVs; RAG is the core deliverable |
 | Two LangGraph agents | Clear split: index offline vs answer online |
 | `validate_context` | Blocks low-score retrieval → fewer hallucinations |
-| Retrieval boosters | Names, skills, roles, sections, institutions without dumping the global threshold |
-| ChromaDB local | Zero infra for a local prototype |
+| Retrieval boosters | Names, skills, roles, sections, institutions (EN/ES cues) without dumping the global threshold |
+| ChromaDB local | Zero infra; cosine space so `score = 1 − distance` aligns with `RETRIEVAL_MIN_SCORE` |
 | Vite + React | SPA chat; no SSR needed |
+| Quota errors → HTTP 429 | Free-tier Gemini limits surface as a clear UI message |
 
 ## Data layout
 

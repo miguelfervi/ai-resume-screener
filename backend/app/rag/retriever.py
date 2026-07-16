@@ -60,86 +60,100 @@ _GO_RE = re.compile(r"\bgo\b", re.I)
 _ROLE_PATTERNS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
     (
         re.compile(
-            r"\b(frontend|front-end|front end|ui developer|react developer)\b",
+            r"\b(frontend|front-end|front end|ui developer|react developer|"
+            r"desarrollador(?:a)? front(?:end)?)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
         re.compile(
-            r"\b(backend|back-end|back end|server[- ]side|api developer)\b",
+            r"\b(backend|back-end|back end|server[- ]side|api developer|"
+            r"desarrollador(?:a)? back(?:end)?)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
         re.compile(
-            r"\b(full[- ]?stack|fullstack)\b",
+            r"\b(full[- ]?stack|fullstack|desarrollador(?:a)? full[- ]?stack)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
         re.compile(
-            r"\b(engineering manager|eng(?:ineering)? manager|\bem\b|people manager)\b",
+            r"\b(engineering manager|eng(?:ineering)? manager|\bem\b|people manager|"
+            r"manager de ingenier[ií]a)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Summary", "Resumen", "Skills", "Habilidades"),
     ),
     (
         re.compile(
-            r"\b(design(?:er)?|product design|ux|ui\/ux)\b",
+            r"\b(design(?:er)?|product design|ux|ui\/ux|diseñador(?:a)?)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
         re.compile(
-            r"\b(data (?:engineer|scientist)|ml engineer|machine learning)\b",
+            r"\b(data (?:engineer|scientist)|ml engineer|machine learning|"
+            r"ingenier[oó]a? de datos|cient[ií]fic[oa] de datos)\b",
             re.I,
         ),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
-        re.compile(r"\b(devops|sre|platform engineer)\b", re.I),
+        re.compile(r"\b(devops|sre|platform engineer|ingenier[oó]a? de plataforma)\b", re.I),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
     (
-        re.compile(r"\b(ios|android|mobile)\b", re.I),
+        re.compile(r"\b(ios|android|mobile|m[oó]vil)\b", re.I),
         ("Header", "Experience", "Experiencia", "Skills", "Habilidades", "Projects", "Proyectos"),
     ),
 ]
 
 _INTENT_SECTIONS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
     (
-        re.compile(r"\b(summar(?:y|ise|ize)|overview|profile|about)\b", re.I),
+        re.compile(
+            r"\b(summar(?:y|ise|ize)|overview|profile|about|resumen|perfil|sobre)\b",
+            re.I,
+        ),
         ("Summary", "Resumen", "Header", "Experience", "Experiencia"),
     ),
     (
-        re.compile(r"\b(certificat\w*|credentials?)\b", re.I),
+        re.compile(r"\b(certificat\w*|credentials?|certificacion(?:es)?)\b", re.I),
         ("Certifications", "Certificaciones"),
     ),
     (
-        re.compile(r"\b(languages?|idiomas?|speaks?)\b", re.I),
+        re.compile(r"\b(languages?|idiomas?|speaks?|habla)\b", re.I),
         ("Languages", "Idiomas"),
     ),
     (
         re.compile(
-            r"\b(education|degree|university|universitat|college|graduat\w*|alumni|formaci[oó]n)\b",
+            r"\b(education|degree|university|universitat|universidad|college|"
+            r"gradu\w*|egresad\w*|alumni|formaci[oó]n|estudi[oó])\b",
             re.I,
         ),
         ("Education", "Formación"),
     ),
     (
-        re.compile(r"\b(project\w*|portfolio)\b", re.I),
+        re.compile(r"\b(project\w*|portfolio|proyectos?)\b", re.I),
         ("Projects", "Proyectos"),
     ),
     (
-        re.compile(r"\b(experience|worked|role|job|career|experiencia)\b", re.I),
+        re.compile(
+            r"\b(experience|worked|role|job|career|experiencia|trabaj[oó]|puesto)\b",
+            re.I,
+        ),
         ("Experience", "Experiencia", "Header"),
     ),
     (
-        re.compile(r"\b(skills?|stack|technologies|habilidades|tech)\b", re.I),
+        re.compile(
+            r"\b(skills?|stack|technologies|tecnolog[ií]as?|habilidades|tech)\b",
+            re.I,
+        ),
         ("Skills", "Habilidades"),
     ),
 ]
@@ -148,7 +162,8 @@ _SKILL_SECTIONS = ("Skills", "Habilidades", "Projects", "Proyectos", "Experience
 _EDU_SECTIONS = ("Education", "Formación")
 _ACRONYM_RE = re.compile(r"\b([A-Z]{2,6})\b")
 _VAGUE_RE = re.compile(
-    r"\b(someone|anybody|anyone|who|which|any|people|candidates?)\b",
+    r"\b(someone|anybody|anyone|who|which|any|people|candidates?|"
+    r"alguien|qui[eé]n|cu[aá]l(?:es)?|alg[uú]n|personas?|candidat[oa]s?)\b",
     re.I,
 )
 

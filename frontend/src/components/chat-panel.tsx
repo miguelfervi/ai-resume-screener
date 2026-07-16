@@ -53,6 +53,7 @@ export function ChatPanel() {
   const [previewWidth, setPreviewWidth] = useState(PREVIEW_DEFAULT)
   const [resizing, setResizing] = useState(false)
   const [indexReady, setIndexReady] = useState<boolean | null>(null)
+  const [healthChecking, setHealthChecking] = useState(false)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const dragRef = useRef<{ startX: number; startWidth: number } | null>(null)
@@ -61,19 +62,21 @@ export function ChatPanel() {
     setPreviewWidth(readStoredPreviewWidth())
   }, [])
 
-  useEffect(() => {
-    let cancelled = false
-    void getHealth()
-      .then((h) => {
-        if (!cancelled) setIndexReady(h.indexReady)
-      })
-      .catch(() => {
-        if (!cancelled) setIndexReady(false)
-      })
-    return () => {
-      cancelled = true
+  const refreshHealth = useCallback(async () => {
+    setHealthChecking(true)
+    try {
+      const h = await getHealth()
+      setIndexReady(h.indexReady)
+    } catch {
+      setIndexReady(false)
+    } finally {
+      setHealthChecking(false)
     }
   }, [])
+
+  useEffect(() => {
+    void refreshHealth()
+  }, [refreshHealth])
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -133,7 +136,7 @@ export function ChatPanel() {
 
   async function submit(text = draft) {
     const next = text.trim()
-    if (!next || loading) return
+    if (!next || loading || indexReady === false) return
     setDraft('')
     await ask(next)
     if (window.matchMedia('(pointer: fine)').matches) {
@@ -169,6 +172,8 @@ export function ChatPanel() {
 
   const empty = messages.length === 0 && !loading
   const previewOpen = selectedCv !== null
+  const chatLocked = indexReady === false
+  const composerDisabled = loading || chatLocked
 
   return (
     <div className="chat-shell flex h-dvh max-h-dvh w-full overflow-hidden">
@@ -227,24 +232,43 @@ export function ChatPanel() {
               previewOpen ? 'max-w-xl' : 'mx-auto max-w-2xl',
             )}
           >
-            {empty ? (
+            {empty && !chatLocked ? (
               <SuggestedQuestions
-                disabled={loading || indexReady === false}
+                disabled={loading || indexReady === null}
                 onSelect={(q) => void submit(q)}
               />
             ) : null}
 
-            {empty && indexReady === false ? (
-              <p
-                className="border-destructive/20 bg-destructive/5 text-destructive rounded-xl border px-3 py-3 text-sm"
+            {chatLocked ? (
+              <div
+                className="animate-fade-up border-destructive/25 bg-destructive/6 mx-auto w-full max-w-xl rounded-2xl border px-4 py-5 sm:px-5 sm:py-6"
                 role="status"
               >
-                Vector index is empty. Run{' '}
-                <code className="bg-background/80 rounded px-1 py-0.5 text-xs">
+                <p className="font-heading text-foreground text-lg tracking-tight sm:text-xl">
+                  Index not ready
+                </p>
+                <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                  Chat is locked until the CV vector index exists. From the repo
+                  root, with the backend venv active:
+                </p>
+                <pre className="bg-background/90 border-border/70 text-foreground mt-3 overflow-x-auto rounded-xl border px-3 py-2.5 font-mono text-[0.75rem] leading-relaxed sm:text-xs">
                   python scripts/ingest.py
-                </code>{' '}
-                then refresh.
-              </p>
+                </pre>
+                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+                  Then click refresh — the badge should switch to{' '}
+                  <span className="text-foreground font-medium">Grounded</span>.
+                </p>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  className="mt-4"
+                  disabled={healthChecking}
+                  onClick={() => void refreshHealth()}
+                >
+                  {healthChecking ? 'Checking…' : 'Refresh index status'}
+                </Button>
+              </div>
             ) : null}
 
             {messages.map((msg) => (
@@ -296,9 +320,13 @@ export function ChatPanel() {
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={onKeyDown}
-              placeholder="Ask about skills, education, or a candidate…"
+              placeholder={
+                chatLocked
+                  ? 'Index empty — run ingest before asking…'
+                  : 'Ask about skills, education, or a candidate…'
+              }
               rows={1}
-              disabled={loading || indexReady === false}
+              disabled={composerDisabled}
               enterKeyHint="send"
               className="max-h-32 min-h-11 flex-1 resize-none border-0 bg-transparent text-base shadow-none focus-visible:ring-0 sm:max-h-36 sm:text-sm"
               aria-label="Chat question"
@@ -306,7 +334,7 @@ export function ChatPanel() {
             <Button
               type="submit"
               size="icon"
-              disabled={loading || indexReady === false || !draft.trim()}
+              disabled={composerDisabled || !draft.trim()}
               className="size-11 shrink-0 rounded-xl sm:size-10"
               aria-label="Send"
             >
@@ -319,11 +347,17 @@ export function ChatPanel() {
               previewOpen ? 'max-w-xl text-left' : 'mx-auto max-w-2xl text-center',
             )}
           >
-            Grounded in indexed CVs
-            <span className="hidden sm:inline">
-              {' '}
-              · Enter to send · Click a source to open the resume
-            </span>
+            {chatLocked ? (
+              <>Chat locked until the index is ready</>
+            ) : (
+              <>
+                Grounded in indexed CVs
+                <span className="hidden sm:inline">
+                  {' '}
+                  · Enter to send · Click a source to open the resume
+                </span>
+              </>
+            )}
           </p>
         </form>
       </div>

@@ -74,12 +74,13 @@ python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent e
 | Variable | Default | Purpose |
 |----------|---------|---------|
 | `GOOGLE_API_KEY` | — | Gemini chat + embeddings |
-| `GEMINI_MODEL` | `gemini-2.0-flash` | Chat model |
-| `GEMINI_EMBEDDING_MODEL` | `text-embedding-004` | Embeddings |
-| `CHROMA_PATH` | `../data/chroma` | Vector store |
+| `GEMINI_MODEL` | `gemini-flash-latest` | Chat model |
+| `GEMINI_EMBEDDING_MODEL` | `gemini-embedding-001` | Embeddings |
+| `CHROMA_PATH` | `../data/chroma` | Vector store (cosine HNSW) |
 | `CVS_PATH` | `../data/cvs` | PDF directory |
 | `RETRIEVAL_TOP_K` | `6` | Chunks per query |
-| `RETRIEVAL_MIN_SCORE` | `0.65` | Evidence threshold |
+| `RETRIEVAL_MIN_SCORE` | `0.65` | Cosine similarity evidence floor |
+| `EMBED_BATCH_PAUSE_SEC` | `2` | Pause between ingest embed batches |
 
 ## Testing
 
@@ -96,11 +97,11 @@ Coverage targets: invariants (unit), chunker/store/retriever, agents (mocked LLM
 
 ```bash
 cd frontend
-pnpm test        # Vitest — once setup (plan #50)
+pnpm test
 pnpm build
 ```
 
-Coverage targets: `api.ts` mock/real paths, `useChat`, smoke RTL for chat components.
+Coverage targets: `api.ts`, `useChat`, smoke RTL for chat components.
 
 ### CI
 

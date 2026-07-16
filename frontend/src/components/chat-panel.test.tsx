@@ -1,9 +1,10 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { ChatPanel } from '@/components/chat-panel'
 import { MessageBubble } from '@/components/message-bubble'
+import { getHealth } from '@/lib/api'
 
 vi.mock('@/lib/api', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@/lib/api')>()
@@ -33,6 +34,12 @@ vi.mock('@/lib/api', async (importOriginal) => {
       },
     }),
   }
+})
+
+const mockedGetHealth = vi.mocked(getHealth)
+
+beforeEach(() => {
+  mockedGetHealth.mockResolvedValue({ status: 'ok', indexReady: true })
 })
 
 describe('MessageBubble', () => {
@@ -70,7 +77,7 @@ describe('ChatPanel', () => {
       expect(screen.getByText('Grounded')).toBeInTheDocument()
     })
 
-    expect(screen.getByText('Ask the résumé set')).toBeInTheDocument()
+    expect(screen.getByText('Ask the resume set')).toBeInTheDocument()
 
     await user.click(
       screen.getByRole('button', { name: /Who has experience with Python/i }),
@@ -81,5 +88,34 @@ describe('ChatPanel', () => {
         screen.getByText(/Jane Doe lists Python among her skills/),
       ).toBeInTheDocument()
     })
+  })
+
+  it('locks chat and shows ingest CTA when index is empty', async () => {
+    mockedGetHealth.mockResolvedValue({ status: 'ok', indexReady: false })
+    const user = userEvent.setup()
+    render(<ChatPanel />)
+
+    await waitFor(() => {
+      expect(screen.getByText('Index empty')).toBeInTheDocument()
+    })
+
+    expect(screen.getByText('Index not ready')).toBeInTheDocument()
+    expect(screen.getByText(/python scripts\/ingest\.py/i)).toBeInTheDocument()
+    expect(screen.queryByText('Ask the resume set')).not.toBeInTheDocument()
+
+    const input = screen.getByRole('textbox', { name: 'Chat question' })
+    expect(input).toBeDisabled()
+    expect(screen.getByRole('button', { name: 'Send' })).toBeDisabled()
+
+    mockedGetHealth.mockResolvedValue({ status: 'ok', indexReady: true })
+    await user.click(
+      screen.getByRole('button', { name: /Refresh index status/i }),
+    )
+
+    await waitFor(() => {
+      expect(screen.getByText('Grounded')).toBeInTheDocument()
+    })
+    expect(screen.getByText('Ask the resume set')).toBeInTheDocument()
+    expect(input).not.toBeDisabled()
   })
 })

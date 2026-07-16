@@ -45,7 +45,11 @@ def build_embeddings(settings: Settings | None = None) -> Embeddings:
 
     from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
+    model = settings.gemini_embedding_model
+    if not model.startswith("models/"):
+        model = f"models/{model}"
+
     return GoogleGenerativeAIEmbeddings(
-        model=settings.gemini_embedding_model,
+        model=model,
         google_api_key=api_key,
     )

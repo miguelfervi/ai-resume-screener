@@ -11,17 +11,22 @@ _BACKEND_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=str(_BACKEND_DIR / ".env"),
+        extra="ignore",
+    )
 
     # Google Gemini
     google_api_key: str | None = None
-    gemini_model: str = "gemini-2.0-flash"
-    gemini_embedding_model: str = "text-embedding-004"
+    gemini_model: str = "gemini-flash-latest"
+    gemini_embedding_model: str = "gemini-embedding-001"
+    gemini_image_model: str = "imagen-4.0-generate-001"
     llm_temperature: float = 0.0
 
     # Data paths (resolved relative to backend/)
     chroma_path: str = "../data/chroma"
     cvs_path: str = "../data/cvs"
+    photos_path: str = "../data/cvs/photos"
 
     # RAG
     retrieval_top_k: int = 6
@@ -43,6 +48,10 @@ class Settings(BaseSettings):
     @property
     def cvs_dir(self) -> Path:
         return self.resolve_path(self.cvs_path)
+
+    @property
+    def photos_dir(self) -> Path:
+        return self.resolve_path(self.photos_path)
 
 
 @lru_cache

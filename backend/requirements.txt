@@ -17,8 +17,10 @@ pymupdf==1.28.0
 # Vector store
 chromadb==0.6.3
 
-# CV generation (seed → PDF)
+# CV generation (seed → PDF + AI photos)
 reportlab==4.2.5
+google-genai>=1.0.0
+Pillow>=10.0.0
 
 # HTTP client (tests + API)
 httpx==0.28.1

@@ -97,21 +97,52 @@ class ChromaStore:
                 time.sleep(15)
         return len(chunks)
 
+    def candidate_names(self) -> list[str]:
+        if self.count() == 0:
+            return []
+        result = self._collection.get(include=["metadatas"])
+        names = {
+            str(meta.get("candidate_name", "")).strip()
+            for meta in (result.get("metadatas") or [])
+            if meta and meta.get("candidate_name")
+        }
+        return sorted(n for n in names if n)
+
     def query(
         self,
         question: str,
         *,
         top_k: int = 6,
         min_score: float = 0.0,
+        candidate_name: str | None = None,
+        source_file: str | None = None,
+        sections: list[str] | None = None,
     ) -> list[RetrievedChunk]:
         if self.count() == 0:
             return []
 
-        result = self._collection.query(
-            query_texts=[question],
-            n_results=min(top_k, max(self.count(), 1)),
-            include=["documents", "metadatas", "distances"],
-        )
+        where: dict | None = None
+        clauses: list[dict] = []
+        if candidate_name:
+            clauses.append({"candidate_name": candidate_name})
+        if source_file:
+            clauses.append({"source_file": source_file})
+        if sections:
+            clauses.append({"section": {"$in": list(sections)}})
+        if len(clauses) == 1:
+            where = clauses[0]
+        elif len(clauses) > 1:
+            where = {"$and": clauses}
+
+        kwargs: dict = {
+            "query_texts": [question],
+            "n_results": min(max(top_k, 1), max(self.count(), 1)),
+            "include": ["documents", "metadatas", "distances"],
+        }
+        if where is not None:
+            kwargs["where"] = where
+
+        result = self._collection.query(**kwargs)
         documents = (result.get("documents") or [[]])[0]
         metadatas = (result.get("metadatas") or [[]])[0]
         distances = (result.get("distances") or [[]])[0]

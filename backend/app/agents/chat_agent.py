@@ -57,7 +57,7 @@ def retrieve_node(state: ChatState, settings: Settings) -> dict:
             store,
             state["question"],
             top_k=settings.retrieval_top_k,
-            min_score=0.0,  # filter in validate
+            min_score=settings.retrieval_min_score,
         )
     metrics.chunks_retrieved = len(chunks)
     return {

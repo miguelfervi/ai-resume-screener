@@ -97,6 +97,12 @@ export async function getHealth(): Promise<HealthResponse> {
   return (await res.json()) as HealthResponse
 }
 
+/** URL for inline PDF preview (proxied to backend in dev). */
+export function cvUrl(filename: string): string {
+  const name = filename.split(/[/\\]/).pop() || filename
+  return `/api/cvs/${encodeURIComponent(name)}`
+}
+
 export async function sendChat(request: ChatRequest): Promise<ChatResponse> {
   if (!request.question.trim()) {
     throw new ApiError('question is required', 400)

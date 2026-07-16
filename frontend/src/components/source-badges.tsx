@@ -6,34 +6,45 @@ import type { Source } from '@/types/api'
 
 type SourceBadgesProps = {
   sources: Source[]
+  selectedFile?: string | null
+  onSelectSource?: (source: Source) => void
 }
 
-export function SourceBadges({ sources }: SourceBadgesProps) {
+export function SourceBadges({
+  sources,
+  selectedFile,
+  onSelectSource,
+}: SourceBadgesProps) {
   const [openId, setOpenId] = useState<string | null>(null)
 
   if (!sources.length) return null
 
   return (
-    <div className="flex flex-col gap-2 border-t border-border/60 pt-2">
-      <p className="text-[0.65rem] font-medium tracking-[0.14em] text-muted-foreground uppercase">
+    <div className="border-border/60 flex flex-col gap-2 border-t pt-2">
+      <p className="text-muted-foreground text-[0.65rem] font-medium tracking-[0.14em] uppercase">
         Sources
       </p>
       <div className="flex flex-col gap-1.5 sm:flex-row sm:flex-wrap">
         {sources.map((source, i) => {
           const id = `${source.file}-${source.section}-${i}`
           const open = openId === id
+          const selected = selectedFile === source.file
           return (
             <div key={id} className="w-full sm:w-auto sm:max-w-full">
               <button
                 type="button"
-                onClick={() => setOpenId(open ? null : id)}
+                onClick={() => {
+                  onSelectSource?.(source)
+                  setOpenId(open ? null : id)
+                }}
                 className="focus-visible:ring-ring w-full rounded-md focus-visible:ring-2 focus-visible:outline-none sm:w-auto"
               >
                 <Badge
                   variant="outline"
                   className={cn(
                     'h-auto min-h-9 w-full max-w-full cursor-pointer justify-start gap-1.5 rounded-md px-2.5 py-2 text-left text-xs font-normal transition-colors sm:min-h-0 sm:w-auto sm:py-1',
-                    open && 'border-primary/40 bg-accent text-accent-foreground',
+                    (open || selected) &&
+                      'border-primary/40 bg-accent text-accent-foreground',
                   )}
                 >
                   <span className="truncate font-medium">{source.candidateName}</span>

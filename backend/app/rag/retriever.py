@@ -124,7 +124,10 @@ _INTENT_SECTIONS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
         ("Languages", "Idiomas"),
     ),
     (
-        re.compile(r"\b(education|degree|university|formaci[oó]n)\b", re.I),
+        re.compile(
+            r"\b(education|degree|university|universitat|college|graduat\w*|alumni|formaci[oó]n)\b",
+            re.I,
+        ),
         ("Education", "Formación"),
     ),
     (
@@ -142,6 +145,8 @@ _INTENT_SECTIONS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
 ]
 
 _SKILL_SECTIONS = ("Skills", "Habilidades", "Projects", "Proyectos", "Experience", "Experiencia")
+_EDU_SECTIONS = ("Education", "Formación")
+_ACRONYM_RE = re.compile(r"\b([A-Z]{2,6})\b")
 _VAGUE_RE = re.compile(
     r"\b(someone|anybody|anyone|who|which|any|people|candidates?)\b",
     re.I,
@@ -176,6 +181,61 @@ def match_source_files(question: str, known_files: set[str] | None = None) -> li
             seen.add(f)
             out.append(f)
     return out
+
+
+def detect_acronyms(question: str) -> list[str]:
+    """Catch institution/tech acronyms like UPC, AWS, MIT (skip tiny words)."""
+    skip = {"WHO", "WHAT", "WHICH", "FROM", "WITH", "HAVE", "DOES", "THE", "AND", "FOR", "CV", "PDF"}
+    found: list[str] = []
+    for m in _ACRONYM_RE.finditer(question):
+        token = m.group(1)
+        if token in skip or token in found:
+            continue
+        found.append(token)
+    return found
+
+
+def detect_institution_terms(question: str) -> list[str]:
+    """Institution cues: acronyms (UPC/UGR) and place/university phrases."""
+    terms = [a.casefold() for a in detect_acronyms(question)]
+    q = question.casefold()
+    places = (
+        "granada",
+        "barcelona",
+        "madrid",
+        "valencia",
+        "sevilla",
+        "bilbao",
+        "london",
+        "chicago",
+        "upc",
+        "ugr",
+        "upf",
+        "uab",
+        "ub",
+        "mit",
+        "politècnica",
+        "politecnica",
+    )
+    for p in places:
+        if p in q and p not in terms:
+            terms.append(p)
+    for m in re.finditer(
+        r"(?:universidad|university|universitat)\s+(?:de\s+|of\s+)?([a-záéíóúñ]{3,})",
+        q,
+        re.IGNORECASE,
+    ):
+        token = m.group(1).casefold()
+        if token not in {"the", "de", "of", "la", "el"} and token not in terms:
+            terms.append(token)
+    return terms
+
+
+def _chunk_mentions_terms(chunk: RetrievedChunk, terms: list[str]) -> bool:
+    if not terms:
+        return True
+    text = chunk.text.casefold()
+    return any(t in text for t in terms)
 
 
 def detect_skills(question: str) -> list[str]:
@@ -229,6 +289,7 @@ def adaptive_floor(question: str, min_score: float) -> float:
     specific = bool(
         _PDF_RE.search(question)
         or detect_skills(question)
+        or detect_institution_terms(question)
         or matched_role_sections(question)
         or any(p.search(question) for p, _ in _INTENT_SECTIONS)
     )
@@ -309,9 +370,13 @@ def retrieve(
     pass_score = min_score if min_score > 0 else 0.65
     floor = adaptive_floor(question, pass_score)
     skills = detect_skills(question)
+    acronyms = detect_acronyms(question)
+    institutions = detect_institution_terms(question)
     intent_sections = preferred_sections(question)
     role_sections = matched_role_sections(question)
     section_targets = list(dict.fromkeys([*intent_sections, *role_sections]))
+    if institutions and not any(s in _EDU_SECTIONS for s in section_targets):
+        section_targets = list(dict.fromkeys([*_EDU_SECTIONS, *section_targets]))
 
     fetch_k = max(top_k * 3, 12)
     general = store.query(question, top_k=fetch_k, min_score=0.0)
@@ -374,8 +439,13 @@ def retrieve(
             sections=section_targets,
         )
         for hit in hits:
-            if hit.score >= _BOOST_FLOOR:
-                focused.append(_promote(hit, pass_score, _SECTION_BOOST))
+            if hit.score < _BOOST_FLOOR:
+                continue
+            # Institution questions must mention the school/place in the chunk.
+            if institutions and hit.section in _EDU_SECTIONS:
+                if not _chunk_mentions_terms(hit, institutions):
+                    continue
+            focused.append(_promote(hit, pass_score, _SECTION_BOOST))
 
     if skills:
         hits = store.query(
@@ -389,6 +459,17 @@ def retrieve(
             if hit.score >= _BOOST_FLOOR and any(s in text_l for s in skills):
                 focused.append(_promote(hit, pass_score, _SKILL_BOOST))
 
+    if institutions:
+        hits = store.query(
+            question,
+            top_k=max(top_k, 10),
+            min_score=0.0,
+            sections=list(_EDU_SECTIONS),
+        )
+        for hit in hits:
+            if hit.score >= 0.28 and _chunk_mentions_terms(hit, institutions):
+                focused.append(_promote(hit, pass_score, _SECTION_BOOST))
+
     boosted_general = _apply_soft_boosts(
         general,
         question=question,
@@ -398,5 +479,11 @@ def retrieve(
         floor=floor,
         pass_score=pass_score,
     )
+    if institutions:
+        boosted_general = [
+            c
+            for c in boosted_general
+            if c.section not in _EDU_SECTIONS or _chunk_mentions_terms(c, institutions)
+        ]
 
     return _dedupe_merge(focused, boosted_general, top_k=top_k)

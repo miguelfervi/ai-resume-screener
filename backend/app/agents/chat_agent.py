@@ -138,12 +138,24 @@ def cite_sources(state: ChatState) -> dict:
         return {"sources": [], "metrics": metrics.to_dict()}
 
     answer = state.get("answer") or ""
-    selected: list[RetrievedChunk] = []
-    for chunk in chunks:
-        name = chunk.candidate_name
-        # Prefer chunks whose candidate is mentioned; otherwise keep top scores
-        if name and re.search(re.escape(name.split()[0]), answer, re.IGNORECASE):
-            selected.append(chunk)
+
+    def _mentioned(candidate_name: str) -> bool:
+        name = candidate_name.strip()
+        if not name:
+            return False
+        # Prefer full name; never match bare first-name substrings ("Ana" in "Granada").
+        if re.search(rf"\b{re.escape(name)}\b", answer, re.IGNORECASE):
+            return True
+        parts = name.split()
+        if len(parts) >= 2:
+            # first + last as separate tokens
+            return bool(
+                re.search(rf"\b{re.escape(parts[0])}\b", answer, re.IGNORECASE)
+                and re.search(rf"\b{re.escape(parts[-1])}\b", answer, re.IGNORECASE)
+            )
+        return bool(re.search(rf"\b{re.escape(parts[0])}\b", answer, re.IGNORECASE))
+
+    selected: list[RetrievedChunk] = [c for c in chunks if _mentioned(c.candidate_name)]
     if not selected:
         selected = chunks[:3]
 

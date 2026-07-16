@@ -1,4 +1,4 @@
-"""Pydantic models shared across agents and API.
+"""Chat and health API schemas.
 
 Keep in sync with frontend/src/types/api.ts (camelCase serialization aliases).
 """
@@ -8,11 +8,6 @@ from __future__ import annotations
 from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field
-
-
-# ---------------------------------------------------------------------------
-# Chat API
-# ---------------------------------------------------------------------------
 
 
 class ChatMessage(BaseModel):
@@ -61,67 +56,6 @@ class ChatResponse(BaseModel):
 class HealthResponse(BaseModel):
     status: str
     index_ready: bool = Field(default=False, serialization_alias="indexReady")
-
-
-# ---------------------------------------------------------------------------
-# CV generation
-# ---------------------------------------------------------------------------
-
-
-class CandidateProfile(BaseModel):
-    """Planned profile for offline CV generation."""
-
-    slug: str
-    full_name: str
-    locale: str = "en"
-    role_family: str = Field(description="e.g. backend, data, design")
-    university: str | None = None
-    seniority: str = "mid"
-
-
-class GeneratedCV(BaseModel):
-    slug: str
-    full_name: str
-    email: str
-    pdf_path: str
-    photo_path: str | None = None
-    skills: list[str] = Field(default_factory=list)
-
-
-class ManifestEntry(BaseModel):
-    slug: str
-    full_name: str
-    email: str
-    file: str
-    skills: list[str] = Field(default_factory=list)
-    locale: str = "en"
-
-
-# ---------------------------------------------------------------------------
-# RAG / ingest
-# ---------------------------------------------------------------------------
-
-
-class DocumentChunk(BaseModel):
-    text: str
-    candidate_name: str
-    source_file: str
-    section: str
-    chunk_index: int = 0
-
-
-class RetrievedChunk(BaseModel):
-    text: str
-    candidate_name: str
-    source_file: str
-    section: str
-    score: float
-    snippet: str = ""
-
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
 
 
 def metrics_to_response(metrics_dict: dict[str, Any]) -> RunMetricsResponse:

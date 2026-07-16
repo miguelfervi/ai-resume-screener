@@ -1,0 +1,63 @@
+---
+description: Backend Python/FastAPI/LangGraph conventions for AI Resume Screener
+globs: backend/**/*.py
+alwaysApply: false
+---
+
+# Backend Conventions
+
+## LangGraph nodes
+
+Every node has the signature `(state: XxxState) -> XxxState` and returns only the keys it modifies.
+Wrap heavy work in `with Timer(metrics.node_timings_ms, "node_key"):`.
+
+```python
+# ✅ GOOD
+def retrieve(state: ChatState) -> ChatState:
+    metrics = state["metrics"]
+    with Timer(metrics.node_timings_ms, "retrieve"):
+        chunks = retriever.search(state["question"])
+    return {"retrieved_chunks": chunks}
+```
+
+## Invariants
+
+Add postconditions to `app/invariants.py` and call them after any mutation:
+
+```python
+from .invariants import check, check_sources_from_retrieved
+
+check(len(chunks) > 0, "retrieval must return chunks when index is populated")
+check_sources_from_retrieved(sources, chunks)
+```
+
+Never use bare `assert` — use `check()` so failures produce `InvariantError` with a clear message.
+
+## Error handling
+
+- User errors → `HTTPException` with 4xx status in `main.py`.
+- LLM/retrieval failures → log with `logger.warning` and return a safe degraded response.
+- Invariant violations → let `InvariantError` propagate — it signals a bug.
+
+## Pydantic models (`models.py`)
+
+- API models use explicit field names; frontend mirrors them in camelCase via serialization aliases.
+- Keep `description=` strings concise — they may be injected into LLM prompts.
+- Comment at top of `models.py`: sync with `frontend/src/types/api.ts`.
+
+## Settings
+
+All config via `app/config.py` (`pydantic-settings`). Access with `get_settings()` (LRU-cached). Never hardcode paths or API keys.
+
+## RAG modules
+
+- `rag/chunker.py` — section-aware splitting (~500 tokens, 50 overlap)
+- `rag/store.py` — ChromaDB wrapper with upsert + collection management
+- `rag/retriever.py` — top-k search, score threshold, dedupe by candidate
+
+## Adding a new agent node
+
+1. Implement `(state) -> partial state` in the relevant `agents/*.py`.
+2. Register in the `StateGraph` with explicit edges.
+3. Add invariant checks at the end of the node if it mutates critical data.
+4. Add a unit test with mocked LLM/embeddings in `backend/tests/`.

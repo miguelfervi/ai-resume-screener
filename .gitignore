@@ -27,8 +27,10 @@ npm-debug.log*
 # Generated / local data
 data/chroma/
 
-# IDE (do not publish)
-.cursor/
+# IDE — keep shared rules, ignore local Cursor state
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
 .vscode/
 
 # System

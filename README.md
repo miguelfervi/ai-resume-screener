@@ -32,7 +32,7 @@ ai-resume-screener/
 
 ## Getting started
 
-Implementation is in progress. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the planned workflow.
+Implementation is in progress. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the planned workflow and [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for commit workflow and local setup.
 
 ### Prerequisites
 
@@ -62,9 +62,9 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## Development log
 
-| # | Commit | Summary |
-|---|--------|---------|
-| 1 | _pending_ | Project scaffold |
+| # | Commit | Date | Summary |
+|---|--------|------|---------|
+| 1 | `5643bde` | 2026-07-16 | Project scaffold — folders, .gitignore, README skeleton |
 
 ## License
 

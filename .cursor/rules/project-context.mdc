@@ -1,0 +1,54 @@
+---
+description: AI Resume Screener — project overview, stack and conventions (always active)
+alwaysApply: true
+---
+
+# AI Resume Screener — Project Context
+
+Full-stack RAG chat: ask natural-language questions about a collection of CV PDFs → LangGraph agents retrieve grounded chunks → answer with source citations.
+
+## Stack
+
+| Layer | Tech |
+|---|---|
+| Frontend | Vite 6 · React 19 · TypeScript strict · Tailwind CSS v4 · shadcn/ui · Plus Jakarta Sans |
+| Backend | FastAPI · LangGraph · Python 3.11+ |
+| LLM | Google Gemini `gemini-2.0-flash` |
+| Embeddings | Google `text-embedding-004` |
+| Vector store | ChromaDB (local, persistent) |
+| PDF extraction | pymupdf4llm |
+| CV generation | Jinja2 HTML · Playwright PDF · Gemini image (Pillow fallback) |
+
+## Three LangGraph agents
+
+```
+generate_agent: plan_profiles → generate_content → generate_photo → render_pdf → validate_manifest
+ingest_agent:   extract_text → chunk_by_section → embed → store_chroma → verify_index
+chat_agent:     retrieve → validate_context → generate_answer → cite_sources
+```
+
+## Key files
+
+- `backend/app/agents/generate_agent.py` — offline CV PDF generation
+- `backend/app/agents/ingest_agent.py` — offline RAG indexing
+- `backend/app/agents/chat_agent.py` — runtime Q&A with grounded citations
+- `backend/app/invariants.py` — runtime guards (`InvariantError`)
+- `backend/app/metrics.py` — `RunMetrics` + `Timer` per node
+- `backend/app/rag/` — chunker, store, retriever
+- `frontend/src/hooks/use-chat.ts` — chat state, send, cancel
+- `frontend/src/lib/api.ts` — typed API client + `ApiError`
+- `frontend/src/types/api.ts` — mirrors `backend/app/models.py` (camelCase)
+
+## Architecture docs
+
+- `docs/ARCHITECTURE.md` — agent flows, data layout, API surface
+- `docs/DEVELOPMENT.md` — commit workflow, local setup, testing
+
+## Non-obvious constraints
+
+- Chat must never hallucinate: `validate_context` blocks answers when max retrieval score < threshold.
+- `check_sources_from_retrieved` ensures every citation maps to a real chunk.
+- ChromaDB path `data/chroma/` is gitignored; PDFs in `data/cvs/` are committed for demo.
+- Agents are compiled once and cached per module.
+- Frontend types in `types/api.ts` must stay in sync with `models.py` (comment in models.py).
+- Tests: `cd backend && pytest -v` from project root with `PYTHONPATH=.` or `pytest.ini`.

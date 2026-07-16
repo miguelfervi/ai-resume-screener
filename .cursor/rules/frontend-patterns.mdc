@@ -1,0 +1,65 @@
+---
+description: Frontend React/Vite/TypeScript conventions for AI Resume Screener
+globs: frontend/src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend Conventions
+
+## Hooks
+
+Business logic lives in `src/hooks/`, never in page/component files.
+
+```typescript
+// ✅ GOOD — logic in a hook
+const { messages, sendMessage, isLoading, error, cancel } = useChat();
+
+// ❌ BAD — state and fetch logic inside a component
+const [loading, setLoading] = useState(false);
+const res = await fetch("/api/chat", ...)
+```
+
+Available hooks: `useChat`.
+
+## Error handling
+
+Use `ApiError` from `src/lib/api.ts` for typed error handling:
+
+```typescript
+} catch (err) {
+  const msg = err instanceof ApiError
+    ? err.message
+    : "Unexpected error. Please try again.";
+}
+```
+
+Never swallow errors silently. Surface them in the chat UI or via `ErrorBoundary`.
+
+## API types
+
+All backend types live in `src/types/api.ts`. Do not redefine them locally:
+`ChatRequest`, `ChatResponse`, `Source`, `RunMetrics`, `ApiError`.
+
+Types use camelCase to match JSON serialization from FastAPI (`serialization_alias`).
+
+## Styling
+
+- **Tailwind CSS v4 only** — no CSS modules, no styled-components.
+- Theme tokens in `src/index.css` (`@theme { --font-sans: ... }`).
+- Chat layout: `flex flex-col h-dvh`; messages `flex-1 overflow-y-auto`; input fixed at bottom.
+- shadcn/ui components in `src/components/ui/`. Add with `npx shadcn@latest add <name>`.
+
+## Components
+
+- Props typed with explicit interfaces.
+- `MessageBubble` renders assistant markdown; user messages are plain text.
+- `SourceBadges` shows candidate + section + snippet from `ChatResponse.sources`.
+- `ErrorBoundary` wraps `ChatPanel` in `App.tsx`.
+- Dev proxy: `/api` → `http://localhost:8000` in `vite.config.ts`.
+
+## Adding a new UI feature
+
+1. Extend types in `types/api.ts` if backend contract changes.
+2. Update `lib/api.ts` client method.
+3. Extend `useChat` hook for new state/actions.
+4. Compose UI in a dedicated component under `src/components/`.

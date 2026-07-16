@@ -1,0 +1,699 @@
+[
+  {
+    "slug": "jane-doe",
+    "full_name": "Jane Doe",
+    "email": "jane.doe@demo-cvs.local",
+    "locale": "en",
+    "headline": "Senior Backend Engineer",
+    "summary": "Backend engineer with 8 years building APIs and data pipelines. Strong Python and cloud experience.",
+    "location": "Barcelona, Spain",
+    "skills": ["Python", "FastAPI", "PostgreSQL", "AWS", "Docker"],
+    "languages": ["English", "Spanish"],
+    "experience": [
+      {
+        "title": "Senior Backend Engineer",
+        "company": "TechFlow",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Led Python microservices migration", "Designed REST APIs serving 2M requests/day"]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "DataSoft",
+        "start": "2016",
+        "end": "2020",
+        "bullets": ["Built ETL pipelines in Python", "Maintained Django applications"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Computer Science", "institution": "Universitat Politècnica de Catalunya (UPC)", "year": "2016"}
+    ]
+  },
+  {
+    "slug": "carlos-mendez",
+    "full_name": "Carlos Méndez",
+    "email": "carlos.mendez@demo-cvs.local",
+    "locale": "es",
+    "headline": "Ingeniero de Datos",
+    "summary": "Especialista en pipelines de datos y machine learning con Python y Spark.",
+    "location": "Madrid, España",
+    "skills": ["Python", "Spark", "SQL", "Airflow", "TensorFlow"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Data Engineer",
+        "company": "Analytics Pro",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Diseñó pipelines ETL con Python y Airflow", "Optimizó consultas SQL en BigQuery"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad Politécnica de Madrid (UPM)", "year": "2018"}
+    ]
+  },
+  {
+    "slug": "emma-wright",
+    "full_name": "Emma Wright",
+    "email": "emma.wright@demo-cvs.local",
+    "locale": "en",
+    "headline": "Frontend Developer",
+    "summary": "React specialist focused on accessible, performant user interfaces.",
+    "location": "London, UK",
+    "skills": ["React", "TypeScript", "CSS", "Vite", "Testing Library"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Frontend Developer",
+        "company": "Pixel Labs",
+        "start": "2021",
+        "end": "Present",
+        "bullets": ["Built design system in React 19", "Improved Core Web Vitals by 30%"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Computer Science", "institution": "University of Manchester", "year": "2020"}
+    ]
+  },
+  {
+    "slug": "lucia-fernandez",
+    "full_name": "Lucía Fernández",
+    "email": "lucia.fernandez@demo-cvs.local",
+    "locale": "es",
+    "headline": "Desarrolladora Full Stack",
+    "summary": "Desarrollo web con Node.js y React. Experiencia en startups B2B.",
+    "location": "Barcelona, España",
+    "skills": ["JavaScript", "Node.js", "React", "MongoDB", "GraphQL"],
+    "languages": ["Spanish", "Catalan", "English"],
+    "experience": [
+      {
+        "title": "Full Stack Developer",
+        "company": "StartupHub",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Desarrolló APIs GraphQL", "Implementó CI/CD con GitHub Actions"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "Universitat de Barcelona (UB)", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "marcus-chen",
+    "full_name": "Marcus Chen",
+    "email": "marcus.chen@demo-cvs.local",
+    "locale": "en",
+    "headline": "DevOps Engineer",
+    "summary": "Infrastructure automation and Kubernetes at scale.",
+    "location": "Berlin, Germany",
+    "skills": ["Kubernetes", "Terraform", "Go", "AWS", "Prometheus"],
+    "languages": ["English", "Mandarin"],
+    "experience": [
+      {
+        "title": "DevOps Engineer",
+        "company": "CloudNine",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Managed EKS clusters for 50+ services", "Reduced deploy time by 60%"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Information Systems", "institution": "MIT", "year": "2017"}
+    ]
+  },
+  {
+    "slug": "ana-torres",
+    "full_name": "Ana Torres",
+    "email": "ana.torres@demo-cvs.local",
+    "locale": "es",
+    "headline": "QA Engineer",
+    "summary": "Testing automatizado y calidad de software en entornos ágiles.",
+    "location": "Valencia, España",
+    "skills": ["Selenium", "Cypress", "Python", "Jira", "Postman"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "QA Engineer",
+        "company": "QualityFirst",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Automatizó tests E2E con Cypress", "Definió estrategia de testing en Python"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2018"}
+    ]
+  },
+  {
+    "slug": "david-kumar",
+    "full_name": "David Kumar",
+    "email": "david.kumar@demo-cvs.local",
+    "locale": "en",
+    "headline": "Machine Learning Engineer",
+    "summary": "Production ML systems with Python, PyTorch and MLOps tooling.",
+    "location": "San Francisco, USA",
+    "skills": ["Python", "PyTorch", "MLflow", "Kubernetes", "SQL"],
+    "languages": ["English", "Hindi"],
+    "experience": [
+      {
+        "title": "ML Engineer",
+        "company": "AI Ventures",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Deployed recommendation models serving 1M users", "Built feature store in Python"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Artificial Intelligence", "institution": "Stanford University", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "sofia-ruiz",
+    "full_name": "Sofía Ruiz",
+    "email": "sofia.ruiz@demo-cvs.local",
+    "locale": "es",
+    "headline": "Product Manager",
+    "summary": "Gestión de producto digital con foco en equipos de ingeniería.",
+    "location": "Madrid, España",
+    "skills": ["Product Strategy", "Agile", "Figma", "Analytics", "Roadmapping"],
+    "languages": ["Spanish", "English", "French"],
+    "experience": [
+      {
+        "title": "Product Manager",
+        "company": "SaaS Co",
+        "start": "2017",
+        "end": "Present",
+        "bullets": ["Lanzó 3 productos B2B", "Coordinó equipos de 15 ingenieros"]
+      }
+    ],
+    "education": [
+      {"degree": "MBA", "institution": "IE Business School", "year": "2016"}
+    ]
+  },
+  {
+    "slug": "james-oconnor",
+    "full_name": "James O'Connor",
+    "email": "james.oconnor@demo-cvs.local",
+    "locale": "en",
+    "headline": "Java Backend Developer",
+    "summary": "Enterprise Java applications and Spring Boot microservices.",
+    "location": "Dublin, Ireland",
+    "skills": ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Maven"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Senior Java Developer",
+        "company": "FinServe",
+        "start": "2015",
+        "end": "Present",
+        "bullets": ["Architected payment processing system", "Mentored junior developers"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Software Engineering", "institution": "Trinity College Dublin", "year": "2014"}
+    ]
+  },
+  {
+    "slug": "elena-vidal",
+    "full_name": "Elena Vidal",
+    "email": "elena.vidal@demo-cvs.local",
+    "locale": "es",
+    "headline": "UX/UI Designer",
+    "summary": "Diseño de interfaces centradas en el usuario para apps web y móvil.",
+    "location": "Barcelona, España",
+    "skills": ["Figma", "Sketch", "Prototyping", "User Research", "Design Systems"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Senior UX Designer",
+        "company": "Design Studio BCN",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Rediseñó app con 500K usuarios", "Creó design system corporativo"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Diseño Digital", "institution": "UB", "year": "2017"}
+    ]
+  },
+  {
+    "slug": "ryan-patel",
+    "full_name": "Ryan Patel",
+    "email": "ryan.patel@demo-cvs.local",
+    "locale": "en",
+    "headline": "Python Developer",
+    "summary": "Python developer with focus on automation and scripting.",
+    "location": "Toronto, Canada",
+    "skills": ["Python", "Django", "Celery", "Redis", "Linux"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Python Developer",
+        "company": "AutoScript Inc",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Automated reporting pipelines in Python", "Built internal tools with Django"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Computer Science", "institution": "University of Toronto", "year": "2018"}
+    ]
+  },
+  {
+    "slug": "maria-santos",
+    "full_name": "María Santos",
+    "email": "maria.santos@demo-cvs.local",
+    "locale": "es",
+    "headline": "Ingeniera de Software",
+    "summary": "Desarrollo backend con Python y bases de datos relacionales.",
+    "location": "Sevilla, España",
+    "skills": ["Python", "Flask", "MySQL", "Git", "Linux"],
+    "languages": ["Spanish"],
+    "experience": [
+      {
+        "title": "Software Engineer",
+        "company": "InnovaTech",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Desarrolló APIs REST en Python/Flask", "Migró monolito a microservicios"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "UPM", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "oliver-brown",
+    "full_name": "Oliver Brown",
+    "email": "oliver.brown@demo-cvs.local",
+    "locale": "en",
+    "headline": "Security Engineer",
+    "summary": "Application security, penetration testing and secure SDLC.",
+    "location": "Edinburgh, UK",
+    "skills": ["Security", "OWASP", "Python", "Burp Suite", "SIEM"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Security Engineer",
+        "company": "SecureNet",
+        "start": "2017",
+        "end": "Present",
+        "bullets": ["Conducted security audits for fintech clients", "Built Python tooling for vulnerability scans"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Cybersecurity", "institution": "University of Edinburgh", "year": "2016"}
+    ]
+  },
+  {
+    "slug": "paula-garcia",
+    "full_name": "Paula García",
+    "email": "paula.garcia@demo-cvs.local",
+    "locale": "es",
+    "headline": "Data Analyst",
+    "summary": "Análisis de datos de negocio con SQL y visualización.",
+    "location": "Bilbao, España",
+    "skills": ["SQL", "Tableau", "Excel", "R", "Power BI"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Data Analyst",
+        "company": "Retail Analytics",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Creó dashboards de ventas en Tableau", "Automatizó informes semanales"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Estadística", "institution": "UPV/EHU", "year": "2017"}
+    ]
+  },
+  {
+    "slug": "nina-andersson",
+    "full_name": "Nina Andersson",
+    "email": "nina.andersson@demo-cvs.local",
+    "locale": "en",
+    "headline": "iOS Developer",
+    "summary": "Native iOS development with Swift and SwiftUI.",
+    "location": "Stockholm, Sweden",
+    "skills": ["Swift", "SwiftUI", "Xcode", "Core Data", "Combine"],
+    "languages": ["English", "Swedish"],
+    "experience": [
+      {
+        "title": "iOS Developer",
+        "company": "Nordic Apps",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Shipped 4 apps to App Store", "Led SwiftUI migration"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Computer Science", "institution": "KTH Royal Institute", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "hugo-martin",
+    "full_name": "Hugo Martín",
+    "email": "hugo.martin@demo-cvs.local",
+    "locale": "es",
+    "headline": "SRE / Platform Engineer",
+    "summary": "Fiabilidad de sistemas y observabilidad en producción.",
+    "location": "Barcelona, España",
+    "skills": ["Kubernetes", "Python", "Grafana", "Linux", "CI/CD"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Site Reliability Engineer",
+        "company": "Platform.io",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Mantuvo SLA 99.95%", "Escribió runbooks y herramientas en Python"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2018"}
+    ]
+  },
+  {
+    "slug": "lisa-hoffman",
+    "full_name": "Lisa Hoffman",
+    "email": "lisa.hoffman@demo-cvs.local",
+    "locale": "en",
+    "headline": "Technical Writer",
+    "summary": "Documentation for developer tools and API products.",
+    "location": "Amsterdam, Netherlands",
+    "skills": ["Technical Writing", "Markdown", "API Docs", "Git", "Confluence"],
+    "languages": ["English", "German"],
+    "experience": [
+      {
+        "title": "Senior Technical Writer",
+        "company": "DocuTech",
+        "start": "2016",
+        "end": "Present",
+        "bullets": ["Documented REST APIs for 200+ endpoints", "Created developer onboarding guides"]
+      }
+    ],
+    "education": [
+      {"degree": "BA Communications", "institution": "University of Amsterdam", "year": "2015"}
+    ]
+  },
+  {
+    "slug": "diego-lopez",
+    "full_name": "Diego López",
+    "email": "diego.lopez@demo-cvs.local",
+    "locale": "es",
+    "headline": "Desarrollador Python Junior",
+    "summary": "Junior developer aprendiendo Python y buenas prácticas de desarrollo.",
+    "location": "Zaragoza, España",
+    "skills": ["Python", "Git", "pytest", "HTML", "CSS"],
+    "languages": ["Spanish"],
+    "experience": [
+      {
+        "title": "Junior Python Developer",
+        "company": "CodeStart",
+        "start": "2023",
+        "end": "Present",
+        "bullets": ["Escribió tests con pytest", "Contribuyó a APIs internas en Python"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad de Zaragoza", "year": "2023"}
+    ]
+  },
+  {
+    "slug": "sarah-mitchell",
+    "full_name": "Sarah Mitchell",
+    "email": "sarah.mitchell@demo-cvs.local",
+    "locale": "en",
+    "headline": "Engineering Manager",
+    "summary": "Leading backend teams building scalable distributed systems.",
+    "location": "New York, USA",
+    "skills": ["Leadership", "Python", "System Design", "Hiring", "Agile"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Engineering Manager",
+        "company": "ScaleUp NYC",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Managed team of 12 Python engineers", "Delivered platform serving 10M users"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Computer Science", "institution": "Columbia University", "year": "2012"}
+    ]
+  },
+  {
+    "slug": "ivan-petrov",
+    "full_name": "Ivan Petrov",
+    "email": "ivan.petrov@demo-cvs.local",
+    "locale": "en",
+    "headline": "Rust Systems Programmer",
+    "summary": "Low-level systems programming and performance-critical services.",
+    "location": "Prague, Czech Republic",
+    "skills": ["Rust", "C++", "Linux", "Networking", "WASM"],
+    "languages": ["English", "Czech", "Russian"],
+    "experience": [
+      {
+        "title": "Systems Programmer",
+        "company": "PerfSystems",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Built high-throughput proxy in Rust", "Optimized latency-critical paths"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Computer Science", "institution": "Charles University", "year": "2017"}
+    ]
+  },
+  {
+    "slug": "carmen-ortiz",
+    "full_name": "Carmen Ortiz",
+    "email": "carmen.ortiz@demo-cvs.local",
+    "locale": "es",
+    "headline": "Business Analyst",
+    "summary": "Análisis de procesos y requisitos para proyectos digitales.",
+    "location": "Málaga, España",
+    "skills": ["Business Analysis", "BPMN", "SQL", "Jira", "Stakeholder Management"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Business Analyst",
+        "company": "Consulting Plus",
+        "start": "2017",
+        "end": "Present",
+        "bullets": ["Definió requisitos para 10+ proyectos", "Facilitó workshops con stakeholders"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en ADE", "institution": "Universidad de Málaga", "year": "2016"}
+    ]
+  },
+  {
+    "slug": "tom-wilson",
+    "full_name": "Tom Wilson",
+    "email": "tom.wilson@demo-cvs.local",
+    "locale": "en",
+    "headline": "Cloud Architect",
+    "summary": "AWS solutions architecture for enterprise workloads.",
+    "location": "Chicago, USA",
+    "skills": ["AWS", "Python", "CloudFormation", "Lambda", "VPC"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Cloud Architect",
+        "company": "Enterprise Cloud",
+        "start": "2016",
+        "end": "Present",
+        "bullets": ["Designed multi-account AWS landing zone", "Wrote IaC modules in Python/CDK"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Information Technology", "institution": "University of Illinois", "year": "2014"}
+    ]
+  },
+  {
+    "slug": "beatriz-navarro",
+    "full_name": "Beatriz Navarro",
+    "email": "beatriz.navarro@demo-cvs.local",
+    "locale": "es",
+    "headline": "Ingeniera Backend",
+    "summary": "APIs escalables con Python y arquitectura hexagonal.",
+    "location": "Barcelona, España",
+    "skills": ["Python", "FastAPI", "DDD", "PostgreSQL", "Redis"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Backend Engineer",
+        "company": "FinTech BCN",
+        "start": "2021",
+        "end": "Present",
+        "bullets": ["Implementó APIs de pagos en FastAPI", "Diseñó arquitectura hexagonal en Python"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2020"}
+    ]
+  },
+  {
+    "slug": "alex-thompson",
+    "full_name": "Alex Thompson",
+    "email": "alex.thompson@demo-cvs.local",
+    "locale": "en",
+    "headline": "Game Developer",
+    "summary": "Unity and C# game development for mobile platforms.",
+    "location": "Montreal, Canada",
+    "skills": ["Unity", "C#", "Game Design", "Blender", "Shader Graph"],
+    "languages": ["English", "French"],
+    "experience": [
+      {
+        "title": "Game Developer",
+        "company": "Indie Games MTL",
+        "start": "2019",
+        "end": "Present",
+        "bullets": ["Released 2 mobile games with 100K+ downloads", "Optimized rendering pipeline"]
+      }
+    ],
+    "education": [
+      {"degree": "Diploma Game Development", "institution": "Vanier College", "year": "2018"}
+    ]
+  },
+  {
+    "slug": "rosa-diaz",
+    "full_name": "Rosa Díaz",
+    "email": "rosa.diaz@demo-cvs.local",
+    "locale": "es",
+    "headline": "Scrum Master",
+    "summary": "Facilitación ágil y mejora continua en equipos de producto.",
+    "location": "Madrid, España",
+    "skills": ["Scrum", "Kanban", "Facilitation", "Coaching", "Jira"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Scrum Master",
+        "company": "AgileWorks",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Facilitó 5 equipos Scrum", "Redujo lead time en 25%"]
+      }
+    ],
+    "education": [
+      {"degree": "Certificación PSM II", "institution": "Scrum.org", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "kevin-zhang",
+    "full_name": "Kevin Zhang",
+    "email": "kevin.zhang@demo-cvs.local",
+    "locale": "en",
+    "headline": "Full Stack Engineer",
+    "summary": "TypeScript across the stack with Next.js and Node.",
+    "location": "Singapore",
+    "skills": ["TypeScript", "Next.js", "Node.js", "Prisma", "AWS"],
+    "languages": ["English", "Mandarin"],
+    "experience": [
+      {
+        "title": "Full Stack Engineer",
+        "company": "AsiaTech",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Built SaaS dashboard in Next.js", "Designed PostgreSQL schemas"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Computer Engineering", "institution": "NUS", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "marta-iglesias",
+    "full_name": "Marta Iglesias",
+    "email": "marta.iglesias@demo-cvs.local",
+    "locale": "es",
+    "headline": "Ingeniera de Machine Learning",
+    "summary": "Modelos de NLP y clasificación con Python y Hugging Face.",
+    "location": "Barcelona, España",
+    "skills": ["Python", "NLP", "Hugging Face", "scikit-learn", "Pandas"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "ML Engineer",
+        "company": "Language AI",
+        "start": "2021",
+        "end": "Present",
+        "bullets": ["Entrenó modelos de clasificación de texto en Python", "Desplegó pipelines NLP en producción"]
+      }
+    ],
+    "education": [
+      {"degree": "MSc Data Science", "institution": "UPF Barcelona", "year": "2020"}
+    ]
+  },
+  {
+    "slug": "chris-evans",
+    "full_name": "Chris Evans",
+    "email": "chris.evans@demo-cvs.local",
+    "locale": "en",
+    "headline": "Database Administrator",
+    "summary": "PostgreSQL administration, tuning and high availability.",
+    "location": "Boston, USA",
+    "skills": ["PostgreSQL", "SQL", "Linux", "Backup", "Replication"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Database Administrator",
+        "company": "DataCore Systems",
+        "start": "2014",
+        "end": "Present",
+        "bullets": ["Managed 50+ PostgreSQL instances", "Implemented streaming replication"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Information Systems", "institution": "Boston University", "year": "2013"}
+    ]
+  },
+  {
+    "slug": "laura-perez",
+    "full_name": "Laura Pérez",
+    "email": "laura.perez@demo-cvs.local",
+    "locale": "es",
+    "headline": "Desarrolladora Python",
+    "summary": "Desarrollo de herramientas internas y scripts de automatización con Python.",
+    "location": "Granada, España",
+    "skills": ["Python", "Bash", "Docker", "PostgreSQL", "FastAPI"],
+    "languages": ["Spanish", "English"],
+    "experience": [
+      {
+        "title": "Python Developer",
+        "company": "AutoOps",
+        "start": "2020",
+        "end": "Present",
+        "bullets": ["Automatizó despliegues con Python", "Creó APIs internas con FastAPI"]
+      }
+    ],
+    "education": [
+      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad de Granada", "year": "2019"}
+    ]
+  },
+  {
+    "slug": "michael-foster",
+    "full_name": "Michael Foster",
+    "email": "michael.foster@demo-cvs.local",
+    "locale": "en",
+    "headline": "Python Software Engineer",
+    "summary": "Building data-intensive applications with Python and PostgreSQL.",
+    "location": "Austin, USA",
+    "skills": ["Python", "PostgreSQL", "Redis", "FastAPI", "pytest"],
+    "languages": ["English"],
+    "experience": [
+      {
+        "title": "Software Engineer",
+        "company": "DataPipe",
+        "start": "2018",
+        "end": "Present",
+        "bullets": ["Built ingestion services in Python", "Maintained high-throughput PostgreSQL schemas"]
+      }
+    ],
+    "education": [
+      {"degree": "BSc Computer Science", "institution": "University of Texas at Austin", "year": "2017"}
+    ]
+  }
+]

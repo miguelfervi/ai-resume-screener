@@ -7,7 +7,7 @@ Overview of the AI Resume Screener end-to-end workflow.
 ```mermaid
 flowchart TB
   subgraph Offline["1 · Offline data preparation"]
-    Seed["data/seed/profiles.json"]
+    Seed["data/seed/profiles.json\n(Gemini narratives)"]
     Gen["scripts/generate_cvs.py\n+ ReportLab (+ optional AI photos)"]
     PDFs["data/cvs/*.pdf\n30 résumés · 5 layouts"]
     Seed --> Gen --> PDFs

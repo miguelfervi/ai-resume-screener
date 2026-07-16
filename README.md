@@ -35,7 +35,7 @@ flowchart LR
 ```
 
 ```
-profiles.json → generate_cvs.py → data/cvs/*.pdf
+profiles.json (Gemini narratives) → generate_cvs.py → data/cvs/*.pdf
         ↓
 ingest.py: extract → chunk → embed → ChromaDB
         ↓
@@ -108,11 +108,11 @@ Then click a **source** badge → CV opens on the right (drag the edge to resize
 PDFs under `data/cvs/` are already committed for the demo.
 
 ```bash
-# from repo root, backend venv active
-python scripts/enrich_profiles.py          # expand seed text
+# from repo root, backend venv active — only if you regenerate CV texts/PDFs
+python scripts/llm_rewrite_profiles.py     # Gemini narrative texts (optional re-run)
 python scripts/generate_cvs.py             # 30 PDFs; AI photos for 6 sample CVs
 python scripts/generate_cvs.py --photos all
-python scripts/ingest.py                   # rebuild Chroma index after PDF changes
+python scripts/ingest.py                   # rebuild Chroma after PDF changes
 ```
 
 ## API surface
@@ -139,7 +139,7 @@ ai-resume-screener/
 │   ├── cvs/             # 30 demo PDFs + photos/ (committed)
 │   ├── seed/            # profiles.json
 │   └── chroma/          # vector index (gitignored)
-├── scripts/             # generate_cvs, ingest, enrich_profiles
+├── scripts/             # llm_rewrite, generate_cvs, ingest
 └── docs/                # ARCHITECTURE, DEVELOPMENT, VIDEO_SCRIPT
 ```
 

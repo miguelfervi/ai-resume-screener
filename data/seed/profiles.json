@@ -5,7 +5,7 @@
     "email": "jane.doe@demo-cvs.local",
     "locale": "en",
     "headline": "Senior Backend Engineer",
-    "summary": "Jane is a Senior Backend Engineer with 6 years of experience shipping production systems. Strong hands-on background with Python, FastAPI, PostgreSQL, AWS, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Barcelona, Spain.",
+    "summary": "Senior Backend Engineer with 6 years of experience architecting scalable production systems. Proven expertise in Python, FastAPI, and AWS, with a focus on driving technical ownership and cross-functional collaboration. Committed to delivering high-impact solutions in the Barcelona tech ecosystem.",
     "location": "Barcelona, Spain",
     "skills": [
       "Python",
@@ -30,10 +30,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Led Python microservices migration",
-          "Designed REST APIs serving 2M requests/day",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Spearheaded the migration of legacy monoliths to a high-performance Python microservices architecture.",
+          "Engineered robust REST APIs using FastAPI, successfully handling a load of 2M requests per day.",
+          "Standardized engineering practices by authoring comprehensive technical design documents and operational runbooks.",
+          "Optimized CI/CD pipelines and internal workflows using Python, resulting in a significant reduction in feature delivery time."
         ],
         "location": "Barcelona, Spain"
       },
@@ -43,10 +43,10 @@
         "start": "2016",
         "end": "2020",
         "bullets": [
-          "Built ETL pipelines in Python",
-          "Maintained Django applications",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Developed and scaled complex ETL pipelines in Python to process large-scale data streams.",
+          "Managed the full lifecycle of Django-based applications, ensuring high availability and performance.",
+          "Established team-wide documentation standards for architectural decisions and incident response protocols.",
+          "Automated repetitive development tasks with custom Python scripts to accelerate deployment cycles."
         ],
         "location": "Barcelona, Spain"
       },
@@ -57,10 +57,10 @@
         "start": "2013",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Collaborated closely with product stakeholders to deliver iterative features using Python.",
+          "Enforced rigorous code quality standards through peer reviews and the implementation of automated testing suites.",
+          "Created centralized technical documentation to streamline onboarding and knowledge sharing.",
+          "Implemented Python-based automation tools to improve team productivity and reduce manual overhead."
         ]
       }
     ],
@@ -69,13 +69,13 @@
         "degree": "MSc Computer Science",
         "institution": "Universitat Politècnica de Catalunya (UPC)",
         "year": "2016",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned an MSc in Computer Science from Universitat Politècnica de Catalunya (UPC) in 2016, graduating with distinction on a capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2017",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course via online platforms in 2017 to advance expertise in modern backend stacks."
       }
     ],
     "phone": "+1 (555) 0466-1495",
@@ -83,17 +83,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+        "description": "Developed a lightweight Python-based ETL toolkit and dashboard to visualize team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Python patterns."
+        "description": "Maintained an open-source utility library dedicated to implementing efficient Python design patterns."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "carlos-mendez",
@@ -101,7 +102,7 @@
     "email": "carlos.mendez@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniero de Datos",
-    "summary": "Carlos es ingeniero de datos con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Spark, SQL, Airflow. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
+    "summary": "Ingeniero de datos con 3 años de trayectoria en entornos tecnológicos de alto rendimiento. Especialista en el diseño de arquitecturas escalables utilizando Python, Spark, SQL y Airflow para transformar datos en valor estratégico. Enfocado en la colaboración interdisciplinar y la entrega de soluciones técnicas de alto impacto desde Madrid.",
     "location": "Madrid, España",
     "skills": [
       "Python",
@@ -126,10 +127,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Diseñó pipelines ETL con Python y Airflow",
-          "Optimizó consultas SQL en BigQuery",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Arquitecto de pipelines ETL robustos mediante Python y Airflow, logrando una alta disponibilidad de datos.",
+          "Refactorización y optimización de consultas complejas en BigQuery, reduciendo los costes operativos en un 20%.",
+          "Establecimiento de estándares de documentación técnica para asegurar la escalabilidad y el mantenimiento del equipo.",
+          "Implementación de scripts de automatización en Python que aceleraron los ciclos de despliegue de datos."
         ],
         "location": "Madrid, España"
       },
@@ -140,10 +141,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Alineación de objetivos técnicos con las necesidades de producto mediante análisis de datos con Python.",
+          "Elevación de los estándares de calidad del software mediante la implementación de revisiones de código y testing automatizado.",
+          "Creación de guías técnicas y documentación de procesos para estandarizar el flujo de trabajo del equipo.",
+          "Desarrollo de herramientas de automatización en Python para agilizar la entrega de informes recurrentes."
         ]
       },
       {
@@ -153,10 +154,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Apoyo en la priorización de tareas de producto utilizando scripts de Python para el análisis de métricas.",
+          "Contribución activa a la mejora de la calidad del código mediante la ejecución de pruebas unitarias.",
+          "Redacción de documentación técnica detallada para facilitar la transferencia de conocimiento interno.",
+          "Automatización de tareas manuales mediante Python, optimizando el tiempo de respuesta del equipo de BI."
         ]
       }
     ],
@@ -165,13 +166,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "Universidad Politécnica de Madrid (UPM)",
         "year": "2018",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Graduado con mención destacada en el proyecto final, con especialización en sistemas distribuidos y gestión de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2019",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Programa de formación continua enfocado en la actualización técnica sobre el stack de datos actual."
       }
     ],
     "phone": "+34 640970425",
@@ -179,17 +180,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización de métricas operativas."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería de utilidades en Python publicada como proyecto open source."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "emma-wright",
@@ -197,7 +199,7 @@
     "email": "emma.wright@demo-cvs.local",
     "locale": "en",
     "headline": "Frontend Developer",
-    "summary": "Emma is a Frontend Developer with 10 years of experience shipping production systems. Strong hands-on background with React, TypeScript, CSS, Vite, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in London, UK.",
+    "summary": "Accomplished Frontend Developer with 10 years of experience architecting scalable production systems. Expert in React, TypeScript, and modern tooling, with a proven track record of driving technical strategy and cross-functional collaboration. Passionate about delivering high-performance, accessible user interfaces that drive measurable business impact.",
     "location": "London, UK",
     "skills": [
       "React",
@@ -221,10 +223,10 @@
         "start": "2021",
         "end": "Present",
         "bullets": [
-          "Built design system in React 19",
-          "Improved Core Web Vitals by 30%",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with React"
+          "Engineered a comprehensive design system using React 19 to standardize UI components and accelerate development velocity.",
+          "Optimized frontend performance, resulting in a 30% improvement in Core Web Vitals through strategic refactoring.",
+          "Authored technical runbooks and architectural decision records to streamline onboarding and maintain system integrity.",
+          "Reduced deployment cycles by implementing automated CI/CD workflows and custom React-based tooling."
         ],
         "location": "London, UK"
       },
@@ -235,10 +237,10 @@
         "start": "2018",
         "end": "2020",
         "bullets": [
-          "Partnered with product to ship incremental value using React",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with React"
+          "Collaborated with product stakeholders to deliver high-impact features using React, ensuring alignment with user requirements.",
+          "Elevated codebase maintainability by establishing rigorous code review standards and expanding automated test coverage.",
+          "Formalized team documentation processes, creating centralized technical guides for complex system modules.",
+          "Increased team efficiency by automating repetitive development tasks and optimizing the React build pipeline."
         ]
       },
       {
@@ -248,10 +250,10 @@
         "start": "2014",
         "end": "2017",
         "bullets": [
-          "Partnered with product to ship incremental value using React",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with React"
+          "Developed and deployed scalable web features in React, contributing to the successful delivery of core product milestones.",
+          "Enhanced software reliability by integrating comprehensive unit and integration testing suites.",
+          "Standardized development practices by documenting technical workflows and troubleshooting procedures for the engineering team.",
+          "Streamlined the development lifecycle by introducing automated scripts that reduced manual overhead in React projects."
         ]
       }
     ],
@@ -260,13 +262,13 @@
         "degree": "BSc Computer Science",
         "institution": "University of Manchester",
         "year": "2020",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Computer Science with a distinction-level capstone project focused on systems and data architecture."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2021",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course to stay current with industry-standard frontend technologies and best practices."
       }
     ],
     "phone": "+1 (555) 6095-8013",
@@ -274,17 +276,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with React for team metrics."
+        "description": "Developed a lightweight React-based dashboard and ETL pipeline to visualize and track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on React patterns."
+        "description": "Maintained an open-source utility library dedicated to advancing reusable React design patterns and component logic."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "lucia-fernandez",
@@ -292,7 +295,7 @@
     "email": "lucia.fernandez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrolladora Full Stack",
-    "summary": "Lucía es desarrolladora full stack con 4 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con JavaScript, Node.js, React, MongoDB. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
+    "summary": "Desarrolladora Full Stack con 4 años de experiencia en el ciclo de vida completo de productos digitales. Especialista en arquitecturas escalables utilizando JavaScript, Node.js, React y MongoDB para resolver problemas complejos de negocio. Enfocada en la excelencia técnica y la colaboración ágil desde Barcelona.",
     "location": "Barcelona, España",
     "skills": [
       "JavaScript",
@@ -318,10 +321,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Desarrolló APIs GraphQL",
-          "Implementó CI/CD con GitHub Actions",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con JavaScript"
+          "Diseñé y desplegué APIs robustas con GraphQL, optimizando la comunicación entre el frontend y los servicios de backend.",
+          "Arquitecté pipelines de CI/CD mediante GitHub Actions, logrando una integración continua eficiente y despliegues más seguros.",
+          "Establecí estándares de documentación técnica que facilitaron la incorporación de nuevos miembros y la trazabilidad de decisiones.",
+          "Implementé scripts de automatización en JavaScript que redujeron los tiempos de despliegue en un 20%."
         ],
         "location": "Barcelona, España"
       },
@@ -332,10 +335,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando JavaScript",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con JavaScript"
+          "Alineé el desarrollo técnico con los objetivos de producto, priorizando funcionalidades críticas mediante el uso de JavaScript.",
+          "Elevé los estándares de calidad del código mediante la implementación de revisiones por pares y un robusto set de pruebas automatizadas.",
+          "Creé manuales técnicos y guías de arquitectura para estandarizar los procesos de desarrollo del equipo.",
+          "Optimicé flujos de trabajo internos mediante herramientas de automatización, mejorando la velocidad de entrega del equipo."
         ]
       },
       {
@@ -345,10 +348,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando JavaScript",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con JavaScript"
+          "Participé activamente en la planificación de sprints, traduciendo requerimientos de negocio en soluciones funcionales con JavaScript.",
+          "Refactoricé componentes críticos para mejorar la mantenibilidad y reducir la deuda técnica del proyecto.",
+          "Redacté documentación técnica detallada para asegurar la transferencia de conocimiento dentro del equipo de ingeniería.",
+          "Desarrollé herramientas de automatización que agilizaron las tareas repetitivas del ciclo de desarrollo."
         ]
       }
     ],
@@ -357,13 +360,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "Universitat de Barcelona (UB)",
         "year": "2019",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática por la Universitat de Barcelona (UB) con mención destacada en el proyecto final."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2020",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas en el stack actual."
       }
     ],
     "phone": "+34 634578639",
@@ -371,17 +374,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con JavaScript para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros con JavaScript para la visualización de métricas de rendimiento del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en JavaScript."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar procesos de desarrollo con JavaScript."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "marcus-chen",
@@ -389,7 +393,7 @@
     "email": "marcus.chen@demo-cvs.local",
     "locale": "en",
     "headline": "DevOps Engineer",
-    "summary": "Marcus is a DevOps Engineer with 4 years of experience shipping production systems. Strong hands-on background with Kubernetes, Terraform, Go, AWS, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Berlin, Germany.",
+    "summary": "Marcus is a DevOps Engineer with 4 years of experience architecting and scaling production-grade infrastructure. He specializes in optimizing CI/CD pipelines and cloud-native environments using Kubernetes, Terraform, and AWS to drive measurable operational efficiency.",
     "location": "Berlin, Germany",
     "skills": [
       "Kubernetes",
@@ -414,10 +418,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Managed EKS clusters for 50+ services",
-          "Reduced deploy time by 60%",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Kubernetes"
+          "Orchestrated EKS clusters supporting 50+ microservices, ensuring high availability and seamless scaling.",
+          "Optimized CI/CD pipelines to reduce deployment lead times by 60% through strategic automation.",
+          "Standardized infrastructure operations by authoring comprehensive technical runbooks and architectural decision records.",
+          "Accelerated software delivery cycles by implementing Helm charts and automated Kubernetes workflows."
         ],
         "location": "Berlin, Germany"
       },
@@ -428,10 +432,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Partnered with product to ship incremental value using Kubernetes",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Kubernetes"
+          "Collaborated with cross-functional product teams to deploy incremental features within a containerized Kubernetes environment.",
+          "Elevated codebase reliability by establishing rigorous peer review processes and integrating automated testing suites.",
+          "Maintained system stability by documenting critical infrastructure configurations and incident response procedures.",
+          "Streamlined development operations by automating repetitive deployment tasks using Linux-based scripting."
         ]
       },
       {
@@ -441,10 +445,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Partnered with product to ship incremental value using Kubernetes",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Kubernetes"
+          "Supported product development lifecycles by managing containerized environments and Kubernetes cluster resources.",
+          "Enhanced software quality by participating in code reviews and implementing automated unit testing frameworks.",
+          "Contributed to team knowledge sharing by documenting system architecture and operational best practices.",
+          "Improved deployment velocity by automating manual configuration workflows within the development pipeline."
         ]
       }
     ],
@@ -453,13 +457,13 @@
         "degree": "BSc Information Systems",
         "institution": "MIT",
         "year": "2017",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Information Systems from MIT in 2017, graduating with distinction on a capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2018",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course in 2018 to advance technical proficiency in modern cloud-native stacks."
       }
     ],
     "phone": "+1 (555) 5764-6537",
@@ -467,18 +471,19 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Kubernetes for team metrics."
+        "description": "Developed a lightweight ETL pipeline and monitoring dashboard using Kubernetes to visualize team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Kubernetes patterns."
+        "description": "Maintained an open-source utility library focused on simplifying complex Kubernetes deployment patterns."
       }
     ],
     "certifications": [
       "CKA (Certified Kubernetes Administrator)",
       "HashiCorp Terraform Associate"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   },
   {
     "slug": "ana-torres",
@@ -486,7 +491,7 @@
     "email": "ana.torres@demo-cvs.local",
     "locale": "es",
     "headline": "QA Engineer",
-    "summary": "Ana es qa engineer con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Selenium, Cypress, Python, Jira. Busca roles con impacto técnico y colaboración cercana con negocio desde Valencia, España.",
+    "summary": "QA Engineer con 3 años de trayectoria en entornos tecnológicos dinámicos. Especialista en la implementación de estrategias de automatización mediante Python, Cypress y Selenium para optimizar la calidad del software.",
     "location": "Valencia, España",
     "skills": [
       "Selenium",
@@ -511,10 +516,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Automatizó tests E2E con Cypress",
-          "Definió estrategia de testing en Python",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Selenium"
+          "Desarrollé y mantuve suites de pruebas E2E utilizando Cypress para asegurar la estabilidad del producto.",
+          "Diseñé la estrategia de testing automatizado empleando Python, mejorando la cobertura de pruebas en un 30%.",
+          "Estandaricé la documentación técnica y los flujos de trabajo, facilitando la transferencia de conocimiento en el equipo.",
+          "Optimicé los ciclos de despliegue mediante la integración de scripts de Selenium en pipelines de CI/CD."
         ],
         "location": "Valencia, España"
       },
@@ -525,10 +530,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Selenium",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Selenium"
+          "Coordiné con el equipo de producto la priorización de entregas críticas mediante el uso de Selenium.",
+          "Elevé los estándares de calidad del código a través de revisiones técnicas y la ejecución de pruebas automatizadas.",
+          "Establecí protocolos de documentación para registrar decisiones de arquitectura y procesos de QA.",
+          "Aceleré el time-to-market mediante la automatización de casos de prueba recurrentes con Selenium."
         ]
       },
       {
@@ -538,10 +543,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Selenium",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Selenium"
+          "Brindé soporte técnico especializado colaborando estrechamente con producto para agilizar la resolución de incidencias.",
+          "Implementé mejoras en la calidad del software mediante la ejecución sistemática de pruebas y revisiones de código.",
+          "Gestioné la documentación técnica de los procesos de soporte para optimizar la eficiencia operativa.",
+          "Contribuí a la reducción de tiempos de entrega mediante la automatización de tareas repetitivas con Selenium."
         ]
       }
     ],
@@ -550,13 +555,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "UPC",
         "year": "2018",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática por la UPC con mención destacada en el proyecto final y especialización en sistemas."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2019",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar competencias técnicas en el stack actual."
       }
     ],
     "phone": "+34 600375889",
@@ -564,17 +569,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Selenium para métricas de equipo."
+        "description": "Desarrollo de un dashboard de métricas y procesos ETL ligeros utilizando Selenium para el seguimiento del rendimiento del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Selenium."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la automatización con Selenium."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "david-kumar",
@@ -582,7 +588,7 @@
     "email": "david.kumar@demo-cvs.local",
     "locale": "en",
     "headline": "Machine Learning Engineer",
-    "summary": "David is a Machine Learning Engineer with 5 years of experience shipping production systems. Strong hands-on background with Python, PyTorch, MLflow, Kubernetes, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in San Francisco, USA.",
+    "summary": "Machine Learning Engineer with 5 years of experience architecting and deploying scalable production systems. Proven expertise in PyTorch, Kubernetes, and MLflow, with a focus on driving measurable business impact through end-to-end model lifecycle management.",
     "location": "San Francisco, USA",
     "skills": [
       "Python",
@@ -607,10 +613,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Deployed recommendation models serving 1M users",
-          "Built feature store in Python",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Engineered and deployed high-throughput recommendation models serving over 1M active users.",
+          "Architected a robust feature store using Python to streamline data retrieval for real-time inference.",
+          "Standardized engineering practices by authoring comprehensive technical runbooks and architectural decision records.",
+          "Optimized CI/CD pipelines with Python-based automation, reducing model deployment lead times by 30%."
         ],
         "location": "San Francisco, USA"
       },
@@ -621,10 +627,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Collaborated with product stakeholders to translate business requirements into high-impact Python data solutions.",
+          "Enforced rigorous code quality standards through peer reviews and the implementation of automated testing suites.",
+          "Developed internal documentation and knowledge-sharing resources to improve team onboarding and system transparency.",
+          "Streamlined development workflows by automating repetitive data processing tasks, significantly increasing team velocity."
         ]
       },
       {
@@ -634,10 +640,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Contributed to cross-functional product initiatives by developing data-driven features using Python.",
+          "Refactored legacy codebases to improve maintainability and integrated automated testing to ensure system reliability.",
+          "Maintained detailed technical documentation to support research reproducibility and team collaboration.",
+          "Automated manual data extraction workflows, resulting in faster turnaround times for research deliverables."
         ]
       }
     ],
@@ -646,13 +652,13 @@
         "degree": "MSc Artificial Intelligence",
         "institution": "Stanford University",
         "year": "2019",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Completed MSc in Artificial Intelligence with a distinction-awarded capstone project and advanced coursework in systems and data."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2020",
-        "details": "Continuing education aligned with current stack."
+        "details": "Engaged in professional specialization coursework to maintain technical proficiency with modern industry-standard tools."
       }
     ],
     "phone": "+1 (555) 6371-2338",
@@ -660,18 +666,19 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+        "description": "Developed a lightweight ETL pipeline and interactive dashboard using Python to track and visualize key team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Python patterns."
+        "description": "Maintained an open-source utility library focused on optimizing Python design patterns and developer productivity."
       }
     ],
     "certifications": [
       "Deep Learning Specialization",
       "AWS ML Specialty"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "sofia-ruiz",
@@ -679,7 +686,7 @@
     "email": "sofia.ruiz@demo-cvs.local",
     "locale": "es",
     "headline": "Product Manager",
-    "summary": "Sofía es product manager con 5 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Product Strategy, Agile, Figma, Analytics. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
+    "summary": "Product Manager con 5 años de trayectoria en el desarrollo de soluciones tecnológicas escalables. Experta en definir Product Strategy y metodologías Agile para optimizar el ciclo de vida del producto mediante Analytics y Figma. Enfocada en generar impacto técnico y alinear objetivos de negocio en entornos colaborativos.",
     "location": "Madrid, España",
     "skills": [
       "Product Strategy",
@@ -705,10 +712,10 @@
         "start": "2017",
         "end": "Present",
         "bullets": [
-          "Lanzó 3 productos B2B",
-          "Coordinó equipos de 15 ingenieros",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+          "Lideré el lanzamiento integral de 3 productos B2B, gestionando el ciclo completo desde la concepción hasta la salida al mercado.",
+          "Dirigí equipos multidisciplinares de 15 ingenieros, fomentando una cultura de alta productividad y alineación técnica.",
+          "Estandaricé la documentación de procesos y decisiones arquitectónicas en Jira, mejorando la trazabilidad y el conocimiento compartido.",
+          "Optimicé el Product Strategy para implementar automatizaciones que redujeron significativamente los tiempos de entrega del equipo."
         ],
         "location": "Madrid, España"
       },
@@ -719,10 +726,10 @@
         "start": "2014",
         "end": "2016",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Product Strategy",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+          "Prioricé el backlog de producto mediante el uso de Product Strategy, asegurando la entrega de valor constante a los usuarios finales.",
+          "Impulsé la calidad del software mediante la implementación de revisiones de código y protocolos de pruebas automatizadas.",
+          "Gestioné la documentación técnica y funcional, facilitando la comunicación efectiva entre los equipos de desarrollo y negocio.",
+          "Ejecuté mejoras en los flujos de trabajo mediante automatización, logrando una mayor eficiencia operativa en el desarrollo de producto."
         ]
       },
       {
@@ -732,10 +739,10 @@
         "start": "2010",
         "end": "2013",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Product Strategy",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+          "Colaboré estrechamente con el equipo de producto para definir prioridades estratégicas basadas en el análisis de datos.",
+          "Supervisé la calidad técnica de los entregables mediante revisiones sistemáticas y la integración de pruebas automatizadas.",
+          "Desarrollé documentación técnica detallada para estandarizar los procesos internos y las decisiones de diseño.",
+          "Apliqué principios de Product Strategy para automatizar tareas recurrentes, optimizando los tiempos de entrega del departamento."
         ]
       }
     ],
@@ -744,13 +751,13 @@
         "degree": "MBA",
         "institution": "IE Business School",
         "year": "2016",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el MBA con una calificación destacada en el proyecto final, especializándome en sistemas de información y análisis de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2017",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación continua en plataformas digitales para mantener mis competencias técnicas alineadas con el stack actual."
       }
     ],
     "phone": "+34 652603515",
@@ -758,17 +765,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Product Strategy para métricas de equipo."
+        "description": "Desarrollo de un dashboard y procesos ETL ligeros para centralizar métricas de equipo bajo una estrategia de producto definida."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Product Strategy."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto, aplicando metodologías de Product Strategy para su escalabilidad."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "james-oconnor",
@@ -776,7 +784,7 @@
     "email": "james.oconnor@demo-cvs.local",
     "locale": "en",
     "headline": "Java Backend Developer",
-    "summary": "James is a Java Backend Developer with 3 years of experience shipping production systems. Strong hands-on background with Java, Spring Boot, Kafka, PostgreSQL, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Dublin, Ireland.",
+    "summary": "Results-driven Java Backend Developer with 3 years of experience building scalable production systems. Expert in leveraging Spring Boot, Kafka, and PostgreSQL to deliver high-performance solutions through cross-functional collaboration. Committed to driving technical ownership and measurable engineering impact.",
     "location": "Dublin, Ireland",
     "skills": [
       "Java",
@@ -800,10 +808,10 @@
         "start": "2015",
         "end": "Present",
         "bullets": [
-          "Architected payment processing system",
-          "Mentored junior developers",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Java"
+          "Architected a high-throughput payment processing system, ensuring 99.9% uptime for critical financial transactions.",
+          "Spearheaded mentorship initiatives for junior developers, fostering a culture of technical excellence and code quality.",
+          "Standardized engineering documentation by creating comprehensive technical runbooks and architectural decision records.",
+          "Optimized CI/CD pipelines using Java-based automation, resulting in a 30% reduction in software delivery lead times."
         ],
         "location": "Dublin, Ireland"
       },
@@ -814,10 +822,10 @@
         "start": "2012",
         "end": "2014",
         "bullets": [
-          "Partnered with product to ship incremental value using Java",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Java"
+          "Collaborated with product stakeholders to translate business requirements into robust, scalable Java features.",
+          "Enforced rigorous code quality standards through peer reviews and the implementation of automated unit and integration testing.",
+          "Authored detailed technical specifications and system documentation to streamline onboarding and maintenance.",
+          "Automated repetitive development workflows, significantly accelerating the deployment cycle for core services."
         ]
       },
       {
@@ -827,10 +835,10 @@
         "start": "2008",
         "end": "2011",
         "bullets": [
-          "Partnered with product to ship incremental value using Java",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Java"
+          "Contributed to the full software development lifecycle, delivering incremental value in a fast-paced Java environment.",
+          "Participated in active code reviews and test-driven development to minimize production defects.",
+          "Maintained internal knowledge bases and technical runbooks to support team operational efficiency.",
+          "Streamlined development processes by automating manual tasks, improving overall team productivity."
         ]
       }
     ],
@@ -839,13 +847,13 @@
         "degree": "BSc Software Engineering",
         "institution": "Trinity College Dublin",
         "year": "2014",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Software Engineering with distinction for a capstone project focused on complex data systems."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2015",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed professional specialization coursework to maintain proficiency in modern backend development stacks."
       }
     ],
     "phone": "+1 (555) 6621-8088",
@@ -853,17 +861,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Java for team metrics."
+        "description": "Developed a lightweight ETL pipeline and dashboard using Java to visualize and track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Java patterns."
+        "description": "Maintained an open-source utility library dedicated to implementing clean Java design patterns."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "elena-vidal",
@@ -871,7 +880,7 @@
     "email": "elena.vidal@demo-cvs.local",
     "locale": "es",
     "headline": "UX/UI Designer",
-    "summary": "Elena es ux/ui designer con 7 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Figma, Sketch, Prototyping, User Research. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
+    "summary": "Diseñadora UX/UI con 7 años de trayectoria en entornos tecnológicos y de producto. Especialista en la creación de soluciones centradas en el usuario mediante Figma, Sketch y metodologías de investigación. Enfocada en generar impacto técnico y estratégico a través de la colaboración interdisciplinar.",
     "location": "Barcelona, España",
     "skills": [
       "Figma",
@@ -896,10 +905,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Rediseñó app con 500K usuarios",
-          "Creó design system corporativo",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Figma"
+          "Lideré el rediseño integral de una aplicación móvil, optimizando la experiencia para una base de 500.000 usuarios activos.",
+          "Desarrollé y escalé un sistema de diseño corporativo que unificó la identidad visual y mejoró la consistencia en todos los productos.",
+          "Establecí una documentación técnica rigurosa para estandarizar los procesos de diseño y facilitar la toma de decisiones del equipo.",
+          "Implementé flujos de trabajo automatizados en Figma, logrando una reducción significativa en los tiempos de entrega de los sprints."
         ],
         "location": "Barcelona, España"
       },
@@ -910,10 +919,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Figma",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Figma"
+          "Colaboré estrechamente con el equipo de producto para definir prioridades y ejecutar entregables de alta fidelidad en Figma.",
+          "Elevé los estándares de calidad mediante la revisión sistemática de componentes y la integración de pruebas de usabilidad.",
+          "Gestioné la documentación de flujos de trabajo para asegurar la escalabilidad y el mantenimiento de los activos digitales.",
+          "Optimicé la eficiencia operativa del equipo mediante la automatización de tareas repetitivas dentro del entorno de diseño."
         ]
       },
       {
@@ -923,10 +932,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Figma",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Figma"
+          "Apoyé en la definición de requisitos de producto, utilizando Figma para prototipar soluciones rápidas y efectivas.",
+          "Participé activamente en la mejora de la calidad del código mediante revisiones técnicas y pruebas automatizadas de interfaz.",
+          "Contribuí a la creación de guías de estilo y documentación técnica para alinear los entregables con los objetivos del proyecto.",
+          "Agilicé los ciclos de diseño mediante la implementación de herramientas de automatización, mejorando la productividad del equipo."
         ]
       }
     ],
@@ -935,13 +944,13 @@
         "degree": "Grado en Diseño Digital",
         "institution": "UB",
         "year": "2017",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Diseño Digital por la UB con una calificación destacada en el proyecto final y formación en sistemas y datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2018",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack actual."
       }
     ],
     "phone": "+34 674354407",
@@ -949,17 +958,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Figma para métricas de equipo."
+        "description": "Desarrollo de un dashboard y ETL ligero en Figma para la visualización y seguimiento de métricas clave del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Figma."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar flujos de trabajo en Figma."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   },
   {
     "slug": "ryan-patel",
@@ -967,7 +977,7 @@
     "email": "ryan.patel@demo-cvs.local",
     "locale": "en",
     "headline": "Python Developer",
-    "summary": "Ryan is a Python Developer with 10 years of experience shipping production systems. Strong hands-on background with Python, Django, Celery, Redis, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Toronto, Canada.",
+    "summary": "Accomplished Python Developer with 10 years of experience architecting and scaling production-grade systems. Proven expertise in Django, Celery, and Redis, with a focus on driving technical ownership and measurable operational efficiency. Based in Toronto, Canada, seeking to leverage deep backend proficiency to deliver high-impact software solutions.",
     "location": "Toronto, Canada",
     "skills": [
       "Python",
@@ -991,10 +1001,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Automated reporting pipelines in Python",
-          "Built internal tools with Django",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Engineered high-throughput reporting pipelines using Python, reducing manual data processing time by 40%.",
+          "Developed and maintained scalable internal administrative tools leveraging the Django framework.",
+          "Standardized engineering practices by authoring comprehensive technical documentation and operational runbooks.",
+          "Optimized CI/CD workflows through custom Python automation, accelerating feature delivery cycles."
         ],
         "location": "Toronto, Canada"
       },
@@ -1005,10 +1015,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Collaborated with cross-functional product teams to deploy incremental backend features using Python.",
+          "Enforced rigorous code quality standards through peer reviews and the implementation of automated testing suites.",
+          "Architected system documentation and troubleshooting guides to streamline team onboarding and maintenance.",
+          "Refactored legacy scripts into modular Python services, significantly reducing deployment bottlenecks."
         ]
       },
       {
@@ -1018,10 +1028,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Assisted in the development of core product features by contributing clean, maintainable Python code.",
+          "Supported the QA lifecycle by writing and executing automated test cases to ensure system stability.",
+          "Contributed to technical knowledge bases by documenting system architecture and internal development processes.",
+          "Streamlined repetitive development tasks by creating Bash and Python-based automation utilities."
         ]
       }
     ],
@@ -1030,13 +1040,13 @@
         "degree": "BSc Computer Science",
         "institution": "University of Toronto",
         "year": "2018",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Computer Science with a focus on systems architecture and data structures."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2019",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed professional specialization coursework to stay current with modern backend development stacks."
       }
     ],
     "phone": "+1 (555) 3774-9110",
@@ -1044,17 +1054,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+        "description": "Designed a lightweight ETL pipeline and dashboard using Python to visualize real-time team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Python patterns."
+        "description": "Maintained an open-source utility library dedicated to implementing efficient Python design patterns."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "maria-santos",
@@ -1062,7 +1073,7 @@
     "email": "maria.santos@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera de Software",
-    "summary": "María es ingeniera de software con 10 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Flask, MySQL, Git. Busca roles con impacto técnico y colaboración cercana con negocio desde Sevilla, España.",
+    "summary": "Ingeniera de software con una década de trayectoria en el desarrollo de productos tecnológicos escalables. Especialista en la creación de soluciones robustas mediante Python, Flask y arquitecturas de microservicios, con un enfoque orientado a la eficiencia operativa y la colaboración estratégica.",
     "location": "Sevilla, España",
     "skills": [
       "Python",
@@ -1086,10 +1097,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Desarrolló APIs REST en Python/Flask",
-          "Migró monolito a microservicios",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Diseño y despliegue de APIs REST de alto rendimiento utilizando Python y Flask para optimizar la comunicación entre servicios.",
+          "Liderazgo técnico en la migración de una arquitectura monolítica hacia un ecosistema de microservicios, mejorando la escalabilidad del sistema.",
+          "Establecimiento de estándares de documentación técnica para asegurar la transferencia de conocimiento y la alineación del equipo de desarrollo.",
+          "Implementación de scripts de automatización en Python que redujeron significativamente los ciclos de entrega y el tiempo de despliegue."
         ],
         "location": "Sevilla, España"
       },
@@ -1100,10 +1111,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Coordinación directa con el equipo de producto para definir prioridades y ejecutar entregas incrementales basadas en Python.",
+          "Elevación de los estándares de calidad mediante la implementación de revisiones de código rigurosas y suites de pruebas automatizadas.",
+          "Creación de guías técnicas y documentación de arquitectura para facilitar el mantenimiento de los sistemas desarrollados.",
+          "Optimización de flujos de trabajo mediante la automatización de tareas repetitivas, logrando una mayor agilidad en el ciclo de vida del software."
         ]
       },
       {
@@ -1113,10 +1124,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Participación activa en el ciclo de vida de desarrollo de producto, aplicando Python para resolver requerimientos técnicos específicos.",
+          "Contribución a la mejora de la base de código mediante la ejecución de pruebas unitarias y revisiones colaborativas.",
+          "Redacción de documentación técnica detallada para estandarizar los procesos internos del equipo de ingeniería.",
+          "Desarrollo de herramientas de automatización en Python que permitieron agilizar los tiempos de entrega de los proyectos asignados."
         ]
       }
     ],
@@ -1125,13 +1136,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "UPM",
         "year": "2019",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática por la UPM, destacando en el proyecto final y en el área de sistemas y datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2020",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
       }
     ],
     "phone": "+34 641455202",
@@ -1139,17 +1150,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización y análisis de métricas de equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes mediante Python."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "oliver-brown",
@@ -1157,7 +1169,7 @@
     "email": "oliver.brown@demo-cvs.local",
     "locale": "en",
     "headline": "Security Engineer",
-    "summary": "Oliver is a Security Engineer with 9 years of experience shipping production systems. Strong hands-on background with Security, OWASP, Python, Burp Suite, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Edinburgh, UK.",
+    "summary": "Security Engineer with 9 years of experience designing and securing production-grade systems. Expert in leveraging Python, OWASP standards, and threat modeling to drive technical ownership and measurable security improvements. Proven track record of collaborating across engineering teams to integrate robust security practices into the SDLC.",
     "location": "Edinburgh, UK",
     "skills": [
       "Security",
@@ -1181,10 +1193,10 @@
         "start": "2017",
         "end": "Present",
         "bullets": [
-          "Conducted security audits for fintech clients",
-          "Built Python tooling for vulnerability scans",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Security"
+          "Led comprehensive security audits for high-stakes fintech clients, identifying and mitigating critical vulnerabilities.",
+          "Engineered custom Python-based automation tools to streamline vulnerability scanning and reduce manual overhead.",
+          "Authored technical runbooks and architectural documentation to standardize incident response and security protocols.",
+          "Optimized security workflows by integrating automated tooling, resulting in a significant reduction in deployment lead times."
         ],
         "location": "Edinburgh, UK"
       },
@@ -1195,10 +1207,10 @@
         "start": "2014",
         "end": "2016",
         "bullets": [
-          "Partnered with product to ship incremental value using Security",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Security"
+          "Collaborated with product teams to embed Security best practices directly into the development lifecycle.",
+          "Enhanced codebase integrity by implementing rigorous security-focused code reviews and automated testing suites.",
+          "Developed internal knowledge bases and technical documentation to improve team-wide security awareness.",
+          "Automated repetitive security tasks using Python, accelerating delivery cycles while maintaining high compliance standards."
         ]
       },
       {
@@ -1208,10 +1220,10 @@
         "start": "2010",
         "end": "2013",
         "bullets": [
-          "Partnered with product to ship incremental value using Security",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Security"
+          "Monitored network traffic and system logs to identify potential threats and maintain organizational security posture.",
+          "Refined incident response procedures through detailed analysis and documentation of security events.",
+          "Supported cross-functional teams by providing actionable security insights and technical guidance.",
+          "Streamlined operational workflows by automating routine security checks and reporting processes."
         ]
       }
     ],
@@ -1220,13 +1232,13 @@
         "degree": "MSc Cybersecurity",
         "institution": "University of Edinburgh",
         "year": "2016",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Completed an MSc in Cybersecurity at the University of Edinburgh with a distinction-level capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2017",
-        "details": "Continuing education aligned with current stack."
+        "details": "Engaged in professional specialization coursework to maintain expertise in evolving security technologies."
       }
     ],
     "phone": "+1 (555) 3071-1867",
@@ -1234,18 +1246,19 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Security for team metrics."
+        "description": "Developed a lightweight ETL pipeline and dashboard using Security principles to visualize team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Security patterns."
+        "description": "Maintained an open-source utility library dedicated to implementing standardized Security patterns."
       }
     ],
     "certifications": [
       "CompTIA Security+",
       "OSCP (in progress)"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "paula-garcia",
@@ -1253,7 +1266,7 @@
     "email": "paula.garcia@demo-cvs.local",
     "locale": "es",
     "headline": "Data Analyst",
-    "summary": "Paula es data analyst con 5 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con SQL, Tableau, Excel, R. Busca roles con impacto técnico y colaboración cercana con negocio desde Bilbao, España.",
+    "summary": "Data Analyst con 5 años de trayectoria en entornos tecnológicos, especializada en transformar datos complejos en decisiones estratégicas. Experta en el ciclo completo de datos mediante SQL, Tableau, R y Python, con un enfoque orientado a maximizar el impacto en el negocio.",
     "location": "Bilbao, España",
     "skills": [
       "SQL",
@@ -1278,10 +1291,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Creó dashboards de ventas en Tableau",
-          "Automatizó informes semanales",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con SQL"
+          "Diseñé y desplegué dashboards interactivos en Tableau que optimizaron la visibilidad de las métricas de ventas.",
+          "Desarrollé scripts de automatización para informes semanales, eliminando tareas manuales y reduciendo el margen de error.",
+          "Establecí una base de conocimiento técnica mediante la documentación exhaustiva de procesos y arquitecturas de datos.",
+          "Optimicé flujos de trabajo mediante consultas SQL avanzadas, logrando una reducción significativa en los tiempos de entrega de reportes."
         ],
         "location": "Bilbao, España"
       },
@@ -1292,10 +1305,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando SQL",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con SQL"
+          "Colaboré estrechamente con el equipo de producto para definir KPIs y priorizar entregas basadas en análisis SQL.",
+          "Implementé revisiones de código y pruebas automatizadas para elevar los estándares de calidad y fiabilidad de los datos.",
+          "Estandaricé la documentación técnica del equipo para facilitar la escalabilidad y el mantenimiento de los proyectos.",
+          "Agilicé la extracción y procesamiento de datos mediante la automatización de consultas SQL recurrentes."
         ]
       },
       {
@@ -1305,10 +1318,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando SQL",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con SQL"
+          "Soporté la toma de decisiones de producto mediante la extracción y análisis de datos críticos utilizando SQL.",
+          "Ejecuté auditorías de calidad de código y pruebas unitarias para asegurar la integridad de los reportes generados.",
+          "Redacté guías técnicas y documentación de procesos para mejorar la eficiencia operativa del equipo.",
+          "Implementé soluciones de automatización con SQL que aceleraron la entrega de insights clave para el negocio."
         ]
       }
     ],
@@ -1317,13 +1330,13 @@
         "degree": "Grado en Estadística",
         "institution": "UPV/EHU",
         "year": "2017",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Estadística en la UPV/EHU con mención destacada en el proyecto final y formación avanzada en sistemas."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2018",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
       }
     ],
     "phone": "+34 631161308",
@@ -1331,17 +1344,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con SQL para métricas de equipo."
+        "description": "Desarrollo de un dashboard integral y procesos ETL ligeros en SQL para el seguimiento automatizado de métricas de equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en SQL."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la optimización de consultas SQL."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "nina-andersson",
@@ -1349,7 +1363,7 @@
     "email": "nina.andersson@demo-cvs.local",
     "locale": "en",
     "headline": "iOS Developer",
-    "summary": "Nina is a iOS Developer with 5 years of experience shipping production systems. Strong hands-on background with Swift, SwiftUI, Xcode, Core Data, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Stockholm, Sweden.",
+    "summary": "iOS Developer with 5 years of experience building and scaling high-performance production applications. Expert in leveraging Swift, SwiftUI, and Combine to deliver seamless user experiences while driving technical strategy and cross-functional collaboration.",
     "location": "Stockholm, Sweden",
     "skills": [
       "Swift",
@@ -1374,10 +1388,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Shipped 4 apps to App Store",
-          "Led SwiftUI migration",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Swift"
+          "Successfully deployed 4 consumer-facing applications to the App Store, maintaining high user ratings.",
+          "Spearheaded the architectural migration from UIKit to SwiftUI, modernizing the codebase and improving UI responsiveness.",
+          "Authored comprehensive technical documentation and operational runbooks to streamline onboarding and knowledge sharing.",
+          "Optimized CI/CD pipelines using Swift-based automation, resulting in a significant reduction in build and deployment cycle times."
         ],
         "location": "Stockholm, Sweden"
       },
@@ -1388,10 +1402,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Partnered with product to ship incremental value using Swift",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Swift"
+          "Collaborated closely with product managers to define requirements and deliver incremental feature updates using Swift.",
+          "Enforced rigorous code quality standards through peer reviews and the implementation of automated unit testing suites.",
+          "Established standardized technical documentation practices to ensure long-term maintainability of mobile features.",
+          "Engineered custom automation scripts to eliminate manual overhead in the development workflow."
         ]
       },
       {
@@ -1401,10 +1415,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Partnered with product to ship incremental value using Swift",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Swift"
+          "Contributed to the end-to-end development lifecycle, delivering iterative improvements to core product features.",
+          "Participated in active code reviews to identify bugs early and promote best practices within the engineering team.",
+          "Maintained internal technical documentation to support team alignment and project continuity.",
+          "Developed internal tooling to automate repetitive tasks, increasing overall team development velocity."
         ]
       }
     ],
@@ -1413,13 +1427,13 @@
         "degree": "BSc Computer Science",
         "institution": "KTH Royal Institute",
         "year": "2019",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Computer Science from KTH Royal Institute in 2019, graduating with distinction on a capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2020",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course in 2020 to refine expertise in modern mobile development stacks."
       }
     ],
     "phone": "+1 (555) 0308-4329",
@@ -1427,17 +1441,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Swift for team metrics."
+        "description": "Developed a lightweight ETL and dashboard utility using Swift to visualize and track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Swift patterns."
+        "description": "Maintained an open-source utility library focused on implementing reusable and efficient Swift design patterns."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   },
   {
     "slug": "hugo-martin",
@@ -1445,7 +1460,7 @@
     "email": "hugo.martin@demo-cvs.local",
     "locale": "es",
     "headline": "SRE / Platform Engineer",
-    "summary": "Hugo es sre / platform engineer con 6 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Kubernetes, Python, Grafana, Linux. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
+    "summary": "Hugo es un SRE y Platform Engineer con 6 años de trayectoria en entornos tecnológicos de alta exigencia. Especialista en optimizar infraestructuras mediante Kubernetes, Python y herramientas de observabilidad, enfocado en maximizar la fiabilidad y la eficiencia operativa desde Barcelona.",
     "location": "Barcelona, España",
     "skills": [
       "Kubernetes",
@@ -1470,10 +1485,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Mantuvo SLA 99.95%",
-          "Escribió runbooks y herramientas en Python",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+          "Garantizó una disponibilidad del 99.95% en los servicios críticos mediante la gestión proactiva de SLO/SLA.",
+          "Desarrolló herramientas de automatización en Python y runbooks detallados para optimizar la respuesta ante incidentes.",
+          "Estandarizó la documentación técnica y los procesos de arquitectura para fomentar el conocimiento compartido en el equipo.",
+          "Aceleró el ciclo de despliegue mediante la implementación de pipelines CI/CD y la orquestación avanzada en Kubernetes."
         ],
         "location": "Barcelona, España"
       },
@@ -1484,10 +1499,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Kubernetes",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+          "Alineó la infraestructura con los objetivos de negocio mediante la priorización estratégica de entregas en Kubernetes.",
+          "Elevó los estándares de calidad del software mediante la implementación de revisiones de código y pruebas automatizadas.",
+          "Estableció guías de mejores prácticas y documentación técnica para mejorar la mantenibilidad de la plataforma.",
+          "Optimizó los tiempos de entrega de producto mediante la automatización de flujos de trabajo en entornos de contenedores."
         ]
       },
       {
@@ -1497,10 +1512,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Kubernetes",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+          "Soportó la infraestructura base colaborando estrechamente con los equipos de producto para asegurar la escalabilidad.",
+          "Implementó protocolos de pruebas automatizadas que redujeron significativamente los errores en producción.",
+          "Redactó documentación técnica exhaustiva para facilitar la operativa y el mantenimiento de los sistemas.",
+          "Automatizó tareas recurrentes de administración de sistemas, mejorando la eficiencia operativa del equipo."
         ]
       }
     ],
@@ -1509,13 +1524,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "UPC",
         "year": "2018",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuvo el Grado en Ingeniería Informática por la UPC, destacando en el proyecto final y en el área de sistemas."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2019",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completó formación especializada en plataformas online para actualizar competencias técnicas en el stack actual."
       }
     ],
     "phone": "+34 606412025",
@@ -1523,17 +1538,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Kubernetes para métricas de equipo."
+        "description": "Desarrollo de un dashboard y proceso ETL ligero sobre Kubernetes para la visualización de métricas de equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Kubernetes."
+        "description": "Creación y mantenimiento de una librería de código abierto enfocada en la automatización de tareas en Kubernetes."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "lisa-hoffman",
@@ -1541,7 +1557,7 @@
     "email": "lisa.hoffman@demo-cvs.local",
     "locale": "en",
     "headline": "Technical Writer",
-    "summary": "Lisa is a Technical Writer with 4 years of experience shipping production systems. Strong hands-on background with Technical Writing, Markdown, API Docs, Git, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Amsterdam, Netherlands.",
+    "summary": "Technical Writer with 4 years of experience specializing in production-grade documentation and developer experience. Expert in docs-as-code workflows, API documentation, and cross-functional collaboration to drive technical clarity. Seeking to leverage expertise in Markdown, Sphinx, and Docusaurus to deliver measurable impact in Amsterdam.",
     "location": "Amsterdam, Netherlands",
     "skills": [
       "Technical Writing",
@@ -1566,10 +1582,10 @@
         "start": "2016",
         "end": "Present",
         "bullets": [
-          "Documented REST APIs for 200+ endpoints",
-          "Created developer onboarding guides",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Technical Writing"
+          "Authored and maintained comprehensive documentation for 200+ REST API endpoints using OpenAPI specifications.",
+          "Designed streamlined developer onboarding guides that reduced time-to-first-call for new engineering hires.",
+          "Standardized internal knowledge management by documenting architectural decisions and operational runbooks in Confluence.",
+          "Optimized documentation delivery pipelines by implementing automated workflows, reducing manual update cycles by 30%."
         ],
         "location": "Amsterdam, Netherlands"
       },
@@ -1580,10 +1596,10 @@
         "start": "2013",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using Technical Writing",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Technical Writing"
+          "Collaborated with product managers to translate complex feature requirements into clear, user-focused technical documentation.",
+          "Enhanced documentation accuracy by integrating peer review cycles and automated validation tests into the content lifecycle.",
+          "Established a centralized repository for technical decisions, improving team alignment and reducing knowledge silos.",
+          "Refined content production workflows, resulting in faster turnaround times for technical release notes and guides."
         ]
       },
       {
@@ -1593,10 +1609,10 @@
         "start": "2009",
         "end": "2012",
         "bullets": [
-          "Partnered with product to ship incremental value using Technical Writing",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Technical Writing"
+          "Supported the documentation team in drafting technical content and maintaining internal knowledge bases.",
+          "Assisted in the review of technical specifications to ensure consistency and clarity across product documentation.",
+          "Contributed to the organization of team runbooks, ensuring critical operational procedures were accessible and up-to-date.",
+          "Streamlined documentation formatting processes, contributing to improved efficiency in content publishing."
         ]
       }
     ],
@@ -1605,13 +1621,13 @@
         "degree": "BA Communications",
         "institution": "University of Amsterdam",
         "year": "2015",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BA in Communications from the University of Amsterdam in 2015, completing a capstone project with distinction."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2016",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course via Coursera/edX in 2016 to advance technical documentation skills."
       }
     ],
     "phone": "+1 (555) 4964-0709",
@@ -1619,17 +1635,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Technical Writing for team metrics."
+        "description": "Developed an internal reporting toolkit utilizing Technical Writing principles to visualize and track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Technical Writing patterns."
+        "description": "Maintained an open-source utility library focused on establishing standardized Technical Writing patterns for developer tools."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "diego-lopez",
@@ -1637,7 +1654,7 @@
     "email": "diego.lopez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrollador Python Junior",
-    "summary": "Diego es desarrollador python junior con 9 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Git, pytest, HTML. Busca roles con impacto técnico y colaboración cercana con negocio desde Zaragoza, España.",
+    "summary": "Desarrollador Python con 9 años de trayectoria en entornos tecnológicos, especializado en la creación de soluciones escalables y eficientes. Experto en el ciclo de vida de desarrollo de software, enfocado en la colaboración multidisciplinar y la entrega de valor técnico desde Zaragoza.",
     "location": "Zaragoza, España",
     "skills": [
       "Python",
@@ -1661,10 +1678,10 @@
         "start": "2023",
         "end": "Present",
         "bullets": [
-          "Escribió tests con pytest",
-          "Contribuyó a APIs internas en Python",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Implementación de suites de pruebas unitarias robustas utilizando pytest para asegurar la estabilidad del código.",
+          "Desarrollo y mantenimiento de endpoints en APIs internas mediante FastAPI, optimizando la comunicación entre servicios.",
+          "Elaboración de documentación técnica detallada para estandarizar procesos y facilitar la integración de nuevos miembros.",
+          "Optimización de flujos de trabajo mediante scripts de automatización en Python, logrando una reducción significativa en los tiempos de despliegue."
         ],
         "location": "Zaragoza, España"
       },
@@ -1675,10 +1692,10 @@
         "start": "2020",
         "end": "2022",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Alineación técnica con el equipo de producto para definir prioridades y ejecutar entregas incrementales con Python.",
+          "Elevación de los estándares de calidad mediante revisiones de código (code reviews) y la implementación de pruebas automatizadas.",
+          "Creación de guías técnicas y documentación de arquitectura para mejorar la mantenibilidad de los sistemas.",
+          "Automatización de tareas repetitivas con Python, incrementando la eficiencia operativa del equipo de desarrollo."
         ]
       },
       {
@@ -1688,10 +1705,10 @@
         "start": "2016",
         "end": "2019",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Colaboración directa con stakeholders para traducir requerimientos de negocio en funcionalidades técnicas utilizando Python.",
+          "Refactorización de componentes críticos para mejorar la calidad del código y la cobertura de pruebas automatizadas.",
+          "Redacción de documentación técnica exhaustiva para asegurar la transferencia de conocimiento dentro del equipo.",
+          "Desarrollo de herramientas de automatización en Python que optimizaron los ciclos de entrega de software."
         ]
       }
     ],
@@ -1700,13 +1717,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "Universidad de Zaragoza",
         "year": "2023",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática con una calificación destacada en el TFG y una sólida base en sistemas y gestión de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2024",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé un curso de especialización técnica para actualizar mis competencias en el stack tecnológico actual."
       }
     ],
     "phone": "+34 691932270",
@@ -1714,17 +1731,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización de métricas de rendimiento del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar procesos mediante Python."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "sarah-mitchell",
@@ -1732,7 +1750,7 @@
     "email": "sarah.mitchell@demo-cvs.local",
     "locale": "en",
     "headline": "Engineering Manager",
-    "summary": "Sarah is a Engineering Manager with 9 years of experience shipping production systems. Strong hands-on background with Leadership, Python, System Design, Hiring, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in New York, USA.",
+    "summary": "Engineering Manager with 9 years of experience building and scaling high-performance production systems. Proven track record in technical leadership, Python architecture, and cross-functional stakeholder management to drive measurable business outcomes. Passionate about fostering engineering excellence and building high-impact teams in New York.",
     "location": "New York, USA",
     "skills": [
       "Leadership",
@@ -1756,10 +1774,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Managed team of 12 Python engineers",
-          "Delivered platform serving 10M users",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Leadership"
+          "Lead and mentor a high-performing team of 12 Python engineers, fostering a culture of technical excellence and professional growth.",
+          "Architected and scaled a core platform infrastructure supporting over 10M active users with high availability.",
+          "Standardized engineering practices by authoring comprehensive technical runbooks and architectural decision records.",
+          "Optimized development lifecycles by implementing automated workflows, resulting in a significant reduction in feature delivery time."
         ],
         "location": "New York, USA"
       },
@@ -1770,10 +1788,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Partnered with product to ship incremental value using Leadership",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Leadership"
+          "Collaborated directly with product stakeholders to define roadmaps and deliver incremental value through iterative development.",
+          "Elevated codebase reliability by establishing rigorous code review standards and expanding automated test coverage.",
+          "Formalized team knowledge sharing through the creation of centralized technical documentation and operational playbooks.",
+          "Streamlined deployment pipelines by automating manual processes, increasing overall team velocity."
         ]
       },
       {
@@ -1783,10 +1801,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using Leadership",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Leadership"
+          "Drove technical strategy and execution for key product features, aligning engineering efforts with business objectives.",
+          "Championed quality-first development by implementing automated testing frameworks and peer-review protocols.",
+          "Developed internal technical documentation to streamline onboarding and system maintenance for the engineering team.",
+          "Enhanced operational efficiency by automating repetitive development tasks and refining team workflows."
         ]
       }
     ],
@@ -1795,13 +1813,13 @@
         "degree": "MSc Computer Science",
         "institution": "Columbia University",
         "year": "2012",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Completed an MSc in Computer Science with a focus on systems and data, graduating with a distinction for the capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2013",
-        "details": "Continuing education aligned with current stack."
+        "details": "Engaged in professional specialization coursework to maintain technical proficiency with modern industry stacks."
       }
     ],
     "phone": "+1 (555) 6058-8008",
@@ -1809,17 +1827,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Leadership for team metrics."
+        "description": "Developed a lightweight ETL pipeline and visualization dashboard to track team performance metrics and operational health."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Leadership patterns."
+        "description": "Maintained an open-source utility library, focusing on implementing scalable design patterns and robust code architecture."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "ivan-petrov",
@@ -1827,7 +1846,7 @@
     "email": "ivan.petrov@demo-cvs.local",
     "locale": "en",
     "headline": "Rust Systems Programmer",
-    "summary": "Ivan is a Rust Systems Programmer with 7 years of experience shipping production systems. Strong hands-on background with Rust, C++, Linux, Networking, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Prague, Czech Republic.",
+    "summary": "Ivan Petrov is a Rust Systems Programmer with 7 years of experience architecting high-performance production systems. He specializes in Rust, C++, and Linux, with a proven track record of optimizing low-latency networking and streamlining CI/CD pipelines. He is seeking roles that offer technical ownership and the opportunity to drive measurable engineering impact.",
     "location": "Prague, Czech Republic",
     "skills": [
       "Rust",
@@ -1853,10 +1872,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Built high-throughput proxy in Rust",
-          "Optimized latency-critical paths",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Rust"
+          "Engineered a high-throughput network proxy using Rust and Tokio, significantly increasing request handling capacity.",
+          "Refactored latency-critical code paths to reduce system overhead and improve overall throughput.",
+          "Authored comprehensive technical documentation and operational runbooks to standardize team maintenance procedures.",
+          "Accelerated deployment cycles by implementing custom Rust-based automation tools within the CI/CD pipeline."
         ],
         "location": "Prague, Czech Republic"
       },
@@ -1867,10 +1886,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Partnered with product to ship incremental value using Rust",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Rust"
+          "Collaborated with product stakeholders to integrate Rust components into existing C++ systems, delivering incremental feature value.",
+          "Enforced rigorous code quality standards through detailed peer reviews and the implementation of automated testing suites.",
+          "Maintained internal technical documentation to ensure knowledge continuity across cross-functional engineering teams.",
+          "Streamlined development workflows by building internal automation scripts, resulting in faster release iterations."
         ]
       },
       {
@@ -1880,10 +1899,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Partnered with product to ship incremental value using Rust",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Rust"
+          "Assisted in the development of core system features by applying Rust programming best practices.",
+          "Contributed to the stability of the codebase through active participation in code reviews and unit testing.",
+          "Drafted technical documentation for system modules to support team onboarding and project clarity.",
+          "Automated repetitive manual tasks using Rust, reducing time-to-delivery for internal project milestones."
         ]
       }
     ],
@@ -1892,13 +1911,13 @@
         "degree": "MSc Computer Science",
         "institution": "Charles University",
         "year": "2017",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned an MSc in Computer Science with a distinction-awarded capstone project focused on systems architecture."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2018",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course to maintain technical proficiency with modern systems programming stacks."
       }
     ],
     "phone": "+1 (555) 8877-1268",
@@ -1906,17 +1925,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Rust for team metrics."
+        "description": "Developed a lightweight ETL pipeline and dashboard in Rust to visualize and track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Rust patterns."
+        "description": "Maintained an open-source utility library dedicated to demonstrating idiomatic Rust design patterns."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   },
   {
     "slug": "carmen-ortiz",
@@ -1924,7 +1944,7 @@
     "email": "carmen.ortiz@demo-cvs.local",
     "locale": "es",
     "headline": "Business Analyst",
-    "summary": "Carmen es business analyst con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Business Analysis, BPMN, SQL, Jira. Busca roles con impacto técnico y colaboración cercana con negocio desde Málaga, España.",
+    "summary": "Carmen es una Business Analyst con 3 años de trayectoria en entornos tecnológicos y de producto. Especialista en optimización de procesos mediante BPMN, SQL y herramientas de visualización, destaca por su capacidad para alinear objetivos de negocio con soluciones técnicas escalables.",
     "location": "Málaga, España",
     "skills": [
       "Business Analysis",
@@ -1949,10 +1969,10 @@
         "start": "2017",
         "end": "Present",
         "bullets": [
-          "Definió requisitos para 10+ proyectos",
-          "Facilitó workshops con stakeholders",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+          "Lideré el levantamiento de requisitos para más de 10 proyectos estratégicos, asegurando la alineación con los objetivos de negocio.",
+          "Facilité sesiones de trabajo colaborativo con stakeholders clave para definir alcances y prioridades de producto.",
+          "Estandaricé la documentación de procesos y decisiones técnicas, mejorando la transferencia de conocimiento en el equipo.",
+          "Optimicé los ciclos de entrega mediante la automatización de flujos de trabajo, aplicando metodologías de Business Analysis."
         ],
         "location": "Málaga, España"
       },
@@ -1963,10 +1983,10 @@
         "start": "2014",
         "end": "2016",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Business Analysis",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+          "Colaboré estrechamente con el equipo de producto para priorizar el backlog basándome en análisis de datos y Business Analysis.",
+          "Elevé los estándares de calidad mediante la implementación de revisiones técnicas y protocolos de pruebas automatizadas.",
+          "Gestioné la documentación técnica detallada para asegurar la trazabilidad de los procesos internos.",
+          "Reduje los tiempos operativos mediante la automatización de tareas recurrentes utilizando técnicas de Business Analysis."
         ]
       },
       {
@@ -1976,10 +1996,10 @@
         "start": "2010",
         "end": "2013",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Business Analysis",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+          "Analicé métricas de rendimiento para apoyar al equipo de producto en la toma de decisiones estratégicas.",
+          "Desarrollé pruebas de calidad y revisiones de código para garantizar la estabilidad de los entregables.",
+          "Elaboré documentación técnica exhaustiva para facilitar la escalabilidad de los sistemas.",
+          "Implementé soluciones de automatización que agilizaron los tiempos de entrega mediante el uso de Business Analysis."
         ]
       }
     ],
@@ -1988,13 +2008,13 @@
         "degree": "Grado en ADE",
         "institution": "Universidad de Málaga",
         "year": "2016",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en ADE con una calificación destacada en el proyecto final, enfocándome en sistemas de información y análisis de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2017",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
       }
     ],
     "phone": "+34 612860579",
@@ -2002,17 +2022,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Business Analysis para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros para la visualización de métricas clave del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Business Analysis."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la optimización de tareas de Business Analysis."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "tom-wilson",
@@ -2020,7 +2041,7 @@
     "email": "tom.wilson@demo-cvs.local",
     "locale": "en",
     "headline": "Cloud Architect",
-    "summary": "Tom is a Cloud Architect with 6 years of experience shipping production systems. Strong hands-on background with AWS, Python, CloudFormation, Lambda, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Chicago, USA.",
+    "summary": "Cloud Architect with 6 years of experience designing and deploying scalable production systems. Expert in leveraging AWS, Python, and IaC to drive technical ownership and measurable operational efficiency.",
     "location": "Chicago, USA",
     "skills": [
       "AWS",
@@ -2044,10 +2065,10 @@
         "start": "2016",
         "end": "Present",
         "bullets": [
-          "Designed multi-account AWS landing zone",
-          "Wrote IaC modules in Python/CDK",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with AWS"
+          "Architected a secure, multi-account AWS landing zone to support enterprise-wide scalability.",
+          "Engineered reusable infrastructure modules using Python and AWS CDK to standardize deployment patterns.",
+          "Authored comprehensive technical documentation and operational runbooks to streamline team onboarding.",
+          "Optimized cloud expenditure and accelerated delivery cycles by automating CI/CD workflows."
         ],
         "location": "Chicago, USA"
       },
@@ -2058,10 +2079,10 @@
         "start": "2013",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using AWS",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with AWS"
+          "Collaborated with product stakeholders to deliver incremental feature releases on AWS infrastructure.",
+          "Enforced high engineering standards through rigorous code reviews and the implementation of automated testing suites.",
+          "Standardized system maintenance procedures by developing detailed technical runbooks.",
+          "Reduced manual intervention in deployment pipelines by implementing automated AWS provisioning scripts."
         ]
       },
       {
@@ -2071,10 +2092,10 @@
         "start": "2009",
         "end": "2012",
         "bullets": [
-          "Partnered with product to ship incremental value using AWS",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with AWS"
+          "Integrated AWS services to support product development and enhance system reliability.",
+          "Refined codebase maintainability by establishing automated testing protocols and peer review processes.",
+          "Formalized infrastructure management practices through the creation of internal technical documentation.",
+          "Streamlined infrastructure provisioning by automating repetitive tasks within the AWS environment."
         ]
       }
     ],
@@ -2083,13 +2104,13 @@
         "degree": "BSc Information Technology",
         "institution": "University of Illinois",
         "year": "2014",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Information Technology with a focus on systems architecture and data management."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2015",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed professional specialization coursework to maintain proficiency in modern cloud technologies."
       }
     ],
     "phone": "+1 (555) 9499-8499",
@@ -2097,18 +2118,19 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with AWS for team metrics."
+        "description": "Developed a lightweight ETL pipeline and dashboard on AWS to visualize team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on AWS patterns."
+        "description": "Maintained an open-source utility library focused on simplifying common AWS architectural patterns."
       }
     ],
     "certifications": [
       "AWS Solutions Architect Associate",
       "AWS Developer Associate"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "beatriz-navarro",
@@ -2116,7 +2138,7 @@
     "email": "beatriz.navarro@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera Backend",
-    "summary": "Beatriz es ingeniera backend con 7 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, FastAPI, DDD, PostgreSQL. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
+    "summary": "Ingeniera Backend con 7 años de trayectoria en el desarrollo de sistemas escalables y entornos de producto. Especialista en la implementación de arquitecturas robustas mediante Python, FastAPI y DDD, con un enfoque orientado a la eficiencia operativa y la alineación estratégica con los objetivos de negocio.",
     "location": "Barcelona, España",
     "skills": [
       "Python",
@@ -2141,10 +2163,10 @@
         "start": "2021",
         "end": "Present",
         "bullets": [
-          "Implementó APIs de pagos en FastAPI",
-          "Diseñó arquitectura hexagonal en Python",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Desarrollo y despliegue de APIs de procesamiento de pagos de alta disponibilidad utilizando FastAPI y PostgreSQL.",
+          "Implementación de arquitectura hexagonal y principios DDD para mejorar la mantenibilidad del código en sistemas críticos.",
+          "Liderazgo en la documentación técnica y definición de estándares de arquitectura para optimizar la transferencia de conocimiento.",
+          "Optimización del ciclo de vida de desarrollo mediante la automatización de flujos de trabajo con Python, reduciendo los tiempos de entrega en un 20%."
         ],
         "location": "Barcelona, España"
       },
@@ -2155,10 +2177,10 @@
         "start": "2018",
         "end": "2020",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Colaboración directa con el equipo de producto para la priorización de funcionalidades basadas en el valor técnico y de negocio.",
+          "Elevación de los estándares de calidad mediante la implementación de revisiones de código rigurosas y suites de pruebas automatizadas.",
+          "Creación de guías técnicas y documentación de procesos para estandarizar las prácticas de desarrollo dentro del equipo.",
+          "Desarrollo de scripts de automatización en Python para agilizar tareas repetitivas y mejorar la eficiencia del despliegue."
         ]
       },
       {
@@ -2168,10 +2190,10 @@
         "start": "2014",
         "end": "2017",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Participación activa en el ciclo de vida de desarrollo de software, colaborando con producto en la definición de requisitos técnicos.",
+          "Ejecución de pruebas unitarias y de integración para asegurar la estabilidad y robustez de las aplicaciones.",
+          "Redacción de documentación técnica detallada para facilitar el mantenimiento y la escalabilidad de los sistemas.",
+          "Desarrollo de herramientas internas utilizando Python para automatizar procesos operativos y reducir la carga manual."
         ]
       }
     ],
@@ -2180,13 +2202,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "UPC",
         "year": "2020",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática por la UPC, destacando en el proyecto final y en el área de sistemas y datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2021",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
       }
     ],
     "phone": "+34 666427481",
@@ -2194,17 +2216,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización y análisis de métricas de rendimiento del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes de desarrollo en Python."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "alex-thompson",
@@ -2212,7 +2235,7 @@
     "email": "alex.thompson@demo-cvs.local",
     "locale": "en",
     "headline": "Game Developer",
-    "summary": "Alex is a Game Developer with 5 years of experience shipping production systems. Strong hands-on background with Unity, C#, Game Design, Blender, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Montreal, Canada.",
+    "summary": "Results-driven Game Developer with 5 years of experience building and shipping high-performance production systems. Expert in Unity, C#, and technical pipeline optimization with a proven track record of collaborating across cross-functional teams. Passionate about driving technical ownership and delivering measurable impact in the Montreal gaming industry.",
     "location": "Montreal, Canada",
     "skills": [
       "Unity",
@@ -2237,10 +2260,10 @@
         "start": "2019",
         "end": "Present",
         "bullets": [
-          "Released 2 mobile games with 100K+ downloads",
-          "Optimized rendering pipeline",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Unity"
+          "Engineered and launched 2 mobile titles, successfully scaling to over 100K downloads through iterative design.",
+          "Refactored the rendering pipeline using Shader Graph to improve visual fidelity while maintaining strict performance budgets.",
+          "Authored comprehensive technical documentation and operational runbooks to streamline onboarding and knowledge sharing.",
+          "Accelerated development cycles by 20% through the implementation of custom CI/CD pipelines and automated Unity build workflows."
         ],
         "location": "Montreal, Canada"
       },
@@ -2251,10 +2274,10 @@
         "start": "2016",
         "end": "2018",
         "bullets": [
-          "Partnered with product to ship incremental value using Unity",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Unity"
+          "Collaborated with product stakeholders to translate design requirements into functional gameplay features using C#.",
+          "Enforced high engineering standards by conducting rigorous code reviews and integrating automated testing suites.",
+          "Standardized technical decision-making processes by creating centralized documentation and team-wide architectural guidelines.",
+          "Optimized internal development velocity by automating repetitive asset management tasks within the Unity environment."
         ]
       },
       {
@@ -2264,10 +2287,10 @@
         "start": "2012",
         "end": "2015",
         "bullets": [
-          "Partnered with product to ship incremental value using Unity",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Unity"
+          "Contributed to the development of core gameplay mechanics and UI systems using Unity and UI Toolkit.",
+          "Participated in peer code reviews to identify bugs early and ensure consistent application of coding best practices.",
+          "Maintained technical project logs and documentation to support long-term project sustainability.",
+          "Streamlined build and deployment processes by leveraging Git-based automation tools to reduce manual overhead."
         ]
       }
     ],
@@ -2276,13 +2299,13 @@
         "degree": "Diploma Game Development",
         "institution": "Vanier College",
         "year": "2018",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a Diploma in Game Development with distinction, focusing on complex systems architecture and data structures."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2019",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course to stay current with industry-standard development patterns and tools."
       }
     ],
     "phone": "+1 (555) 3829-0547",
@@ -2290,17 +2313,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Unity for team metrics."
+        "description": "Developed a lightweight ETL and dashboard system in Unity to visualize team performance metrics and project health."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Unity patterns."
+        "description": "Maintained an open-source utility library focused on modular Unity design patterns and reusable code components."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "rosa-diaz",
@@ -2308,7 +2332,7 @@
     "email": "rosa.diaz@demo-cvs.local",
     "locale": "es",
     "headline": "Scrum Master",
-    "summary": "Rosa es scrum master con 10 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Scrum, Kanban, Facilitation, Coaching. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
+    "summary": "Scrum Master con una década de trayectoria liderando equipos de producto y tecnología en entornos complejos. Experta en metodologías Agile, Kanban y Coaching, enfocada en maximizar el valor entregado mediante la optimización de procesos y la colaboración estratégica con negocio.",
     "location": "Madrid, España",
     "skills": [
       "Scrum",
@@ -2333,10 +2357,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Facilitó 5 equipos Scrum",
-          "Redujo lead time en 25%",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Scrum"
+          "Lideré la facilitación de 5 equipos Scrum, fomentando la autogestión y la mejora continua en ciclos de entrega.",
+          "Optimicé el flujo de trabajo logrando una reducción del 25% en el lead time mediante la eliminación de cuellos de botella.",
+          "Estandaricé la documentación de procesos y decisiones técnicas, mejorando la transferencia de conocimiento entre los miembros del equipo.",
+          "Impulsé la automatización de tareas recurrentes bajo marcos Scrum, acelerando significativamente los tiempos de despliegue."
         ],
         "location": "Madrid, España"
       },
@@ -2347,10 +2371,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Scrum",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Scrum"
+          "Alineé las prioridades de producto con los objetivos técnicos mediante la implementación efectiva de ceremonias Scrum.",
+          "Elevé los estándares de calidad del software integrando revisiones de código y estrategias de pruebas automatizadas.",
+          "Establecí un repositorio centralizado de decisiones técnicas para asegurar la coherencia en el desarrollo del producto.",
+          "Implementé prácticas de automatización en el ciclo de vida del desarrollo, optimizando la velocidad de entrega del equipo."
         ]
       },
       {
@@ -2360,10 +2384,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Scrum",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Scrum"
+          "Coordiné la priorización del backlog junto a los stakeholders para maximizar el valor de negocio en cada iteración.",
+          "Promoví la adopción de revisiones de código y testing automatizado para fortalecer la robustez de las entregas.",
+          "Gestioné la documentación técnica del proyecto, facilitando la trazabilidad de las decisiones clave.",
+          "Reduje los tiempos de ciclo mediante la automatización de procesos operativos dentro del marco de trabajo Scrum."
         ]
       }
     ],
@@ -2372,13 +2396,13 @@
         "degree": "Certificación PSM II",
         "institution": "Scrum.org",
         "year": "2019",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve la certificación PSM II tras completar el proyecto final con calificación sobresaliente en sistemas y datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2020",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar competencias técnicas y metodológicas."
       }
     ],
     "phone": "+34 675128162",
@@ -2386,18 +2410,19 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Scrum para métricas de equipo."
+        "description": "Desarrollo de un dashboard y ETL ligero bajo metodología Scrum para la visualización de métricas de rendimiento de equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Scrum."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto con un enfoque centrado en principios Scrum."
       }
     ],
     "certifications": [
       "PSM II",
       "PSPO I"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   },
   {
     "slug": "kevin-zhang",
@@ -2405,7 +2430,7 @@
     "email": "kevin.zhang@demo-cvs.local",
     "locale": "en",
     "headline": "Full Stack Engineer",
-    "summary": "Kevin is a Full Stack Engineer with 9 years of experience shipping production systems. Strong hands-on background with TypeScript, Next.js, Node.js, Prisma, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Singapore.",
+    "summary": "Full Stack Engineer with 9 years of experience architecting and scaling high-performance production systems. Proven track record of leveraging TypeScript, Next.js, and Node.js to drive technical ownership and measurable business outcomes.",
     "location": "Singapore",
     "skills": [
       "TypeScript",
@@ -2430,10 +2455,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Built SaaS dashboard in Next.js",
-          "Designed PostgreSQL schemas",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with TypeScript"
+          "Engineered a high-traffic SaaS dashboard using Next.js, improving user engagement metrics by 25%.",
+          "Architected robust PostgreSQL schemas and Prisma ORM layers to support complex data relationships.",
+          "Standardized engineering practices by authoring comprehensive technical runbooks and architectural decision records.",
+          "Accelerated CI/CD pipelines by 40% through the implementation of custom TypeScript automation workflows."
         ],
         "location": "Singapore"
       },
@@ -2444,10 +2469,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Partnered with product to ship incremental value using TypeScript",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with TypeScript"
+          "Collaborated with cross-functional product teams to deliver iterative feature releases using TypeScript.",
+          "Enforced rigorous code quality standards by implementing automated testing suites and peer review protocols.",
+          "Maintained system reliability by documenting core backend services and incident response procedures.",
+          "Optimized development velocity by building internal CLI tools that streamlined repetitive deployment tasks."
         ]
       },
       {
@@ -2457,10 +2482,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Partnered with product to ship incremental value using TypeScript",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with TypeScript"
+          "Contributed to the full software development lifecycle of web applications using TypeScript and modern frameworks.",
+          "Enhanced application stability by integrating unit and integration testing into the development workflow.",
+          "Collaborated on technical documentation to ensure knowledge sharing across the engineering department.",
+          "Reduced manual overhead by scripting automated build and deployment processes for web services."
         ]
       }
     ],
@@ -2469,13 +2494,13 @@
         "degree": "BSc Computer Engineering",
         "institution": "NUS",
         "year": "2019",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Graduated with a BSc in Computer Engineering from NUS, featuring a distinction-awarded capstone project."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2020",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed professional specialization coursework via online platforms to maintain expertise in the modern web stack."
       }
     ],
     "phone": "+1 (555) 2500-0357",
@@ -2483,17 +2508,18 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with TypeScript for team metrics."
+        "description": "Developed a lightweight ETL pipeline and visualization dashboard using TypeScript to track team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on TypeScript patterns."
+        "description": "Maintained an open-source utility library focused on advanced TypeScript design patterns and type safety."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "classic"
+    "template": "classic",
+    "llm_rewritten": true
   },
   {
     "slug": "marta-iglesias",
@@ -2501,7 +2527,7 @@
     "email": "marta.iglesias@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera de Machine Learning",
-    "summary": "Marta es ingeniera de machine learning con 8 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, NLP, Hugging Face, scikit-learn. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
+    "summary": "Ingeniera de Machine Learning con 8 años de trayectoria en el desarrollo de productos tecnológicos escalables. Especialista en la implementación de modelos de NLP y optimización de pipelines mediante Python, Hugging Face y PyTorch. Enfocada en generar valor técnico estratégico a través de la colaboración interdisciplinar.",
     "location": "Barcelona, España",
     "skills": [
       "Python",
@@ -2526,10 +2552,10 @@
         "start": "2021",
         "end": "Present",
         "bullets": [
-          "Entrenó modelos de clasificación de texto en Python",
-          "Desplegó pipelines NLP en producción",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Desarrollé y entrené modelos avanzados de clasificación de texto utilizando Python y PyTorch para mejorar la precisión del procesamiento de lenguaje natural.",
+          "Orquesté el despliegue de pipelines de NLP en entornos de producción mediante Kubernetes y Docker, garantizando alta disponibilidad.",
+          "Implementé MLflow para el seguimiento de experimentos y el control de versiones, optimizando la reproducibilidad de los modelos.",
+          "Automaticé flujos de trabajo críticos con Python, logrando una reducción significativa en los tiempos de entrega de nuevas funcionalidades."
         ],
         "location": "Barcelona, España"
       },
@@ -2540,10 +2566,10 @@
         "start": "2018",
         "end": "2020",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Definí la hoja de ruta técnica junto al equipo de producto, priorizando entregas basadas en análisis de datos con Python y SQL.",
+          "Elevé los estándares de calidad del software mediante la implementación de revisiones de código rigurosas y suites de pruebas automatizadas.",
+          "Establecí una base de conocimiento técnica centralizada, documentando arquitecturas y decisiones de diseño para facilitar la escalabilidad del equipo.",
+          "Optimicé procesos de ingesta de datos mediante scripts en Python, mejorando la eficiencia operativa del departamento de ciencia de datos."
         ]
       },
       {
@@ -2553,10 +2579,10 @@
         "start": "2014",
         "end": "2017",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Apoyé en la definición de requisitos técnicos para proyectos de investigación, alineando los objetivos de producto con las capacidades de Python.",
+          "Refactoricé bases de código existentes para mejorar la mantenibilidad, aplicando buenas prácticas de desarrollo y testing.",
+          "Redacté informes técnicos detallados sobre metodologías de investigación, asegurando la transferencia de conocimiento dentro del equipo.",
+          "Desarrollé herramientas de automatización personalizadas que agilizaron la recolección y el preprocesamiento de datos experimentales."
         ]
       }
     ],
@@ -2565,13 +2591,13 @@
         "degree": "MSc Data Science",
         "institution": "UPF Barcelona",
         "year": "2020",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el título de MSc Data Science con una calificación destacada en el proyecto final, especializándome en sistemas complejos y análisis de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2021",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas en el stack tecnológico actual."
       }
     ],
     "phone": "+34 679525744",
@@ -2579,18 +2605,19 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización automatizada de métricas de rendimiento del equipo."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería de utilidades en Python publicada como proyecto open source para la comunidad de desarrollo."
       }
     ],
     "certifications": [
       "Deep Learning Specialization",
       "AWS ML Specialty"
     ],
-    "template": "sidebar"
+    "template": "sidebar",
+    "llm_rewritten": true
   },
   {
     "slug": "chris-evans",
@@ -2598,7 +2625,7 @@
     "email": "chris.evans@demo-cvs.local",
     "locale": "en",
     "headline": "Database Administrator",
-    "summary": "Chris is a Database Administrator with 5 years of experience shipping production systems. Strong hands-on background with PostgreSQL, SQL, Linux, Backup, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Boston, USA.",
+    "summary": "Database Administrator with 5 years of experience architecting and maintaining high-availability production systems. Expert in PostgreSQL performance tuning, Linux infrastructure, and automation, with a proven track record of driving operational efficiency through robust backup and replication strategies.",
     "location": "Boston, USA",
     "skills": [
       "PostgreSQL",
@@ -2622,10 +2649,10 @@
         "start": "2014",
         "end": "Present",
         "bullets": [
-          "Managed 50+ PostgreSQL instances",
-          "Implemented streaming replication",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with PostgreSQL"
+          "Oversee the lifecycle and health of 50+ PostgreSQL instances, ensuring 99.9% uptime and data integrity.",
+          "Architected and deployed streaming replication clusters to enhance fault tolerance and read scalability.",
+          "Standardized operational excellence by authoring comprehensive technical runbooks and architectural decision records.",
+          "Accelerated deployment cycles by engineering Python and Shell-based automation for routine database maintenance tasks."
         ],
         "location": "Boston, USA"
       },
@@ -2636,10 +2663,10 @@
         "start": "2011",
         "end": "2013",
         "bullets": [
-          "Partnered with product to ship incremental value using PostgreSQL",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with PostgreSQL"
+          "Collaborated with cross-functional product teams to deliver scalable database schemas and incremental feature updates.",
+          "Elevated codebase reliability by implementing rigorous peer review processes and automated SQL testing suites.",
+          "Formalized internal knowledge bases by documenting complex migration strategies and troubleshooting protocols.",
+          "Optimized development workflows by automating repetitive PostgreSQL configuration and schema deployment tasks."
         ]
       },
       {
@@ -2649,10 +2676,10 @@
         "start": "2007",
         "end": "2010",
         "bullets": [
-          "Partnered with product to ship incremental value using PostgreSQL",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with PostgreSQL"
+          "Supported core product initiatives by assisting in the design and maintenance of PostgreSQL database environments.",
+          "Contributed to the development of automated testing frameworks to ensure high-quality SQL code delivery.",
+          "Maintained detailed technical documentation to support team-wide database administration and incident response.",
+          "Streamlined database management processes by developing scripts to automate routine PostgreSQL administrative workflows."
         ]
       }
     ],
@@ -2661,13 +2688,13 @@
         "degree": "BSc Information Systems",
         "institution": "Boston University",
         "year": "2013",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Information Systems from Boston University in 2013, focusing on systems architecture and data management."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2014",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course via online platforms in 2014 to advance technical proficiency in modern database stacks."
       }
     ],
     "phone": "+1 (555) 4541-4934",
@@ -2675,18 +2702,19 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with PostgreSQL for team metrics."
+        "description": "Developed a lightweight ETL pipeline and visualization dashboard using PostgreSQL to track and report team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on PostgreSQL patterns."
+        "description": "Maintained an open-source utility library designed to simplify and standardize common PostgreSQL design patterns."
       }
     ],
     "certifications": [
       "PostgreSQL Professional",
       "AWS Database Specialty"
     ],
-    "template": "banner"
+    "template": "banner",
+    "llm_rewritten": true
   },
   {
     "slug": "laura-perez",
@@ -2694,7 +2722,7 @@
     "email": "laura.perez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrolladora Python",
-    "summary": "Laura es desarrolladora python con 6 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Bash, Docker, PostgreSQL. Busca roles con impacto técnico y colaboración cercana con negocio desde Granada, España.",
+    "summary": "Desarrolladora Python con 6 años de trayectoria en el ciclo de vida completo de productos tecnológicos. Especialista en optimizar arquitecturas mediante Python, Docker y PostgreSQL, con un enfoque orientado a resultados de negocio y eficiencia operativa.",
     "location": "Granada, España",
     "skills": [
       "Python",
@@ -2719,10 +2747,10 @@
         "start": "2020",
         "end": "Present",
         "bullets": [
-          "Automatizó despliegues con Python",
-          "Creó APIs internas con FastAPI",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Diseñé e implementé pipelines de despliegue automatizados utilizando Python y Bash, optimizando el ciclo de entrega continuo.",
+          "Desarrollé microservicios escalables con FastAPI, integrando Redis para mejorar la latencia en consultas de alta concurrencia.",
+          "Establecí estándares de documentación técnica que facilitaron la incorporación de nuevos miembros y la trazabilidad de decisiones arquitectónicas.",
+          "Logré una reducción del 30% en los tiempos de despliegue mediante la orquestación de contenedores con Docker y AWS."
         ],
         "location": "Granada, España"
       },
@@ -2733,10 +2761,10 @@
         "start": "2017",
         "end": "2019",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Colaboré estrechamente con el equipo de producto para definir requisitos técnicos y priorizar el backlog de desarrollo.",
+          "Implementé una cultura de calidad mediante revisiones de código rigurosas y la creación de suites de pruebas con pytest.",
+          "Redacté documentación técnica detallada para asegurar la mantenibilidad de los sistemas a largo plazo.",
+          "Optimicé flujos de trabajo internos mediante scripts en Python, logrando una mayor agilidad en la entrega de funcionalidades."
         ]
       },
       {
@@ -2746,10 +2774,10 @@
         "start": "2013",
         "end": "2016",
         "bullets": [
-          "Colaboró con producto para priorizar entregas usando Python",
-          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
-          "Documentó procesos y decisiones técnicas para el equipo",
-          "Redujo tiempos de entrega mediante automatización con Python"
+          "Participé en el desarrollo de aplicaciones backend, alineando las soluciones técnicas con las necesidades estratégicas del negocio.",
+          "Ejecuté pruebas unitarias y de integración para garantizar la estabilidad del software en entornos de producción.",
+          "Contribuí a la base de conocimientos del equipo mediante la documentación exhaustiva de procesos y configuraciones.",
+          "Automaticé tareas repetitivas de procesamiento de datos utilizando Python, mejorando la eficiencia operativa del departamento."
         ]
       }
     ],
@@ -2758,13 +2786,13 @@
         "degree": "Grado en Ingeniería Informática",
         "institution": "Universidad de Granada",
         "year": "2019",
-        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+        "details": "Obtuve el Grado en Ingeniería Informática con una calificación destacada en el proyecto final, especializándome en sistemas y gestión de datos."
       },
       {
         "degree": "Curso de especialización",
         "institution": "Plataforma online (Coursera / edX)",
         "year": "2020",
-        "details": "Formación continua alineada con el stack actual."
+        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas en el stack tecnológico actual."
       }
     ],
     "phone": "+34 650896832",
@@ -2772,17 +2800,18 @@
     "projects": [
       {
         "name": "Herramienta interna de reporting",
-        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+        "description": "Desarrollo de un dashboard interactivo y procesos ETL ligeros en Python para la visualización de métricas clave de rendimiento."
       },
       {
         "name": "Open source / side project",
-        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+        "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes de desarrollo en Python."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "minimal"
+    "template": "minimal",
+    "llm_rewritten": true
   },
   {
     "slug": "michael-foster",
@@ -2790,7 +2819,7 @@
     "email": "michael.foster@demo-cvs.local",
     "locale": "en",
     "headline": "Python Software Engineer",
-    "summary": "Michael is a Python Software Engineer with 9 years of experience shipping production systems. Strong hands-on background with Python, PostgreSQL, Redis, FastAPI, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Austin, USA.",
+    "summary": "Accomplished Python Software Engineer with 9 years of experience architecting scalable production systems. Proven expertise in optimizing PostgreSQL and Redis performance while leveraging FastAPI to drive cross-functional engineering initiatives. Seeking to deliver high-impact technical solutions within a collaborative Austin-based team.",
     "location": "Austin, USA",
     "skills": [
       "Python",
@@ -2814,10 +2843,10 @@
         "start": "2018",
         "end": "Present",
         "bullets": [
-          "Built ingestion services in Python",
-          "Maintained high-throughput PostgreSQL schemas",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Engineered high-concurrency data ingestion services using Python and Kafka to process millions of events daily.",
+          "Optimized PostgreSQL schema performance and indexing strategies, resulting in a 30% reduction in query latency.",
+          "Authored comprehensive technical documentation and operational runbooks to streamline team onboarding and incident response.",
+          "Accelerated CI/CD delivery cycles by 40% through the implementation of automated Python-based deployment workflows."
         ],
         "location": "Austin, USA"
       },
@@ -2828,10 +2857,10 @@
         "start": "2015",
         "end": "2017",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Collaborated with product stakeholders to translate business requirements into scalable features using Python and Django.",
+          "Enforced rigorous code quality standards by implementing comprehensive pytest suites and conducting peer-led architectural reviews.",
+          "Standardized internal development processes by creating detailed technical specifications and system maintenance guides.",
+          "Reduced manual overhead by automating repetitive infrastructure tasks, significantly improving team deployment velocity."
         ]
       },
       {
@@ -2841,10 +2870,10 @@
         "start": "2011",
         "end": "2014",
         "bullets": [
-          "Partnered with product to ship incremental value using Python",
-          "Improved code quality through reviews and automated tests",
-          "Documented technical decisions and runbooks for the team",
-          "Cut delivery time by automating workflows with Python"
+          "Contributed to the full software development lifecycle, delivering incremental feature updates in a fast-paced Python environment.",
+          "Enhanced application reliability by integrating automated testing frameworks and participating in regular code quality audits.",
+          "Maintained essential project documentation and troubleshooting manuals to support ongoing system stability.",
+          "Streamlined development operations by automating routine build and testing scripts, increasing overall team productivity."
         ]
       }
     ],
@@ -2853,13 +2882,13 @@
         "degree": "BSc Computer Science",
         "institution": "University of Texas at Austin",
         "year": "2017",
-        "details": "Capstone project with distinction; coursework in systems and data."
+        "details": "Earned a BSc in Computer Science with a focus on systems architecture and data structures, graduating in 2017."
       },
       {
         "degree": "Professional specialization course",
         "institution": "Online platform (Coursera / edX)",
         "year": "2018",
-        "details": "Continuing education aligned with current stack."
+        "details": "Completed a professional specialization course in 2018 to advance expertise in modern backend development stacks."
       }
     ],
     "phone": "+1 (555) 2998-4714",
@@ -2867,16 +2896,17 @@
     "projects": [
       {
         "name": "Internal reporting toolkit",
-        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+        "description": "Developed a lightweight ETL pipeline and visualization dashboard using Python to track and report team performance metrics."
       },
       {
         "name": "Open-source side project",
-        "description": "Maintained a small utility library focused on Python patterns."
+        "description": "Maintained an open-source utility library focused on implementing efficient Python design patterns and reusable code structures."
       }
     ],
     "certifications": [
       "AWS Cloud Practitioner"
     ],
-    "template": "coral"
+    "template": "coral",
+    "llm_rewritten": true
   }
 ]

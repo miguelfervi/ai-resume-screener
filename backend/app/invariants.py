@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from .models import DocumentChunk, ManifestEntry, RetrievedChunk, Source
+    from .schemas import DocumentChunk, ManifestEntry, RetrievedChunk, Source
 
 
 class InvariantError(AssertionError):

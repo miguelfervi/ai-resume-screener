@@ -27,7 +27,7 @@ npm-debug.log*
 # Generated / local data
 data/chroma/
 
-# IDE — keep shared rules, ignore local Cursor state
+# IDE — commit shared rules only; ignore local Cursor state
 .cursor/*
 !.cursor/rules/
 !.cursor/rules/**

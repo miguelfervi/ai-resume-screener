@@ -1,5 +1,5 @@
 ---
-description: Backend Python/FastAPI/LangGraph conventions for AI Resume Screener
+description: Backend Python/FastAPI/LangGraph conventions
 globs: backend/**/*.py
 alwaysApply: false
 ---
@@ -8,64 +8,37 @@ alwaysApply: false
 
 ## LangGraph nodes
 
-Every node has the signature `(state: XxxState) -> XxxState` and returns only the keys it modifies.
+Every node has the signature `(state: XxxState) -> partial state` and returns only the keys it modifies.
 Wrap heavy work in `with Timer(metrics.node_timings_ms, "node_key"):`.
-
-```python
-# ✅ GOOD
-def retrieve(state: ChatState) -> ChatState:
-    metrics = state["metrics"]
-    with Timer(metrics.node_timings_ms, "retrieve"):
-        chunks = retriever.search(state["question"])
-    return {"retrieved_chunks": chunks}
-```
 
 ## Invariants
 
-Add postconditions to `app/invariants.py` and call them after any mutation:
-
-```python
-from .invariants import check, check_sources_from_retrieved
-
-check(len(chunks) > 0, "retrieval must return chunks when index is populated")
-check_sources_from_retrieved(sources, chunks)
-```
-
-Never use bare `assert` — use `check()` so failures produce `InvariantError` with a clear message.
-
-## Error handling
-
-- User errors → `HTTPException` with 4xx status in `main.py`.
-- LLM/retrieval failures → log with `logger.warning` and return a safe degraded response.
-- Invariant violations → let `InvariantError` propagate — it signals a bug.
-
-## Pydantic schemas (`schemas/`)
-
-- `schemas/chat.py` — API request/response types (ChatRequest, Source, HealthResponse)
-- `schemas/cv.py` — CV generation domain (CVContent, ManifestEntry)
-- `schemas/rag.py` — RAG domain (DocumentChunk, RetrievedChunk)
-- Frontend mirrors `schemas/chat.py` in `frontend/src/types/api.ts` (camelCase aliases)
-
-## API layer (`api/`)
-
-- `api/deps.py` — FastAPI dependencies (settings, index checks)
-- `api/routes/health.py` — health endpoint
-- `api/routes/chat.py` — chat endpoint (added in commit 21)
-- `main.py` — app factory only; mounts routers
+Add postconditions to `app/invariants.py` via `check()` — never bare `assert`.
 
 ## Settings
 
-All config via `app/config.py` (`pydantic-settings`). Access with `get_settings()` (LRU-cached). Never hardcode paths or API keys.
+All config via `app/config.py` (`get_settings()`). No hardcoded paths or API keys.
 
-## RAG modules
+## Schemas
 
-- `rag/chunker.py` — section-aware splitting (~500 tokens, 50 overlap)
-- `rag/store.py` — ChromaDB wrapper with upsert + collection management
-- `rag/retriever.py` — top-k search, score threshold, dedupe by candidate
+- `schemas/chat.py` — API request/response types
+- `schemas/cv.py` — CV generation domain
+- `schemas/rag.py` — chunks, retrieval
+
+## API
+
+- `api/routes/` — routers per resource
+- `main.py` — app factory only; mounts routers
+
+## RAG
+
+- `rag/chunker.py` — section-aware splitting
+- `rag/store.py` — ChromaDB wrapper
+- `rag/retriever.py` — top-k search, score threshold
 
 ## Adding a new agent node
 
-1. Implement `(state) -> partial state` in the relevant `agents/*.py`.
-2. Register in the `StateGraph` with explicit edges.
-3. Add invariant checks at the end of the node if it mutates critical data.
-4. Add a unit test with mocked LLM/embeddings in `backend/tests/`.
+1. Implement node in `agents/*.py`
+2. Register in `StateGraph` with explicit edges
+3. Add invariant checks after critical mutations
+4. Add unit test with mocked LLM/embeddings

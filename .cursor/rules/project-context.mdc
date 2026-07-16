@@ -5,19 +5,19 @@ alwaysApply: true
 
 # AI Resume Screener — Project Context
 
-Full-stack RAG chat: ask natural-language questions about a collection of CV PDFs → LangGraph agents retrieve grounded chunks → answer with source citations.
+Full-stack RAG chat: ask natural-language questions about CV PDFs → LangGraph agents retrieve grounded chunks → answer with source citations.
 
 ## Stack
 
 | Layer | Tech |
 |---|---|
-| Frontend | Vite 6 · React 19 · TypeScript strict · Tailwind CSS v4 · shadcn/ui · Plus Jakarta Sans |
+| Frontend | Vite 6 · React 19 · TypeScript strict · Tailwind CSS v4 · shadcn/ui |
 | Backend | FastAPI · LangGraph · Python 3.11+ |
 | LLM | Google Gemini `gemini-2.0-flash` |
 | Embeddings | Google `text-embedding-004` |
 | Vector store | ChromaDB (local, persistent) |
 | PDF extraction | pymupdf4llm |
-| CV generation | Seed JSON · ReportLab · `scripts/generate_cvs.py` (no LLM) |
+| CV generation | Seed JSON · ReportLab · `scripts/generate_cvs.py` |
 
 ## Two LangGraph agents
 
@@ -30,28 +30,25 @@ CV PDFs are generated offline from `data/seed/profiles.json` — not via LangGra
 
 ## Key files
 
-- `data/seed/profiles.json` — 28 hand-crafted demo candidates
+- `data/seed/profiles.json` — demo candidates
 - `scripts/generate_cvs.py` — seed → PDF + manifest
 - `backend/app/cv_renderer.py` — ReportLab PDF builder
 - `backend/app/agents/ingest_agent.py` — offline RAG indexing
-- `backend/app/agents/chat_agent.py` — runtime Q&A with grounded citations
+- `backend/app/agents/chat_agent.py` — runtime Q&A
 - `backend/app/invariants.py` — runtime guards (`InvariantError`)
-- `backend/app/metrics.py` — `RunMetrics` + `Timer` per node
+- `backend/app/schemas/` — Pydantic types (chat, cv, rag)
+- `backend/app/api/routes/` — FastAPI routers
 - `backend/app/rag/` — chunker, store, retriever
-- `frontend/src/hooks/use-chat.ts` — chat state, send, cancel
-- `frontend/src/lib/api.ts` — typed API client + `ApiError`
-- `frontend/src/types/api.ts` — mirrors `backend/app/schemas/chat.py` (camelCase)
+- `frontend/src/types/api.ts` — mirrors `schemas/chat.py` (camelCase)
 
-## Architecture docs
+## Docs
 
-- `docs/ARCHITECTURE.md` — agent flows, data layout, API surface
-- `docs/DEVELOPMENT.md` — commit workflow, local setup, testing
+- `docs/ARCHITECTURE.md` — flows, data layout, API
+- `docs/DEVELOPMENT.md` — commit workflow, local setup
 
-## Non-obvious constraints
+## Constraints
 
-- Chat must never hallucinate: `validate_context` blocks answers when max retrieval score < threshold.
-- `check_sources_from_retrieved` ensures every citation maps to a real chunk.
-- ChromaDB path `data/chroma/` is gitignored; PDFs in `data/cvs/` are committed for demo.
-- Agents are compiled once and cached per module.
-- Frontend types in `types/api.ts` must stay in sync with `schemas/chat.py`.
-- Tests: `cd backend && pytest -v` from project root with `PYTHONPATH=.` or `pytest.ini`.
+- Chat must not hallucinate: `validate_context` blocks low-score retrieval.
+- `check_sources_from_retrieved` — every citation maps to a real chunk.
+- `data/chroma/` gitignored; `data/cvs/` committed for demo.
+- Tests: `cd backend && pytest -v`

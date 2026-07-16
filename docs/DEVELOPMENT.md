@@ -102,8 +102,8 @@ Coverage targets: invariants (unit), agents (mocked LLM), API (TestClient).
 
 ## Cursor rules
 
-`.cursor/rules/` provides persistent context for AI-assisted development:
+`.cursor/rules/` is committed — shared AI context for the project. Local Cursor cache/state stays gitignored.
 
-- `project-context.mdc` — always on; stack and agent overview
-- `backend-patterns.mdc` — active on `backend/**/*.py`
-- `frontend-patterns.mdc` — active on `frontend/src/**/*.{ts,tsx}`
+- `project-context.mdc` — always on
+- `backend-patterns.mdc` — `backend/**/*.py`
+- `frontend-patterns.mdc` — `frontend/src/**/*.{ts,tsx}`

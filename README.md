@@ -50,12 +50,12 @@ pip install -r requirements.txt   # once dependencies are defined
 uvicorn app.main:app --reload --port 8000
 ```
 
-### Frontend (placeholder)
+### Frontend
 
 ```bash
 cd frontend
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173).

@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+backend/.env
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Vite
+node_modules/
+dist/
+
+.env.local
+.env*.local
+
+npm-debug.log*
+*.log
+
+# Generated / local data
+data/chroma/
+
+# IDE (do not publish)
+.cursor/
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db

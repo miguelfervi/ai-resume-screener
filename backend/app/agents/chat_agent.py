@@ -12,7 +12,7 @@ from ..invariants import (
     check_retrieval_has_evidence,
     check_sources_from_retrieved,
 )
-from ..llm import build_chat_model, build_embeddings
+from ..llm import build_embeddings, invoke_chat_with_fallback
 from ..metrics import RunMetrics, Timer
 from ..rag.retriever import retrieve
 from ..rag.store import ChromaStore
@@ -38,6 +38,7 @@ class ChatState(TypedDict, total=False):
 def _metrics(state: ChatState) -> RunMetrics:
     raw = state.get("metrics") or {}
     m = RunMetrics(provider=raw.get("provider", "gemini"))
+    m.model = str(raw.get("model") or "")
     m.node_timings_ms = dict(raw.get("node_timings_ms") or {})
     m.input_tokens = int(raw.get("input_tokens") or 0)
     m.output_tokens = int(raw.get("output_tokens") or 0)
@@ -111,8 +112,9 @@ def generate_answer(state: ChatState, settings: Settings) -> dict:
     )
 
     with Timer(metrics.node_timings_ms, "generate"):
-        llm = build_chat_model(settings)
-        response = llm.invoke(prompt)
+        result = invoke_chat_with_fallback(prompt, settings)
+        response = result.response
+        metrics.model = result.model
         answer = getattr(response, "content", None) or str(response)
         if isinstance(answer, list):
             answer = "".join(

@@ -68,6 +68,7 @@ def test_chat_success(client: TestClient) -> None:
         ],
         "metrics": {
             "provider": "gemini",
+            "model": "gemini-flash-latest",
             "total_ms": 12.0,
             "node_timings_ms": {},
             "input_tokens": 1,

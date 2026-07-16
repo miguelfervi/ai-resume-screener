@@ -10,6 +10,7 @@ from typing import Any
 @dataclass
 class RunMetrics:
     provider: str = "gemini"
+    model: str = ""
     node_timings_ms: dict[str, float] = field(default_factory=dict)
     input_tokens: int = 0
     output_tokens: int = 0
@@ -25,6 +26,7 @@ class RunMetrics:
     def to_dict(self) -> dict[str, Any]:
         return {
             "provider": self.provider,
+            "model": self.model,
             "total_ms": round(self.total_ms, 1),
             "node_timings_ms": {k: round(v, 1) for k, v in self.node_timings_ms.items()},
             "input_tokens": self.input_tokens,

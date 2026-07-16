@@ -20,6 +20,7 @@ export interface Source {
 
 export interface RunMetrics {
   provider: string
+  model?: string
   totalMs: number
   nodeTimingsMs: Record<string, number>
   inputTokens: number

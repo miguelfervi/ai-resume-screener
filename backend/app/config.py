@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     # Google Gemini
     google_api_key: str | None = None
     gemini_model: str = "gemini-flash-latest"
+    gemini_fallback_model: str = "gemini-flash-lite-latest"
     gemini_embedding_model: str = "gemini-embedding-001"
     gemini_image_model: str = "imagen-4.0-generate-001"
     llm_temperature: float = 0.0

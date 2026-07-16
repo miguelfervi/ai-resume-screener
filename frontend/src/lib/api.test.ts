@@ -36,6 +36,7 @@ describe('sendChat', () => {
       ],
       metrics: {
         provider: 'gemini',
+        model: 'gemini-flash-latest',
         totalMs: 10,
         nodeTimingsMs: {},
         inputTokens: 1,

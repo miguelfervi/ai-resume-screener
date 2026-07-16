@@ -36,6 +36,7 @@ class RunMetricsResponse(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     provider: str = "gemini"
+    model: str = ""
     total_ms: float = Field(default=0.0, serialization_alias="totalMs")
     node_timings_ms: dict[str, float] = Field(
         default_factory=dict, serialization_alias="nodeTimingsMs"

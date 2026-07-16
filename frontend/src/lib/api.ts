@@ -21,6 +21,7 @@ export class ApiError extends Error {
 
 const MOCK_METRICS: RunMetrics = {
   provider: 'mock',
+  model: 'gemini-flash-latest',
   totalMs: 42,
   nodeTimingsMs: { retrieve: 12, generate: 30 },
   inputTokens: 120,

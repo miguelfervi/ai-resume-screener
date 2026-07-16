@@ -27,6 +27,7 @@ describe('useChat', () => {
       sources: [],
       metrics: {
         provider: 'mock',
+        model: 'gemini-flash-latest',
         totalMs: 1,
         nodeTimingsMs: {},
         inputTokens: 0,

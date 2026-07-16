@@ -74,7 +74,8 @@ python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent e
 | Variable | Default | Purpose |
 |----------|---------|---------|
 | `GOOGLE_API_KEY` | — | Gemini chat + embeddings |
-| `GEMINI_MODEL` | `gemini-flash-latest` | Chat model |
+| `GEMINI_MODEL` | `gemini-flash-latest` | Primary chat model |
+| `GEMINI_FALLBACK_MODEL` | `gemini-flash-lite-latest` | Fallback on free-tier 429 |
 | `GEMINI_EMBEDDING_MODEL` | `gemini-embedding-001` | Embeddings |
 | `CHROMA_PATH` | `../data/chroma` | Vector store (cosine HNSW) |
 | `CVS_PATH` | `../data/cvs` | PDF directory |

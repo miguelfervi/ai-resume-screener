@@ -24,6 +24,7 @@ vi.mock('@/lib/api', async (importOriginal) => {
       ],
       metrics: {
         provider: 'mock',
+        model: 'gemini-flash-latest',
         totalMs: 12,
         nodeTimingsMs: {},
         inputTokens: 1,
@@ -50,11 +51,26 @@ describe('MessageBubble', () => {
           id: '1',
           role: 'assistant',
           content: 'Jane Doe knows Python.',
+          metrics: {
+            provider: 'gemini',
+            model: 'gemini-flash-lite-latest',
+            totalMs: 12,
+            nodeTimingsMs: {},
+            inputTokens: 100,
+            outputTokens: 40,
+            chunksRetrieved: 1,
+            sourcesCited: 1,
+            success: true,
+          },
         }}
       />,
     )
     expect(screen.getByText('Grounded answer')).toBeInTheDocument()
     expect(screen.getByText(/Jane Doe knows Python/)).toBeInTheDocument()
+    expect(screen.getByTestId('answer-usage')).toHaveTextContent(
+      'gemini-flash-lite-latest',
+    )
+    expect(screen.getByTestId('answer-usage')).toHaveTextContent('140 tokens')
   })
 
   it('renders user text without grounded label', () => {

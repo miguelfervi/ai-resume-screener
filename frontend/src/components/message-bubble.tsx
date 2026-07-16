@@ -9,8 +9,18 @@ type MessageBubbleProps = {
   children?: ReactNode
 }
 
+function formatTokens(n: number): string {
+  return n.toLocaleString('en-US')
+}
+
 export function MessageBubble({ message, children }: MessageBubbleProps) {
   const isUser = message.role === 'user'
+  const metrics = message.metrics
+  const model = metrics?.model?.trim()
+  const inputTokens = metrics?.inputTokens ?? 0
+  const outputTokens = metrics?.outputTokens ?? 0
+  const totalTokens = inputTokens + outputTokens
+  const showUsage = !isUser && Boolean(model || totalTokens > 0)
 
   return (
     <div
@@ -42,6 +52,25 @@ export function MessageBubble({ message, children }: MessageBubbleProps) {
         )}
 
         {children ? <div className="mt-2.5 sm:mt-3">{children}</div> : null}
+
+        {showUsage ? (
+          <p
+            className="text-muted-foreground mt-2.5 border-t border-border/50 pt-2 font-mono text-[0.65rem] leading-relaxed tracking-wide"
+            data-testid="answer-usage"
+          >
+            {model ? <span>{model}</span> : null}
+            {model && totalTokens > 0 ? <span> · </span> : null}
+            {totalTokens > 0 ? (
+              <span>
+                {formatTokens(totalTokens)} tokens
+                <span className="text-muted-foreground/80">
+                  {' '}
+                  ({formatTokens(inputTokens)} in · {formatTokens(outputTokens)} out)
+                </span>
+              </span>
+            ) : null}
+          </p>
+        ) : null}
       </div>
     </div>
   )

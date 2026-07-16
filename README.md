@@ -12,7 +12,7 @@ Local-only; no deployment required.
 |-------|------------|
 | Frontend | Vite 8 · React 19 · TypeScript · Tailwind CSS v4 · shadcn/ui |
 | Backend | FastAPI · LangGraph · Python 3.11+ |
-| LLM | Google Gemini (`gemini-flash-latest`, configurable) |
+| LLM | Google Gemini (`gemini-flash-latest` → `gemini-flash-lite-latest` on 429) |
 | Embeddings | Google `gemini-embedding-001` |
 | Vector store | ChromaDB (local, persistent) |
 | PDF extraction | pymupdf4llm |
@@ -163,7 +163,8 @@ Copy `backend/.env.example` → `backend/.env`. Important keys:
 | Variable | Default | Purpose |
 |----------|---------|---------|
 | `GOOGLE_API_KEY` | — | Gemini chat + embeddings |
-| `GEMINI_MODEL` | `gemini-flash-latest` | Chat model |
+| `GEMINI_MODEL` | `gemini-flash-latest` | Primary chat model |
+| `GEMINI_FALLBACK_MODEL` | `gemini-flash-lite-latest` | Used when primary hits free-tier 429 |
 | `GEMINI_EMBEDDING_MODEL` | `gemini-embedding-001` | Embeddings |
 | `RETRIEVAL_TOP_K` | `6` | Chunks returned |
 | `RETRIEVAL_MIN_SCORE` | `0.65` | Cosine similarity floor for grounded answers |

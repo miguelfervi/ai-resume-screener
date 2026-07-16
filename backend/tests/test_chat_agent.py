@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from types import SimpleNamespace
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 from app.agents.chat_agent import (
     _NO_EVIDENCE,
@@ -18,9 +18,10 @@ def _settings(**kwargs) -> Settings:
         "google_api_key": "test-key",
         "retrieval_top_k": 6,
         "retrieval_min_score": 0.65,
+        "cors_origins": ["http://localhost:5173"],
     }
     base.update(kwargs)
-    return Settings(**base)
+    return Settings(_env_file=None, **base)
 
 
 def test_validate_context_keeps_strong_chunks() -> None:
@@ -56,11 +57,11 @@ def test_generate_answer_no_evidence() -> None:
 
 def test_generate_answer_calls_llm() -> None:
     settings = _settings()
-    llm = MagicMock()
-    llm.invoke.return_value = SimpleNamespace(
+    response = SimpleNamespace(
         content="Jane Doe has strong Python skills.",
         usage_metadata={"input_tokens": 10, "output_tokens": 5},
     )
+    invoke_result = SimpleNamespace(response=response, model="gemini-flash-latest")
     state = {
         "question": "Who knows Python?",
         "history": [],
@@ -68,10 +69,15 @@ def test_generate_answer_calls_llm() -> None:
         "retrieved": [make_retrieved().model_dump()],
         "metrics": {},
     }
-    with patch("app.agents.chat_agent.build_chat_model", return_value=llm):
+    with patch(
+        "app.agents.chat_agent.invoke_chat_with_fallback",
+        return_value=invoke_result,
+    ) as mocked:
         out = generate_answer(state, settings)
     assert "Jane Doe" in out["answer"]
-    llm.invoke.assert_called_once()
+    assert out["metrics"]["model"] == "gemini-flash-latest"
+    assert out["metrics"]["input_tokens"] == 10
+    mocked.assert_called_once()
 
 
 def test_cite_sources_prefers_mentioned_candidates() -> None:

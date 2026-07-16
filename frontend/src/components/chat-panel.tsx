@@ -16,6 +16,7 @@ import { SuggestedQuestions } from '@/components/suggested-questions'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { useChat } from '@/hooks/use-chat'
+import { getHealth } from '@/lib/api'
 import { cn } from '@/lib/utils'
 import type { Source } from '@/types/api'
 
@@ -51,12 +52,27 @@ export function ChatPanel() {
   const [selectedCv, setSelectedCv] = useState<SelectedCv | null>(null)
   const [previewWidth, setPreviewWidth] = useState(PREVIEW_DEFAULT)
   const [resizing, setResizing] = useState(false)
+  const [indexReady, setIndexReady] = useState<boolean | null>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const dragRef = useRef<{ startX: number; startWidth: number } | null>(null)
 
   useEffect(() => {
     setPreviewWidth(readStoredPreviewWidth())
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    void getHealth()
+      .then((h) => {
+        if (!cancelled) setIndexReady(h.indexReady)
+      })
+      .catch(() => {
+        if (!cancelled) setIndexReady(false)
+      })
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   useEffect(() => {
@@ -157,11 +173,36 @@ export function ChatPanel() {
   return (
     <div className="chat-shell flex h-dvh max-h-dvh w-full overflow-hidden">
       <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
-        <header className="border-border/60 bg-card/50 safe-pt flex shrink-0 items-center justify-between gap-3 border-b px-3 py-3 backdrop-blur-md sm:px-5 sm:py-4">
+        <header className="border-border/60 bg-card/55 safe-pt flex shrink-0 items-center justify-between gap-3 border-b px-3 py-3 backdrop-blur-md sm:px-5 sm:py-4">
           <div className="min-w-0">
-            <p className="text-muted-foreground text-[0.6rem] font-medium tracking-[0.16em] uppercase sm:text-[0.65rem] sm:tracking-[0.18em]">
-              CV screening
-            </p>
+            <div className="flex flex-wrap items-center gap-2">
+              <p className="text-muted-foreground text-[0.6rem] font-medium tracking-[0.16em] uppercase sm:text-[0.65rem] sm:tracking-[0.18em]">
+                CV screening
+              </p>
+              {indexReady !== null ? (
+                <span
+                  className={cn(
+                    'inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.6rem] font-medium tracking-wide uppercase',
+                    indexReady
+                      ? 'bg-primary/10 text-primary'
+                      : 'bg-destructive/10 text-destructive',
+                  )}
+                  title={
+                    indexReady
+                      ? 'Chroma index is ready'
+                      : 'Run scripts/ingest.py to build the index'
+                  }
+                >
+                  <span
+                    className={cn(
+                      'size-1.5 rounded-full',
+                      indexReady ? 'bg-primary' : 'bg-destructive',
+                    )}
+                  />
+                  {indexReady ? 'Grounded' : 'Index empty'}
+                </span>
+              ) : null}
+            </div>
             <h1 className="font-heading text-foreground truncate text-xl leading-tight tracking-tight sm:mt-0.5 sm:text-2xl">
               Resume Screener
             </h1>
@@ -179,7 +220,7 @@ export function ChatPanel() {
           ) : null}
         </header>
 
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3 sm:px-6 sm:py-5">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3 sm:px-5 sm:py-5">
           <div
             className={cn(
               'flex w-full flex-col gap-3 sm:gap-4',
@@ -188,9 +229,22 @@ export function ChatPanel() {
           >
             {empty ? (
               <SuggestedQuestions
-                disabled={loading}
+                disabled={loading || indexReady === false}
                 onSelect={(q) => void submit(q)}
               />
+            ) : null}
+
+            {empty && indexReady === false ? (
+              <p
+                className="border-destructive/20 bg-destructive/5 text-destructive rounded-xl border px-3 py-3 text-sm"
+                role="status"
+              >
+                Vector index is empty. Run{' '}
+                <code className="bg-background/80 rounded px-1 py-0.5 text-xs">
+                  python scripts/ingest.py
+                </code>{' '}
+                then refresh.
+              </p>
             ) : null}
 
             {messages.map((msg) => (
@@ -210,7 +264,7 @@ export function ChatPanel() {
                 <span className="bg-primary animate-pulse-dot inline-block size-1.5 rounded-full" />
                 <span className="bg-primary animate-pulse-dot inline-block size-1.5 rounded-full [animation-delay:140ms]" />
                 <span className="bg-primary animate-pulse-dot inline-block size-1.5 rounded-full [animation-delay:280ms]" />
-                <span className="ml-1">Retrieving from CVs…</span>
+                <span className="ml-1">Retrieving grounded CV excerpts…</span>
               </div>
             ) : null}
 
@@ -229,7 +283,7 @@ export function ChatPanel() {
 
         <form
           onSubmit={onSubmit}
-          className="border-border/60 bg-card/70 safe-pb shrink-0 border-t px-3 pt-3 backdrop-blur-md sm:px-6 sm:pt-4"
+          className="border-border/60 bg-card/80 safe-pb z-10 shrink-0 border-t px-3 pt-3 shadow-[0_-8px_24px_-16px_rgba(0,0,0,0.18)] backdrop-blur-md sm:px-5 sm:pt-4"
         >
           <div
             className={cn(
@@ -242,9 +296,9 @@ export function ChatPanel() {
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={onKeyDown}
-              placeholder="Ask about skills or a candidate…"
+              placeholder="Ask about skills, education, or a candidate…"
               rows={1}
-              disabled={loading}
+              disabled={loading || indexReady === false}
               enterKeyHint="send"
               className="max-h-32 min-h-11 flex-1 resize-none border-0 bg-transparent text-base shadow-none focus-visible:ring-0 sm:max-h-36 sm:text-sm"
               aria-label="Chat question"
@@ -252,22 +306,30 @@ export function ChatPanel() {
             <Button
               type="submit"
               size="icon"
-              disabled={loading || !draft.trim()}
+              disabled={loading || indexReady === false || !draft.trim()}
               className="size-11 shrink-0 rounded-xl sm:size-10"
               aria-label="Send"
             >
               <ArrowUp className="size-4" />
             </Button>
           </div>
-          <p className="text-muted-foreground mx-auto mt-2 hidden max-w-2xl pb-1 text-center text-[0.7rem] sm:block">
-            Enter to send · Click a source to open the CV · Drag the edge to resize
+          <p
+            className={cn(
+              'text-muted-foreground mt-2 pb-1 text-[0.7rem] leading-relaxed',
+              previewOpen ? 'max-w-xl text-left' : 'mx-auto max-w-2xl text-center',
+            )}
+          >
+            Grounded in indexed CVs
+            <span className="hidden sm:inline">
+              {' '}
+              · Enter to send · Click a source to open the résumé
+            </span>
           </p>
         </form>
       </div>
 
       {previewOpen && selectedCv ? (
         <>
-          {/* Mobile: full-screen sheet */}
           <div className="animate-fade-up fixed inset-0 z-40 flex flex-col lg:hidden">
             <button
               type="button"
@@ -283,7 +345,6 @@ export function ChatPanel() {
             />
           </div>
 
-          {/* Desktop: resizable side panel */}
           <div
             className="animate-fade-up relative hidden h-full shrink-0 self-stretch lg:flex"
             style={{ width: previewWidth }}

@@ -29,7 +29,7 @@ export function MessageBubble({ message, children }: MessageBubbleProps) {
       >
         {!isUser ? (
           <p className="text-muted-foreground mb-1 text-[0.65rem] font-medium tracking-[0.14em] uppercase">
-            Answer
+            Grounded answer
           </p>
         ) : null}
 

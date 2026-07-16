@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FileText } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
@@ -20,10 +21,15 @@ export function SourceBadges({
   if (!sources.length) return null
 
   return (
-    <div className="border-border/60 flex flex-col gap-2 border-t pt-2">
-      <p className="text-muted-foreground text-[0.65rem] font-medium tracking-[0.14em] uppercase">
-        Sources
-      </p>
+    <div className="border-border/60 flex flex-col gap-2 border-t pt-2.5">
+      <div className="flex items-baseline justify-between gap-2">
+        <p className="text-muted-foreground text-[0.65rem] font-medium tracking-[0.14em] uppercase">
+          Sources
+        </p>
+        <p className="text-muted-foreground hidden text-[0.65rem] sm:block">
+          Click to open the CV
+        </p>
+      </div>
       <div className="flex flex-col gap-1.5 sm:flex-row sm:flex-wrap">
         {sources.map((source, i) => {
           const id = `${source.file}-${source.section}-${i}`
@@ -38,15 +44,18 @@ export function SourceBadges({
                   setOpenId(open ? null : id)
                 }}
                 className="focus-visible:ring-ring w-full rounded-md focus-visible:ring-2 focus-visible:outline-none sm:w-auto"
+                aria-pressed={selected}
+                title={`Open ${source.file}`}
               >
                 <Badge
                   variant="outline"
                   className={cn(
                     'h-auto min-h-9 w-full max-w-full cursor-pointer justify-start gap-1.5 rounded-md px-2.5 py-2 text-left text-xs font-normal transition-colors sm:min-h-0 sm:w-auto sm:py-1',
                     (open || selected) &&
-                      'border-primary/40 bg-accent text-accent-foreground',
+                      'border-primary/45 bg-accent text-accent-foreground shadow-sm',
                   )}
                 >
+                  <FileText className="text-muted-foreground size-3 shrink-0 opacity-70" />
                   <span className="truncate font-medium">{source.candidateName}</span>
                   <span className="text-muted-foreground shrink-0">
                     · {source.section}

@@ -62,12 +62,21 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## Development log
 
-| # | Commit | Date | Summary |
-|---|--------|------|---------|
-| 1 | `5643bde` | 2026-07-16 | Project scaffold — folders, .gitignore, README skeleton |
-| 2 | `37af187` | 2026-07-16 | Cursor rules + docs/DEVELOPMENT.md |
-| 3 | `7a50c26` | 2026-07-16 | Backend config, requirements.txt, .env.example |
-| 4 | `3b6f019` | 2026-07-16 | Pydantic models + RunMetrics/Timer |
+Registro cronológico de `git log` (más reciente al final de la tabla).
+
+| Commit | Date | Message |
+|--------|------|---------|
+| `5643bde` | 2026-07-16 | feat: scaffold project |
+| `37af187` | 2026-07-16 | chore: add cursor rules for project context |
+| `7a50c26` | 2026-07-16 | feat(backend): add config and dependencies |
+| `3b6f019` | 2026-07-16 | feat(backend): add pydantic models and RunMetrics |
+| `37c54a8` | 2026-07-16 | feat(backend): add runtime invariants module |
+| `09b4e13` | 2026-07-16 | feat(backend): add Gemini LLM factory |
+| `4e271d4` | 2026-07-16 | feat(backend): add FastAPI app with health endpoint and api layer |
+| `dfc92bb` | 2026-07-16 | feat(backend): add PDF text extractor |
+| `337093b` | 2026-07-16 | data: add seed candidate profiles for CV generation |
+| `c0e14a6` | 2026-07-16 | feat(cvs): add ReportLab PDF renderer and generate_cvs CLI |
+| `cafb5fa` | 2026-07-16 | docs: update architecture for seed PDF approach |
 
 ## License
 

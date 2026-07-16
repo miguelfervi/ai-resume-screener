@@ -29,11 +29,15 @@ class EducationEntry(BaseModel):
     degree: str
     institution: str
     year: str
+    details: str | None = None
+
+
+class ProjectEntry(BaseModel):
+    name: str
+    description: str = ""
 
 
 class CVContent(BaseModel):
-    """Structured CV data rendered by the Jinja2 template."""
-
     slug: str
     full_name: str
     email: str
@@ -47,6 +51,8 @@ class CVContent(BaseModel):
     languages: list[str] = Field(default_factory=list)
     experience: list[ExperienceEntry] = Field(default_factory=list)
     education: list[EducationEntry] = Field(default_factory=list)
+    projects: list[ProjectEntry] = Field(default_factory=list)
+    certifications: list[str] = Field(default_factory=list)
 
 
 class GeneratedCV(BaseModel):
@@ -65,3 +71,4 @@ class ManifestEntry(BaseModel):
     file: str
     skills: list[str] = Field(default_factory=list)
     locale: str = "en"
+    photo: str | None = None

@@ -9,9 +9,15 @@
       "FastAPI",
       "PostgreSQL",
       "AWS",
-      "Docker"
+      "Docker",
+      "Django",
+      "Redis",
+      "pytest",
+      "Kafka",
+      "gRPC"
     ],
-    "locale": "en"
+    "locale": "en",
+    "photo": "photos/jane-doe.jpg"
   },
   {
     "slug": "carlos-mendez",
@@ -23,9 +29,15 @@
       "Spark",
       "SQL",
       "Airflow",
-      "TensorFlow"
+      "TensorFlow",
+      "dbt",
+      "BigQuery",
+      "Pandas",
+      "Kafka",
+      "Docker"
     ],
-    "locale": "es"
+    "locale": "es",
+    "photo": "photos/carlos-mendez.jpg"
   },
   {
     "slug": "emma-wright",
@@ -37,9 +49,15 @@
       "TypeScript",
       "CSS",
       "Vite",
-      "Testing Library"
+      "Testing Library",
+      "Next.js",
+      "Storybook",
+      "GraphQL",
+      "Jest",
+      "Accessibility"
     ],
-    "locale": "en"
+    "locale": "en",
+    "photo": "photos/emma-wright.jpg"
   },
   {
     "slug": "lucia-fernandez",
@@ -51,9 +69,15 @@
       "Node.js",
       "React",
       "MongoDB",
-      "GraphQL"
+      "GraphQL",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "CI/CD",
+      "AWS"
     ],
-    "locale": "es"
+    "locale": "es",
+    "photo": "photos/lucia-fernandez.jpg"
   },
   {
     "slug": "marcus-chen",
@@ -65,9 +89,15 @@
       "Terraform",
       "Go",
       "AWS",
-      "Prometheus"
+      "Prometheus",
+      "Grafana",
+      "Helm",
+      "Linux",
+      "CI/CD",
+      "Python"
     ],
-    "locale": "en"
+    "locale": "en",
+    "photo": "photos/marcus-chen.jpg"
   },
   {
     "slug": "ana-torres",
@@ -79,9 +109,15 @@
       "Cypress",
       "Python",
       "Jira",
-      "Postman"
+      "Postman",
+      "Playwright",
+      "pytest",
+      "API Testing",
+      "CI/CD",
+      "SQL"
     ],
-    "locale": "es"
+    "locale": "es",
+    "photo": "photos/ana-torres.jpg"
   },
   {
     "slug": "david-kumar",
@@ -93,7 +129,12 @@
       "PyTorch",
       "MLflow",
       "Kubernetes",
-      "SQL"
+      "SQL",
+      "scikit-learn",
+      "Pandas",
+      "Hugging Face",
+      "Docker",
+      "Feature Stores"
     ],
     "locale": "en"
   },
@@ -107,7 +148,12 @@
       "Agile",
       "Figma",
       "Analytics",
-      "Roadmapping"
+      "Roadmapping",
+      "A/B Testing",
+      "SQL",
+      "Stakeholder Mgmt",
+      "Jira",
+      "OKRs"
     ],
     "locale": "es"
   },
@@ -121,7 +167,12 @@
       "Spring Boot",
       "Kafka",
       "PostgreSQL",
-      "Maven"
+      "Maven",
+      "Python",
+      "FastAPI",
+      "Django",
+      "Redis",
+      "Docker"
     ],
     "locale": "en"
   },
@@ -135,7 +186,12 @@
       "Sketch",
       "Prototyping",
       "User Research",
-      "Design Systems"
+      "Design Systems",
+      "Accessibility",
+      "FigJam",
+      "Usability Testing",
+      "HTML",
+      "CSS"
     ],
     "locale": "es"
   },
@@ -149,7 +205,12 @@
       "Django",
       "Celery",
       "Redis",
-      "Linux"
+      "Linux",
+      "FastAPI",
+      "PostgreSQL",
+      "pytest",
+      "Docker",
+      "Bash"
     ],
     "locale": "en"
   },
@@ -163,7 +224,12 @@
       "Flask",
       "MySQL",
       "Git",
-      "Linux"
+      "Linux",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
     ],
     "locale": "es"
   },
@@ -177,7 +243,12 @@
       "OWASP",
       "Python",
       "Burp Suite",
-      "SIEM"
+      "SIEM",
+      "Threat Modeling",
+      "Secure SDLC",
+      "Linux",
+      "Cloud Security",
+      "IAM"
     ],
     "locale": "en"
   },
@@ -191,7 +262,12 @@
       "Tableau",
       "Excel",
       "R",
-      "Power BI"
+      "Power BI",
+      "Python",
+      "Statistics",
+      "ETL",
+      "Looker",
+      "Data Modeling"
     ],
     "locale": "es"
   },
@@ -205,7 +281,12 @@
       "SwiftUI",
       "Xcode",
       "Core Data",
-      "Combine"
+      "Combine",
+      "UIKit",
+      "TestFlight",
+      "CI/CD",
+      "REST",
+      "GraphQL"
     ],
     "locale": "en"
   },
@@ -219,7 +300,12 @@
       "Python",
       "Grafana",
       "Linux",
-      "CI/CD"
+      "CI/CD",
+      "Prometheus",
+      "On-call",
+      "Terraform",
+      "SLO/SLA",
+      "Incident Response"
     ],
     "locale": "es"
   },
@@ -233,7 +319,12 @@
       "Markdown",
       "API Docs",
       "Git",
-      "Confluence"
+      "Confluence",
+      "OpenAPI",
+      "Docs-as-code",
+      "Sphinx",
+      "Docusaurus",
+      "Editing"
     ],
     "locale": "en"
   },
@@ -247,7 +338,12 @@
       "Git",
       "pytest",
       "HTML",
-      "CSS"
+      "CSS",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
     ],
     "locale": "es"
   },
@@ -261,7 +357,12 @@
       "Python",
       "System Design",
       "Hiring",
-      "Agile"
+      "Agile",
+      "Mentoring",
+      "Roadmaps",
+      "OKRs",
+      "Stakeholder Mgmt",
+      "Architecture"
     ],
     "locale": "en"
   },
@@ -275,7 +376,12 @@
       "C++",
       "Linux",
       "Networking",
-      "WASM"
+      "WASM",
+      "Tokio",
+      "Performance",
+      "Systems Design",
+      "Git",
+      "CI/CD"
     ],
     "locale": "en"
   },
@@ -289,7 +395,12 @@
       "BPMN",
       "SQL",
       "Jira",
-      "Stakeholder Management"
+      "Stakeholder Management",
+      "Tableau",
+      "Excel",
+      "R",
+      "Power BI",
+      "Python"
     ],
     "locale": "es"
   },
@@ -303,7 +414,12 @@
       "Python",
       "CloudFormation",
       "Lambda",
-      "VPC"
+      "VPC",
+      "CDK",
+      "IAM",
+      "ECS",
+      "S3",
+      "Cost Optimization"
     ],
     "locale": "en"
   },
@@ -317,7 +433,12 @@
       "FastAPI",
       "DDD",
       "PostgreSQL",
-      "Redis"
+      "Redis",
+      "Django",
+      "Docker",
+      "AWS",
+      "pytest",
+      "Kafka"
     ],
     "locale": "es"
   },
@@ -331,7 +452,12 @@
       "C#",
       "Game Design",
       "Blender",
-      "Shader Graph"
+      "Shader Graph",
+      "Mobile",
+      "Profiling",
+      "Git",
+      "CI/CD",
+      "UI Toolkit"
     ],
     "locale": "en"
   },
@@ -345,7 +471,12 @@
       "Kanban",
       "Facilitation",
       "Coaching",
-      "Jira"
+      "Jira",
+      "Retrospectives",
+      "Metrics",
+      "Conflict Resolution",
+      "Agile",
+      "SAFe"
     ],
     "locale": "es"
   },
@@ -359,7 +490,12 @@
       "Next.js",
       "Node.js",
       "Prisma",
-      "AWS"
+      "AWS",
+      "JavaScript",
+      "React",
+      "MongoDB",
+      "GraphQL",
+      "PostgreSQL"
     ],
     "locale": "en"
   },
@@ -373,7 +509,12 @@
       "NLP",
       "Hugging Face",
       "scikit-learn",
-      "Pandas"
+      "Pandas",
+      "PyTorch",
+      "MLflow",
+      "Kubernetes",
+      "SQL",
+      "Docker"
     ],
     "locale": "es"
   },
@@ -387,7 +528,12 @@
       "SQL",
       "Linux",
       "Backup",
-      "Replication"
+      "Replication",
+      "Performance Tuning",
+      "HA",
+      "Monitoring",
+      "Python",
+      "Shell"
     ],
     "locale": "en"
   },
@@ -401,7 +547,12 @@
       "Bash",
       "Docker",
       "PostgreSQL",
-      "FastAPI"
+      "FastAPI",
+      "Django",
+      "Redis",
+      "AWS",
+      "pytest",
+      "Kafka"
     ],
     "locale": "es"
   },
@@ -415,7 +566,12 @@
       "PostgreSQL",
       "Redis",
       "FastAPI",
-      "pytest"
+      "pytest",
+      "Django",
+      "Docker",
+      "AWS",
+      "Kafka",
+      "gRPC"
     ],
     "locale": "en"
   }

@@ -5,28 +5,93 @@
     "email": "jane.doe@demo-cvs.local",
     "locale": "en",
     "headline": "Senior Backend Engineer",
-    "summary": "Backend engineer with 8 years building APIs and data pipelines. Strong Python and cloud experience.",
+    "summary": "Jane is a Senior Backend Engineer with 6 years of experience shipping production systems. Strong hands-on background with Python, FastAPI, PostgreSQL, AWS, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Barcelona, Spain.",
     "location": "Barcelona, Spain",
-    "skills": ["Python", "FastAPI", "PostgreSQL", "AWS", "Docker"],
-    "languages": ["English", "Spanish"],
+    "skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Django",
+      "Redis",
+      "pytest",
+      "Kafka",
+      "gRPC"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
     "experience": [
       {
         "title": "Senior Backend Engineer",
         "company": "TechFlow",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Led Python microservices migration", "Designed REST APIs serving 2M requests/day"]
+        "bullets": [
+          "Led Python microservices migration",
+          "Designed REST APIs serving 2M requests/day",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ],
+        "location": "Barcelona, Spain"
       },
       {
         "title": "Backend Developer",
         "company": "DataSoft",
         "start": "2016",
         "end": "2020",
-        "bullets": ["Built ETL pipelines in Python", "Maintained Django applications"]
+        "bullets": [
+          "Built ETL pipelines in Python",
+          "Maintained Django applications",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ],
+        "location": "Barcelona, Spain"
+      },
+      {
+        "title": "Software Engineer",
+        "company": "NovaLabs",
+        "location": "Barcelona, Spain",
+        "start": "2013",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Computer Science", "institution": "Universitat Politècnica de Catalunya (UPC)", "year": "2016"}
+      {
+        "degree": "MSc Computer Science",
+        "institution": "Universitat Politècnica de Catalunya (UPC)",
+        "year": "2016",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2017",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 0466-1495",
+    "linkedin": "linkedin.com/in/jane-doe",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Python patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -35,21 +100,93 @@
     "email": "carlos.mendez@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniero de Datos",
-    "summary": "Especialista en pipelines de datos y machine learning con Python y Spark.",
+    "summary": "Carlos es ingeniero de datos con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Spark, SQL, Airflow. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
     "location": "Madrid, España",
-    "skills": ["Python", "Spark", "SQL", "Airflow", "TensorFlow"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Python",
+      "Spark",
+      "SQL",
+      "Airflow",
+      "TensorFlow",
+      "dbt",
+      "BigQuery",
+      "Pandas",
+      "Kafka",
+      "Docker"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Data Engineer",
         "company": "Analytics Pro",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Diseñó pipelines ETL con Python y Airflow", "Optimizó consultas SQL en BigQuery"]
+        "bullets": [
+          "Diseñó pipelines ETL con Python y Airflow",
+          "Optimizó consultas SQL en BigQuery",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Madrid, España"
+      },
+      {
+        "title": "Analista de Datos",
+        "company": "NovaLabs",
+        "location": "Madrid, España",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Becario/a BI",
+        "company": "BrightStack",
+        "location": "Madrid, España",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad Politécnica de Madrid (UPM)", "year": "2018"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad Politécnica de Madrid (UPM)",
+        "year": "2018",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2019",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 640970425",
+    "linkedin": "linkedin.com/in/carlos-mendez",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -58,21 +195,92 @@
     "email": "emma.wright@demo-cvs.local",
     "locale": "en",
     "headline": "Frontend Developer",
-    "summary": "React specialist focused on accessible, performant user interfaces.",
+    "summary": "Emma is a Frontend Developer with 10 years of experience shipping production systems. Strong hands-on background with React, TypeScript, CSS, Vite, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in London, UK.",
     "location": "London, UK",
-    "skills": ["React", "TypeScript", "CSS", "Vite", "Testing Library"],
-    "languages": ["English"],
+    "skills": [
+      "React",
+      "TypeScript",
+      "CSS",
+      "Vite",
+      "Testing Library",
+      "Next.js",
+      "Storybook",
+      "GraphQL",
+      "Jest",
+      "Accessibility"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Frontend Developer",
         "company": "Pixel Labs",
         "start": "2021",
         "end": "Present",
-        "bullets": ["Built design system in React 19", "Improved Core Web Vitals by 30%"]
+        "bullets": [
+          "Built design system in React 19",
+          "Improved Core Web Vitals by 30%",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with React"
+        ],
+        "location": "London, UK"
+      },
+      {
+        "title": "UI Engineer",
+        "company": "NovaLabs",
+        "location": "London, UK",
+        "start": "2018",
+        "end": "2020",
+        "bullets": [
+          "Partnered with product to ship incremental value using React",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with React"
+        ]
+      },
+      {
+        "title": "Web Developer",
+        "company": "BrightStack",
+        "location": "London, UK",
+        "start": "2014",
+        "end": "2017",
+        "bullets": [
+          "Partnered with product to ship incremental value using React",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with React"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Computer Science", "institution": "University of Manchester", "year": "2020"}
+      {
+        "degree": "BSc Computer Science",
+        "institution": "University of Manchester",
+        "year": "2020",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2021",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 6095-8013",
+    "linkedin": "linkedin.com/in/emma-wright",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with React for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on React patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -81,21 +289,94 @@
     "email": "lucia.fernandez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrolladora Full Stack",
-    "summary": "Desarrollo web con Node.js y React. Experiencia en startups B2B.",
+    "summary": "Lucía es desarrolladora full stack con 4 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con JavaScript, Node.js, React, MongoDB. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
     "location": "Barcelona, España",
-    "skills": ["JavaScript", "Node.js", "React", "MongoDB", "GraphQL"],
-    "languages": ["Spanish", "Catalan", "English"],
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "React",
+      "MongoDB",
+      "GraphQL",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker",
+      "CI/CD",
+      "AWS"
+    ],
+    "languages": [
+      "Spanish",
+      "Catalan",
+      "English"
+    ],
     "experience": [
       {
         "title": "Full Stack Developer",
         "company": "StartupHub",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Desarrolló APIs GraphQL", "Implementó CI/CD con GitHub Actions"]
+        "bullets": [
+          "Desarrolló APIs GraphQL",
+          "Implementó CI/CD con GitHub Actions",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con JavaScript"
+        ],
+        "location": "Barcelona, España"
+      },
+      {
+        "title": "Desarrollador/a Backend",
+        "company": "NovaLabs",
+        "location": "Barcelona, España",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando JavaScript",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con JavaScript"
+        ]
+      },
+      {
+        "title": "Desarrollador/a Web Junior",
+        "company": "BrightStack",
+        "location": "Barcelona, España",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando JavaScript",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con JavaScript"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "Universitat de Barcelona (UB)", "year": "2019"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universitat de Barcelona (UB)",
+        "year": "2019",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2020",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 634578639",
+    "linkedin": "linkedin.com/in/lucia-fernandez",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con JavaScript para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en JavaScript."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -104,21 +385,94 @@
     "email": "marcus.chen@demo-cvs.local",
     "locale": "en",
     "headline": "DevOps Engineer",
-    "summary": "Infrastructure automation and Kubernetes at scale.",
+    "summary": "Marcus is a DevOps Engineer with 4 years of experience shipping production systems. Strong hands-on background with Kubernetes, Terraform, Go, AWS, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Berlin, Germany.",
     "location": "Berlin, Germany",
-    "skills": ["Kubernetes", "Terraform", "Go", "AWS", "Prometheus"],
-    "languages": ["English", "Mandarin"],
+    "skills": [
+      "Kubernetes",
+      "Terraform",
+      "Go",
+      "AWS",
+      "Prometheus",
+      "Grafana",
+      "Helm",
+      "Linux",
+      "CI/CD",
+      "Python"
+    ],
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
     "experience": [
       {
         "title": "DevOps Engineer",
         "company": "CloudNine",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Managed EKS clusters for 50+ services", "Reduced deploy time by 60%"]
+        "bullets": [
+          "Managed EKS clusters for 50+ services",
+          "Reduced deploy time by 60%",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Kubernetes"
+        ],
+        "location": "Berlin, Germany"
+      },
+      {
+        "title": "SysAdmin",
+        "company": "NovaLabs",
+        "location": "Berlin, Germany",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Partnered with product to ship incremental value using Kubernetes",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Kubernetes"
+        ]
+      },
+      {
+        "title": "Junior DevOps",
+        "company": "BrightStack",
+        "location": "Berlin, Germany",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Partnered with product to ship incremental value using Kubernetes",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Kubernetes"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Information Systems", "institution": "MIT", "year": "2017"}
+      {
+        "degree": "BSc Information Systems",
+        "institution": "MIT",
+        "year": "2017",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2018",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 5764-6537",
+    "linkedin": "linkedin.com/in/marcus-chen",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Kubernetes for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Kubernetes patterns."
+      }
+    ],
+    "certifications": [
+      "CKA (Certified Kubernetes Administrator)",
+      "HashiCorp Terraform Associate"
     ]
   },
   {
@@ -127,21 +481,93 @@
     "email": "ana.torres@demo-cvs.local",
     "locale": "es",
     "headline": "QA Engineer",
-    "summary": "Testing automatizado y calidad de software en entornos ágiles.",
+    "summary": "Ana es qa engineer con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Selenium, Cypress, Python, Jira. Busca roles con impacto técnico y colaboración cercana con negocio desde Valencia, España.",
     "location": "Valencia, España",
-    "skills": ["Selenium", "Cypress", "Python", "Jira", "Postman"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Selenium",
+      "Cypress",
+      "Python",
+      "Jira",
+      "Postman",
+      "Playwright",
+      "pytest",
+      "API Testing",
+      "CI/CD",
+      "SQL"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "QA Engineer",
         "company": "QualityFirst",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Automatizó tests E2E con Cypress", "Definió estrategia de testing en Python"]
+        "bullets": [
+          "Automatizó tests E2E con Cypress",
+          "Definió estrategia de testing en Python",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Selenium"
+        ],
+        "location": "Valencia, España"
+      },
+      {
+        "title": "Tester QA",
+        "company": "NovaLabs",
+        "location": "Valencia, España",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Selenium",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Selenium"
+        ]
+      },
+      {
+        "title": "Soporte Técnico",
+        "company": "BrightStack",
+        "location": "Valencia, España",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Selenium",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Selenium"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2018"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "UPC",
+        "year": "2018",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2019",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 600375889",
+    "linkedin": "linkedin.com/in/ana-torres",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Selenium para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Selenium."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -150,21 +576,94 @@
     "email": "david.kumar@demo-cvs.local",
     "locale": "en",
     "headline": "Machine Learning Engineer",
-    "summary": "Production ML systems with Python, PyTorch and MLOps tooling.",
+    "summary": "David is a Machine Learning Engineer with 5 years of experience shipping production systems. Strong hands-on background with Python, PyTorch, MLflow, Kubernetes, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in San Francisco, USA.",
     "location": "San Francisco, USA",
-    "skills": ["Python", "PyTorch", "MLflow", "Kubernetes", "SQL"],
-    "languages": ["English", "Hindi"],
+    "skills": [
+      "Python",
+      "PyTorch",
+      "MLflow",
+      "Kubernetes",
+      "SQL",
+      "scikit-learn",
+      "Pandas",
+      "Hugging Face",
+      "Docker",
+      "Feature Stores"
+    ],
+    "languages": [
+      "English",
+      "Hindi"
+    ],
     "experience": [
       {
         "title": "ML Engineer",
         "company": "AI Ventures",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Deployed recommendation models serving 1M users", "Built feature store in Python"]
+        "bullets": [
+          "Deployed recommendation models serving 1M users",
+          "Built feature store in Python",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ],
+        "location": "San Francisco, USA"
+      },
+      {
+        "title": "Data Scientist",
+        "company": "NovaLabs",
+        "location": "San Francisco, USA",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
+      },
+      {
+        "title": "Research Intern",
+        "company": "BrightStack",
+        "location": "San Francisco, USA",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Artificial Intelligence", "institution": "Stanford University", "year": "2019"}
+      {
+        "degree": "MSc Artificial Intelligence",
+        "institution": "Stanford University",
+        "year": "2019",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2020",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 6371-2338",
+    "linkedin": "linkedin.com/in/david-kumar",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Python patterns."
+      }
+    ],
+    "certifications": [
+      "Deep Learning Specialization",
+      "AWS ML Specialty"
     ]
   },
   {
@@ -173,21 +672,94 @@
     "email": "sofia.ruiz@demo-cvs.local",
     "locale": "es",
     "headline": "Product Manager",
-    "summary": "Gestión de producto digital con foco en equipos de ingeniería.",
+    "summary": "Sofía es product manager con 5 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Product Strategy, Agile, Figma, Analytics. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
     "location": "Madrid, España",
-    "skills": ["Product Strategy", "Agile", "Figma", "Analytics", "Roadmapping"],
-    "languages": ["Spanish", "English", "French"],
+    "skills": [
+      "Product Strategy",
+      "Agile",
+      "Figma",
+      "Analytics",
+      "Roadmapping",
+      "A/B Testing",
+      "SQL",
+      "Stakeholder Mgmt",
+      "Jira",
+      "OKRs"
+    ],
+    "languages": [
+      "Spanish",
+      "English",
+      "French"
+    ],
     "experience": [
       {
         "title": "Product Manager",
         "company": "SaaS Co",
         "start": "2017",
         "end": "Present",
-        "bullets": ["Lanzó 3 productos B2B", "Coordinó equipos de 15 ingenieros"]
+        "bullets": [
+          "Lanzó 3 productos B2B",
+          "Coordinó equipos de 15 ingenieros",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+        ],
+        "location": "Madrid, España"
+      },
+      {
+        "title": "Product Manager Asociado/a",
+        "company": "NovaLabs",
+        "location": "Madrid, España",
+        "start": "2014",
+        "end": "2016",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Product Strategy",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+        ]
+      },
+      {
+        "title": "Analista de Negocio",
+        "company": "BrightStack",
+        "location": "Madrid, España",
+        "start": "2010",
+        "end": "2013",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Product Strategy",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Product Strategy"
+        ]
       }
     ],
     "education": [
-      {"degree": "MBA", "institution": "IE Business School", "year": "2016"}
+      {
+        "degree": "MBA",
+        "institution": "IE Business School",
+        "year": "2016",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2017",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 652603515",
+    "linkedin": "linkedin.com/in/sofia-ruiz",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Product Strategy para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Product Strategy."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -196,21 +768,92 @@
     "email": "james.oconnor@demo-cvs.local",
     "locale": "en",
     "headline": "Java Backend Developer",
-    "summary": "Enterprise Java applications and Spring Boot microservices.",
+    "summary": "James is a Java Backend Developer with 3 years of experience shipping production systems. Strong hands-on background with Java, Spring Boot, Kafka, PostgreSQL, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Dublin, Ireland.",
     "location": "Dublin, Ireland",
-    "skills": ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Maven"],
-    "languages": ["English"],
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "PostgreSQL",
+      "Maven",
+      "Python",
+      "FastAPI",
+      "Django",
+      "Redis",
+      "Docker"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Senior Java Developer",
         "company": "FinServe",
         "start": "2015",
         "end": "Present",
-        "bullets": ["Architected payment processing system", "Mentored junior developers"]
+        "bullets": [
+          "Architected payment processing system",
+          "Mentored junior developers",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Java"
+        ],
+        "location": "Dublin, Ireland"
+      },
+      {
+        "title": "Software Engineer",
+        "company": "NovaLabs",
+        "location": "Dublin, Ireland",
+        "start": "2012",
+        "end": "2014",
+        "bullets": [
+          "Partnered with product to ship incremental value using Java",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Java"
+        ]
+      },
+      {
+        "title": "Junior Developer",
+        "company": "BrightStack",
+        "location": "Dublin, Ireland",
+        "start": "2008",
+        "end": "2011",
+        "bullets": [
+          "Partnered with product to ship incremental value using Java",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Java"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Software Engineering", "institution": "Trinity College Dublin", "year": "2014"}
+      {
+        "degree": "BSc Software Engineering",
+        "institution": "Trinity College Dublin",
+        "year": "2014",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2015",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 6621-8088",
+    "linkedin": "linkedin.com/in/james-oconnor",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Java for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Java patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -219,21 +862,93 @@
     "email": "elena.vidal@demo-cvs.local",
     "locale": "es",
     "headline": "UX/UI Designer",
-    "summary": "Diseño de interfaces centradas en el usuario para apps web y móvil.",
+    "summary": "Elena es ux/ui designer con 7 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Figma, Sketch, Prototyping, User Research. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
     "location": "Barcelona, España",
-    "skills": ["Figma", "Sketch", "Prototyping", "User Research", "Design Systems"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Figma",
+      "Sketch",
+      "Prototyping",
+      "User Research",
+      "Design Systems",
+      "Accessibility",
+      "FigJam",
+      "Usability Testing",
+      "HTML",
+      "CSS"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Senior UX Designer",
         "company": "Design Studio BCN",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Rediseñó app con 500K usuarios", "Creó design system corporativo"]
+        "bullets": [
+          "Rediseñó app con 500K usuarios",
+          "Creó design system corporativo",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Figma"
+        ],
+        "location": "Barcelona, España"
+      },
+      {
+        "title": "Diseñador/a de Producto",
+        "company": "NovaLabs",
+        "location": "Barcelona, España",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Figma",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Figma"
+        ]
+      },
+      {
+        "title": "Diseñador/a Junior",
+        "company": "BrightStack",
+        "location": "Barcelona, España",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Figma",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Figma"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Diseño Digital", "institution": "UB", "year": "2017"}
+      {
+        "degree": "Grado en Diseño Digital",
+        "institution": "UB",
+        "year": "2017",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2018",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 674354407",
+    "linkedin": "linkedin.com/in/elena-vidal",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Figma para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Figma."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -242,21 +957,92 @@
     "email": "ryan.patel@demo-cvs.local",
     "locale": "en",
     "headline": "Python Developer",
-    "summary": "Python developer with focus on automation and scripting.",
+    "summary": "Ryan is a Python Developer with 10 years of experience shipping production systems. Strong hands-on background with Python, Django, Celery, Redis, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Toronto, Canada.",
     "location": "Toronto, Canada",
-    "skills": ["Python", "Django", "Celery", "Redis", "Linux"],
-    "languages": ["English"],
+    "skills": [
+      "Python",
+      "Django",
+      "Celery",
+      "Redis",
+      "Linux",
+      "FastAPI",
+      "PostgreSQL",
+      "pytest",
+      "Docker",
+      "Bash"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Python Developer",
         "company": "AutoScript Inc",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Automated reporting pipelines in Python", "Built internal tools with Django"]
+        "bullets": [
+          "Automated reporting pipelines in Python",
+          "Built internal tools with Django",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ],
+        "location": "Toronto, Canada"
+      },
+      {
+        "title": "Backend Developer",
+        "company": "NovaLabs",
+        "location": "Toronto, Canada",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
+      },
+      {
+        "title": "Intern",
+        "company": "BrightStack",
+        "location": "Toronto, Canada",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Computer Science", "institution": "University of Toronto", "year": "2018"}
+      {
+        "degree": "BSc Computer Science",
+        "institution": "University of Toronto",
+        "year": "2018",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2019",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 3774-9110",
+    "linkedin": "linkedin.com/in/ryan-patel",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Python patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -265,21 +1051,92 @@
     "email": "maria.santos@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera de Software",
-    "summary": "Desarrollo backend con Python y bases de datos relacionales.",
+    "summary": "María es ingeniera de software con 10 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Flask, MySQL, Git. Busca roles con impacto técnico y colaboración cercana con negocio desde Sevilla, España.",
     "location": "Sevilla, España",
-    "skills": ["Python", "Flask", "MySQL", "Git", "Linux"],
-    "languages": ["Spanish"],
+    "skills": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "Git",
+      "Linux",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "languages": [
+      "Spanish"
+    ],
     "experience": [
       {
         "title": "Software Engineer",
         "company": "InnovaTech",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Desarrolló APIs REST en Python/Flask", "Migró monolito a microservicios"]
+        "bullets": [
+          "Desarrolló APIs REST en Python/Flask",
+          "Migró monolito a microservicios",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Sevilla, España"
+      },
+      {
+        "title": "Desarrollador/a de Software",
+        "company": "NovaLabs",
+        "location": "Sevilla, España",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Desarrollador/a Junior",
+        "company": "BrightStack",
+        "location": "Sevilla, España",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "UPM", "year": "2019"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "UPM",
+        "year": "2019",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2020",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 641455202",
+    "linkedin": "linkedin.com/in/maria-santos",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -288,21 +1145,93 @@
     "email": "oliver.brown@demo-cvs.local",
     "locale": "en",
     "headline": "Security Engineer",
-    "summary": "Application security, penetration testing and secure SDLC.",
+    "summary": "Oliver is a Security Engineer with 9 years of experience shipping production systems. Strong hands-on background with Security, OWASP, Python, Burp Suite, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Edinburgh, UK.",
     "location": "Edinburgh, UK",
-    "skills": ["Security", "OWASP", "Python", "Burp Suite", "SIEM"],
-    "languages": ["English"],
+    "skills": [
+      "Security",
+      "OWASP",
+      "Python",
+      "Burp Suite",
+      "SIEM",
+      "Threat Modeling",
+      "Secure SDLC",
+      "Linux",
+      "Cloud Security",
+      "IAM"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Security Engineer",
         "company": "SecureNet",
         "start": "2017",
         "end": "Present",
-        "bullets": ["Conducted security audits for fintech clients", "Built Python tooling for vulnerability scans"]
+        "bullets": [
+          "Conducted security audits for fintech clients",
+          "Built Python tooling for vulnerability scans",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Security"
+        ],
+        "location": "Edinburgh, UK"
+      },
+      {
+        "title": "IT Security Analyst",
+        "company": "NovaLabs",
+        "location": "Edinburgh, UK",
+        "start": "2014",
+        "end": "2016",
+        "bullets": [
+          "Partnered with product to ship incremental value using Security",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Security"
+        ]
+      },
+      {
+        "title": "SOC Analyst",
+        "company": "BrightStack",
+        "location": "Edinburgh, UK",
+        "start": "2010",
+        "end": "2013",
+        "bullets": [
+          "Partnered with product to ship incremental value using Security",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Security"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Cybersecurity", "institution": "University of Edinburgh", "year": "2016"}
+      {
+        "degree": "MSc Cybersecurity",
+        "institution": "University of Edinburgh",
+        "year": "2016",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2017",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 3071-1867",
+    "linkedin": "linkedin.com/in/oliver-brown",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Security for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Security patterns."
+      }
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "OSCP (in progress)"
     ]
   },
   {
@@ -311,21 +1240,93 @@
     "email": "paula.garcia@demo-cvs.local",
     "locale": "es",
     "headline": "Data Analyst",
-    "summary": "Análisis de datos de negocio con SQL y visualización.",
+    "summary": "Paula es data analyst con 5 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con SQL, Tableau, Excel, R. Busca roles con impacto técnico y colaboración cercana con negocio desde Bilbao, España.",
     "location": "Bilbao, España",
-    "skills": ["SQL", "Tableau", "Excel", "R", "Power BI"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "SQL",
+      "Tableau",
+      "Excel",
+      "R",
+      "Power BI",
+      "Python",
+      "Statistics",
+      "ETL",
+      "Looker",
+      "Data Modeling"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Data Analyst",
         "company": "Retail Analytics",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Creó dashboards de ventas en Tableau", "Automatizó informes semanales"]
+        "bullets": [
+          "Creó dashboards de ventas en Tableau",
+          "Automatizó informes semanales",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con SQL"
+        ],
+        "location": "Bilbao, España"
+      },
+      {
+        "title": "Analista Junior",
+        "company": "NovaLabs",
+        "location": "Bilbao, España",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando SQL",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con SQL"
+        ]
+      },
+      {
+        "title": "Especialista de Reporting",
+        "company": "BrightStack",
+        "location": "Bilbao, España",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando SQL",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con SQL"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Estadística", "institution": "UPV/EHU", "year": "2017"}
+      {
+        "degree": "Grado en Estadística",
+        "institution": "UPV/EHU",
+        "year": "2017",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2018",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 631161308",
+    "linkedin": "linkedin.com/in/paula-garcia",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con SQL para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en SQL."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -334,21 +1335,93 @@
     "email": "nina.andersson@demo-cvs.local",
     "locale": "en",
     "headline": "iOS Developer",
-    "summary": "Native iOS development with Swift and SwiftUI.",
+    "summary": "Nina is a iOS Developer with 5 years of experience shipping production systems. Strong hands-on background with Swift, SwiftUI, Xcode, Core Data, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Stockholm, Sweden.",
     "location": "Stockholm, Sweden",
-    "skills": ["Swift", "SwiftUI", "Xcode", "Core Data", "Combine"],
-    "languages": ["English", "Swedish"],
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Core Data",
+      "Combine",
+      "UIKit",
+      "TestFlight",
+      "CI/CD",
+      "REST",
+      "GraphQL"
+    ],
+    "languages": [
+      "English",
+      "Swedish"
+    ],
     "experience": [
       {
         "title": "iOS Developer",
         "company": "Nordic Apps",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Shipped 4 apps to App Store", "Led SwiftUI migration"]
+        "bullets": [
+          "Shipped 4 apps to App Store",
+          "Led SwiftUI migration",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Swift"
+        ],
+        "location": "Stockholm, Sweden"
+      },
+      {
+        "title": "Mobile Developer",
+        "company": "NovaLabs",
+        "location": "Stockholm, Sweden",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Partnered with product to ship incremental value using Swift",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Swift"
+        ]
+      },
+      {
+        "title": "Junior iOS Developer",
+        "company": "BrightStack",
+        "location": "Stockholm, Sweden",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Partnered with product to ship incremental value using Swift",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Swift"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Computer Science", "institution": "KTH Royal Institute", "year": "2019"}
+      {
+        "degree": "BSc Computer Science",
+        "institution": "KTH Royal Institute",
+        "year": "2019",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2020",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 0308-4329",
+    "linkedin": "linkedin.com/in/nina-andersson",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Swift for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Swift patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -357,21 +1430,93 @@
     "email": "hugo.martin@demo-cvs.local",
     "locale": "es",
     "headline": "SRE / Platform Engineer",
-    "summary": "Fiabilidad de sistemas y observabilidad en producción.",
+    "summary": "Hugo es sre / platform engineer con 6 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Kubernetes, Python, Grafana, Linux. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
     "location": "Barcelona, España",
-    "skills": ["Kubernetes", "Python", "Grafana", "Linux", "CI/CD"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Kubernetes",
+      "Python",
+      "Grafana",
+      "Linux",
+      "CI/CD",
+      "Prometheus",
+      "On-call",
+      "Terraform",
+      "SLO/SLA",
+      "Incident Response"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Site Reliability Engineer",
         "company": "Platform.io",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Mantuvo SLA 99.95%", "Escribió runbooks y herramientas en Python"]
+        "bullets": [
+          "Mantuvo SLA 99.95%",
+          "Escribió runbooks y herramientas en Python",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+        ],
+        "location": "Barcelona, España"
+      },
+      {
+        "title": "Ingeniero/a de Plataforma",
+        "company": "NovaLabs",
+        "location": "Barcelona, España",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Kubernetes",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+        ]
+      },
+      {
+        "title": "SysAdmin",
+        "company": "BrightStack",
+        "location": "Barcelona, España",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Kubernetes",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Kubernetes"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2018"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "UPC",
+        "year": "2018",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2019",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 606412025",
+    "linkedin": "linkedin.com/in/hugo-martin",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Kubernetes para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Kubernetes."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -380,21 +1525,93 @@
     "email": "lisa.hoffman@demo-cvs.local",
     "locale": "en",
     "headline": "Technical Writer",
-    "summary": "Documentation for developer tools and API products.",
+    "summary": "Lisa is a Technical Writer with 4 years of experience shipping production systems. Strong hands-on background with Technical Writing, Markdown, API Docs, Git, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Amsterdam, Netherlands.",
     "location": "Amsterdam, Netherlands",
-    "skills": ["Technical Writing", "Markdown", "API Docs", "Git", "Confluence"],
-    "languages": ["English", "German"],
+    "skills": [
+      "Technical Writing",
+      "Markdown",
+      "API Docs",
+      "Git",
+      "Confluence",
+      "OpenAPI",
+      "Docs-as-code",
+      "Sphinx",
+      "Docusaurus",
+      "Editing"
+    ],
+    "languages": [
+      "English",
+      "German"
+    ],
     "experience": [
       {
         "title": "Senior Technical Writer",
         "company": "DocuTech",
         "start": "2016",
         "end": "Present",
-        "bullets": ["Documented REST APIs for 200+ endpoints", "Created developer onboarding guides"]
+        "bullets": [
+          "Documented REST APIs for 200+ endpoints",
+          "Created developer onboarding guides",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Technical Writing"
+        ],
+        "location": "Amsterdam, Netherlands"
+      },
+      {
+        "title": "Content Writer",
+        "company": "NovaLabs",
+        "location": "Amsterdam, Netherlands",
+        "start": "2013",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using Technical Writing",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Technical Writing"
+        ]
+      },
+      {
+        "title": "Documentation Intern",
+        "company": "BrightStack",
+        "location": "Amsterdam, Netherlands",
+        "start": "2009",
+        "end": "2012",
+        "bullets": [
+          "Partnered with product to ship incremental value using Technical Writing",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Technical Writing"
+        ]
       }
     ],
     "education": [
-      {"degree": "BA Communications", "institution": "University of Amsterdam", "year": "2015"}
+      {
+        "degree": "BA Communications",
+        "institution": "University of Amsterdam",
+        "year": "2015",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2016",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 4964-0709",
+    "linkedin": "linkedin.com/in/lisa-hoffman",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Technical Writing for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Technical Writing patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -403,21 +1620,92 @@
     "email": "diego.lopez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrollador Python Junior",
-    "summary": "Junior developer aprendiendo Python y buenas prácticas de desarrollo.",
+    "summary": "Diego es desarrollador python junior con 9 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Git, pytest, HTML. Busca roles con impacto técnico y colaboración cercana con negocio desde Zaragoza, España.",
     "location": "Zaragoza, España",
-    "skills": ["Python", "Git", "pytest", "HTML", "CSS"],
-    "languages": ["Spanish"],
+    "skills": [
+      "Python",
+      "Git",
+      "pytest",
+      "HTML",
+      "CSS",
+      "FastAPI",
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "languages": [
+      "Spanish"
+    ],
     "experience": [
       {
         "title": "Junior Python Developer",
         "company": "CodeStart",
         "start": "2023",
         "end": "Present",
-        "bullets": ["Escribió tests con pytest", "Contribuyó a APIs internas en Python"]
+        "bullets": [
+          "Escribió tests con pytest",
+          "Contribuyó a APIs internas en Python",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Zaragoza, España"
+      },
+      {
+        "title": "Desarrollador/a de Software",
+        "company": "NovaLabs",
+        "location": "Zaragoza, España",
+        "start": "2020",
+        "end": "2022",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Desarrollador/a Junior",
+        "company": "BrightStack",
+        "location": "Zaragoza, España",
+        "start": "2016",
+        "end": "2019",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad de Zaragoza", "year": "2023"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Zaragoza",
+        "year": "2023",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2024",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 691932270",
+    "linkedin": "linkedin.com/in/diego-lopez",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -426,21 +1714,92 @@
     "email": "sarah.mitchell@demo-cvs.local",
     "locale": "en",
     "headline": "Engineering Manager",
-    "summary": "Leading backend teams building scalable distributed systems.",
+    "summary": "Sarah is a Engineering Manager with 9 years of experience shipping production systems. Strong hands-on background with Leadership, Python, System Design, Hiring, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in New York, USA.",
     "location": "New York, USA",
-    "skills": ["Leadership", "Python", "System Design", "Hiring", "Agile"],
-    "languages": ["English"],
+    "skills": [
+      "Leadership",
+      "Python",
+      "System Design",
+      "Hiring",
+      "Agile",
+      "Mentoring",
+      "Roadmaps",
+      "OKRs",
+      "Stakeholder Mgmt",
+      "Architecture"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Engineering Manager",
         "company": "ScaleUp NYC",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Managed team of 12 Python engineers", "Delivered platform serving 10M users"]
+        "bullets": [
+          "Managed team of 12 Python engineers",
+          "Delivered platform serving 10M users",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Leadership"
+        ],
+        "location": "New York, USA"
+      },
+      {
+        "title": "Tech Lead",
+        "company": "NovaLabs",
+        "location": "New York, USA",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Partnered with product to ship incremental value using Leadership",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Leadership"
+        ]
+      },
+      {
+        "title": "Senior Engineer",
+        "company": "BrightStack",
+        "location": "New York, USA",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using Leadership",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Leadership"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Computer Science", "institution": "Columbia University", "year": "2012"}
+      {
+        "degree": "MSc Computer Science",
+        "institution": "Columbia University",
+        "year": "2012",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2013",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 6058-8008",
+    "linkedin": "linkedin.com/in/sarah-mitchell",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Leadership for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Leadership patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -449,21 +1808,94 @@
     "email": "ivan.petrov@demo-cvs.local",
     "locale": "en",
     "headline": "Rust Systems Programmer",
-    "summary": "Low-level systems programming and performance-critical services.",
+    "summary": "Ivan is a Rust Systems Programmer with 7 years of experience shipping production systems. Strong hands-on background with Rust, C++, Linux, Networking, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Prague, Czech Republic.",
     "location": "Prague, Czech Republic",
-    "skills": ["Rust", "C++", "Linux", "Networking", "WASM"],
-    "languages": ["English", "Czech", "Russian"],
+    "skills": [
+      "Rust",
+      "C++",
+      "Linux",
+      "Networking",
+      "WASM",
+      "Tokio",
+      "Performance",
+      "Systems Design",
+      "Git",
+      "CI/CD"
+    ],
+    "languages": [
+      "English",
+      "Czech",
+      "Russian"
+    ],
     "experience": [
       {
         "title": "Systems Programmer",
         "company": "PerfSystems",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Built high-throughput proxy in Rust", "Optimized latency-critical paths"]
+        "bullets": [
+          "Built high-throughput proxy in Rust",
+          "Optimized latency-critical paths",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Rust"
+        ],
+        "location": "Prague, Czech Republic"
+      },
+      {
+        "title": "C++ Engineer",
+        "company": "NovaLabs",
+        "location": "Prague, Czech Republic",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Partnered with product to ship incremental value using Rust",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Rust"
+        ]
+      },
+      {
+        "title": "Systems Intern",
+        "company": "BrightStack",
+        "location": "Prague, Czech Republic",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Partnered with product to ship incremental value using Rust",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Rust"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Computer Science", "institution": "Charles University", "year": "2017"}
+      {
+        "degree": "MSc Computer Science",
+        "institution": "Charles University",
+        "year": "2017",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2018",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 8877-1268",
+    "linkedin": "linkedin.com/in/ivan-petrov",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Rust for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Rust patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -472,21 +1904,93 @@
     "email": "carmen.ortiz@demo-cvs.local",
     "locale": "es",
     "headline": "Business Analyst",
-    "summary": "Análisis de procesos y requisitos para proyectos digitales.",
+    "summary": "Carmen es business analyst con 3 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Business Analysis, BPMN, SQL, Jira. Busca roles con impacto técnico y colaboración cercana con negocio desde Málaga, España.",
     "location": "Málaga, España",
-    "skills": ["Business Analysis", "BPMN", "SQL", "Jira", "Stakeholder Management"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Business Analysis",
+      "BPMN",
+      "SQL",
+      "Jira",
+      "Stakeholder Management",
+      "Tableau",
+      "Excel",
+      "R",
+      "Power BI",
+      "Python"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Business Analyst",
         "company": "Consulting Plus",
         "start": "2017",
         "end": "Present",
-        "bullets": ["Definió requisitos para 10+ proyectos", "Facilitó workshops con stakeholders"]
+        "bullets": [
+          "Definió requisitos para 10+ proyectos",
+          "Facilitó workshops con stakeholders",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+        ],
+        "location": "Málaga, España"
+      },
+      {
+        "title": "Analista Junior",
+        "company": "NovaLabs",
+        "location": "Málaga, España",
+        "start": "2014",
+        "end": "2016",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Business Analysis",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+        ]
+      },
+      {
+        "title": "Especialista de Reporting",
+        "company": "BrightStack",
+        "location": "Málaga, España",
+        "start": "2010",
+        "end": "2013",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Business Analysis",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Business Analysis"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en ADE", "institution": "Universidad de Málaga", "year": "2016"}
+      {
+        "degree": "Grado en ADE",
+        "institution": "Universidad de Málaga",
+        "year": "2016",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2017",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 612860579",
+    "linkedin": "linkedin.com/in/carmen-ortiz",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Business Analysis para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Business Analysis."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -495,21 +1999,93 @@
     "email": "tom.wilson@demo-cvs.local",
     "locale": "en",
     "headline": "Cloud Architect",
-    "summary": "AWS solutions architecture for enterprise workloads.",
+    "summary": "Tom is a Cloud Architect with 6 years of experience shipping production systems. Strong hands-on background with AWS, Python, CloudFormation, Lambda, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Chicago, USA.",
     "location": "Chicago, USA",
-    "skills": ["AWS", "Python", "CloudFormation", "Lambda", "VPC"],
-    "languages": ["English"],
+    "skills": [
+      "AWS",
+      "Python",
+      "CloudFormation",
+      "Lambda",
+      "VPC",
+      "CDK",
+      "IAM",
+      "ECS",
+      "S3",
+      "Cost Optimization"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Cloud Architect",
         "company": "Enterprise Cloud",
         "start": "2016",
         "end": "Present",
-        "bullets": ["Designed multi-account AWS landing zone", "Wrote IaC modules in Python/CDK"]
+        "bullets": [
+          "Designed multi-account AWS landing zone",
+          "Wrote IaC modules in Python/CDK",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with AWS"
+        ],
+        "location": "Chicago, USA"
+      },
+      {
+        "title": "Cloud Engineer",
+        "company": "NovaLabs",
+        "location": "Chicago, USA",
+        "start": "2013",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using AWS",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with AWS"
+        ]
+      },
+      {
+        "title": "Infrastructure Engineer",
+        "company": "BrightStack",
+        "location": "Chicago, USA",
+        "start": "2009",
+        "end": "2012",
+        "bullets": [
+          "Partnered with product to ship incremental value using AWS",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with AWS"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Information Technology", "institution": "University of Illinois", "year": "2014"}
+      {
+        "degree": "BSc Information Technology",
+        "institution": "University of Illinois",
+        "year": "2014",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2015",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 9499-8499",
+    "linkedin": "linkedin.com/in/tom-wilson",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with AWS for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on AWS patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Solutions Architect Associate",
+      "AWS Developer Associate"
     ]
   },
   {
@@ -518,21 +2094,93 @@
     "email": "beatriz.navarro@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera Backend",
-    "summary": "APIs escalables con Python y arquitectura hexagonal.",
+    "summary": "Beatriz es ingeniera backend con 7 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, FastAPI, DDD, PostgreSQL. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
     "location": "Barcelona, España",
-    "skills": ["Python", "FastAPI", "DDD", "PostgreSQL", "Redis"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Python",
+      "FastAPI",
+      "DDD",
+      "PostgreSQL",
+      "Redis",
+      "Django",
+      "Docker",
+      "AWS",
+      "pytest",
+      "Kafka"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Backend Engineer",
         "company": "FinTech BCN",
         "start": "2021",
         "end": "Present",
-        "bullets": ["Implementó APIs de pagos en FastAPI", "Diseñó arquitectura hexagonal en Python"]
+        "bullets": [
+          "Implementó APIs de pagos en FastAPI",
+          "Diseñó arquitectura hexagonal en Python",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Barcelona, España"
+      },
+      {
+        "title": "Desarrollador/a de Software",
+        "company": "NovaLabs",
+        "location": "Barcelona, España",
+        "start": "2018",
+        "end": "2020",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Desarrollador/a Junior",
+        "company": "BrightStack",
+        "location": "Barcelona, España",
+        "start": "2014",
+        "end": "2017",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "UPC", "year": "2020"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "UPC",
+        "year": "2020",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2021",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 666427481",
+    "linkedin": "linkedin.com/in/beatriz-navarro",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -541,21 +2189,93 @@
     "email": "alex.thompson@demo-cvs.local",
     "locale": "en",
     "headline": "Game Developer",
-    "summary": "Unity and C# game development for mobile platforms.",
+    "summary": "Alex is a Game Developer with 5 years of experience shipping production systems. Strong hands-on background with Unity, C#, Game Design, Blender, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Montreal, Canada.",
     "location": "Montreal, Canada",
-    "skills": ["Unity", "C#", "Game Design", "Blender", "Shader Graph"],
-    "languages": ["English", "French"],
+    "skills": [
+      "Unity",
+      "C#",
+      "Game Design",
+      "Blender",
+      "Shader Graph",
+      "Mobile",
+      "Profiling",
+      "Git",
+      "CI/CD",
+      "UI Toolkit"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
     "experience": [
       {
         "title": "Game Developer",
         "company": "Indie Games MTL",
         "start": "2019",
         "end": "Present",
-        "bullets": ["Released 2 mobile games with 100K+ downloads", "Optimized rendering pipeline"]
+        "bullets": [
+          "Released 2 mobile games with 100K+ downloads",
+          "Optimized rendering pipeline",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Unity"
+        ],
+        "location": "Montreal, Canada"
+      },
+      {
+        "title": "Gameplay Programmer",
+        "company": "NovaLabs",
+        "location": "Montreal, Canada",
+        "start": "2016",
+        "end": "2018",
+        "bullets": [
+          "Partnered with product to ship incremental value using Unity",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Unity"
+        ]
+      },
+      {
+        "title": "Junior Developer",
+        "company": "BrightStack",
+        "location": "Montreal, Canada",
+        "start": "2012",
+        "end": "2015",
+        "bullets": [
+          "Partnered with product to ship incremental value using Unity",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Unity"
+        ]
       }
     ],
     "education": [
-      {"degree": "Diploma Game Development", "institution": "Vanier College", "year": "2018"}
+      {
+        "degree": "Diploma Game Development",
+        "institution": "Vanier College",
+        "year": "2018",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2019",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 3829-0547",
+    "linkedin": "linkedin.com/in/alex-thompson",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Unity for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Unity patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -564,21 +2284,94 @@
     "email": "rosa.diaz@demo-cvs.local",
     "locale": "es",
     "headline": "Scrum Master",
-    "summary": "Facilitación ágil y mejora continua en equipos de producto.",
+    "summary": "Rosa es scrum master con 10 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Scrum, Kanban, Facilitation, Coaching. Busca roles con impacto técnico y colaboración cercana con negocio desde Madrid, España.",
     "location": "Madrid, España",
-    "skills": ["Scrum", "Kanban", "Facilitation", "Coaching", "Jira"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Scrum",
+      "Kanban",
+      "Facilitation",
+      "Coaching",
+      "Jira",
+      "Retrospectives",
+      "Metrics",
+      "Conflict Resolution",
+      "Agile",
+      "SAFe"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Scrum Master",
         "company": "AgileWorks",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Facilitó 5 equipos Scrum", "Redujo lead time en 25%"]
+        "bullets": [
+          "Facilitó 5 equipos Scrum",
+          "Redujo lead time en 25%",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Scrum"
+        ],
+        "location": "Madrid, España"
+      },
+      {
+        "title": "Agile Coach",
+        "company": "NovaLabs",
+        "location": "Madrid, España",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Scrum",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Scrum"
+        ]
+      },
+      {
+        "title": "Coordinador/a de Proyecto",
+        "company": "BrightStack",
+        "location": "Madrid, España",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Scrum",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Scrum"
+        ]
       }
     ],
     "education": [
-      {"degree": "Certificación PSM II", "institution": "Scrum.org", "year": "2019"}
+      {
+        "degree": "Certificación PSM II",
+        "institution": "Scrum.org",
+        "year": "2019",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2020",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 675128162",
+    "linkedin": "linkedin.com/in/rosa-diaz",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Scrum para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Scrum."
+      }
+    ],
+    "certifications": [
+      "PSM II",
+      "PSPO I"
     ]
   },
   {
@@ -587,21 +2380,93 @@
     "email": "kevin.zhang@demo-cvs.local",
     "locale": "en",
     "headline": "Full Stack Engineer",
-    "summary": "TypeScript across the stack with Next.js and Node.",
+    "summary": "Kevin is a Full Stack Engineer with 9 years of experience shipping production systems. Strong hands-on background with TypeScript, Next.js, Node.js, Prisma, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Singapore.",
     "location": "Singapore",
-    "skills": ["TypeScript", "Next.js", "Node.js", "Prisma", "AWS"],
-    "languages": ["English", "Mandarin"],
+    "skills": [
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "Prisma",
+      "AWS",
+      "JavaScript",
+      "React",
+      "MongoDB",
+      "GraphQL",
+      "PostgreSQL"
+    ],
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
     "experience": [
       {
         "title": "Full Stack Engineer",
         "company": "AsiaTech",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Built SaaS dashboard in Next.js", "Designed PostgreSQL schemas"]
+        "bullets": [
+          "Built SaaS dashboard in Next.js",
+          "Designed PostgreSQL schemas",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with TypeScript"
+        ],
+        "location": "Singapore"
+      },
+      {
+        "title": "Backend Developer",
+        "company": "NovaLabs",
+        "location": "Singapore",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Partnered with product to ship incremental value using TypeScript",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with TypeScript"
+        ]
+      },
+      {
+        "title": "Junior Web Developer",
+        "company": "BrightStack",
+        "location": "Singapore",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Partnered with product to ship incremental value using TypeScript",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with TypeScript"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Computer Engineering", "institution": "NUS", "year": "2019"}
+      {
+        "degree": "BSc Computer Engineering",
+        "institution": "NUS",
+        "year": "2019",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2020",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 2500-0357",
+    "linkedin": "linkedin.com/in/kevin-zhang",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with TypeScript for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on TypeScript patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -610,21 +2475,94 @@
     "email": "marta.iglesias@demo-cvs.local",
     "locale": "es",
     "headline": "Ingeniera de Machine Learning",
-    "summary": "Modelos de NLP y clasificación con Python y Hugging Face.",
+    "summary": "Marta es ingeniera de machine learning con 8 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, NLP, Hugging Face, scikit-learn. Busca roles con impacto técnico y colaboración cercana con negocio desde Barcelona, España.",
     "location": "Barcelona, España",
-    "skills": ["Python", "NLP", "Hugging Face", "scikit-learn", "Pandas"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Python",
+      "NLP",
+      "Hugging Face",
+      "scikit-learn",
+      "Pandas",
+      "PyTorch",
+      "MLflow",
+      "Kubernetes",
+      "SQL",
+      "Docker"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "ML Engineer",
         "company": "Language AI",
         "start": "2021",
         "end": "Present",
-        "bullets": ["Entrenó modelos de clasificación de texto en Python", "Desplegó pipelines NLP en producción"]
+        "bullets": [
+          "Entrenó modelos de clasificación de texto en Python",
+          "Desplegó pipelines NLP en producción",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Barcelona, España"
+      },
+      {
+        "title": "Científico/a de Datos",
+        "company": "NovaLabs",
+        "location": "Barcelona, España",
+        "start": "2018",
+        "end": "2020",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Becario/a investigación",
+        "company": "BrightStack",
+        "location": "Barcelona, España",
+        "start": "2014",
+        "end": "2017",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "MSc Data Science", "institution": "UPF Barcelona", "year": "2020"}
+      {
+        "degree": "MSc Data Science",
+        "institution": "UPF Barcelona",
+        "year": "2020",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2021",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 679525744",
+    "linkedin": "linkedin.com/in/marta-iglesias",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "Deep Learning Specialization",
+      "AWS ML Specialty"
     ]
   },
   {
@@ -633,21 +2571,93 @@
     "email": "chris.evans@demo-cvs.local",
     "locale": "en",
     "headline": "Database Administrator",
-    "summary": "PostgreSQL administration, tuning and high availability.",
+    "summary": "Chris is a Database Administrator with 5 years of experience shipping production systems. Strong hands-on background with PostgreSQL, SQL, Linux, Backup, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Boston, USA.",
     "location": "Boston, USA",
-    "skills": ["PostgreSQL", "SQL", "Linux", "Backup", "Replication"],
-    "languages": ["English"],
+    "skills": [
+      "PostgreSQL",
+      "SQL",
+      "Linux",
+      "Backup",
+      "Replication",
+      "Performance Tuning",
+      "HA",
+      "Monitoring",
+      "Python",
+      "Shell"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Database Administrator",
         "company": "DataCore Systems",
         "start": "2014",
         "end": "Present",
-        "bullets": ["Managed 50+ PostgreSQL instances", "Implemented streaming replication"]
+        "bullets": [
+          "Managed 50+ PostgreSQL instances",
+          "Implemented streaming replication",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with PostgreSQL"
+        ],
+        "location": "Boston, USA"
+      },
+      {
+        "title": "SQL Developer",
+        "company": "NovaLabs",
+        "location": "Boston, USA",
+        "start": "2011",
+        "end": "2013",
+        "bullets": [
+          "Partnered with product to ship incremental value using PostgreSQL",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with PostgreSQL"
+        ]
+      },
+      {
+        "title": "Junior DBA",
+        "company": "BrightStack",
+        "location": "Boston, USA",
+        "start": "2007",
+        "end": "2010",
+        "bullets": [
+          "Partnered with product to ship incremental value using PostgreSQL",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with PostgreSQL"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Information Systems", "institution": "Boston University", "year": "2013"}
+      {
+        "degree": "BSc Information Systems",
+        "institution": "Boston University",
+        "year": "2013",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2014",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 4541-4934",
+    "linkedin": "linkedin.com/in/chris-evans",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with PostgreSQL for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on PostgreSQL patterns."
+      }
+    ],
+    "certifications": [
+      "PostgreSQL Professional",
+      "AWS Database Specialty"
     ]
   },
   {
@@ -656,21 +2666,93 @@
     "email": "laura.perez@demo-cvs.local",
     "locale": "es",
     "headline": "Desarrolladora Python",
-    "summary": "Desarrollo de herramientas internas y scripts de automatización con Python.",
+    "summary": "Laura es desarrolladora python con 6 años de experiencia en entornos de producto y tecnología. Ha trabajado en equipos multidisciplinares entregando soluciones con Python, Bash, Docker, PostgreSQL. Busca roles con impacto técnico y colaboración cercana con negocio desde Granada, España.",
     "location": "Granada, España",
-    "skills": ["Python", "Bash", "Docker", "PostgreSQL", "FastAPI"],
-    "languages": ["Spanish", "English"],
+    "skills": [
+      "Python",
+      "Bash",
+      "Docker",
+      "PostgreSQL",
+      "FastAPI",
+      "Django",
+      "Redis",
+      "AWS",
+      "pytest",
+      "Kafka"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
     "experience": [
       {
         "title": "Python Developer",
         "company": "AutoOps",
         "start": "2020",
         "end": "Present",
-        "bullets": ["Automatizó despliegues con Python", "Creó APIs internas con FastAPI"]
+        "bullets": [
+          "Automatizó despliegues con Python",
+          "Creó APIs internas con FastAPI",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ],
+        "location": "Granada, España"
+      },
+      {
+        "title": "Desarrollador/a de Software",
+        "company": "NovaLabs",
+        "location": "Granada, España",
+        "start": "2017",
+        "end": "2019",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
+      },
+      {
+        "title": "Desarrollador/a Junior",
+        "company": "BrightStack",
+        "location": "Granada, España",
+        "start": "2013",
+        "end": "2016",
+        "bullets": [
+          "Colaboró con producto para priorizar entregas usando Python",
+          "Mejoró la calidad del código con revisiones y pruebas automatizadas",
+          "Documentó procesos y decisiones técnicas para el equipo",
+          "Redujo tiempos de entrega mediante automatización con Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "Grado en Ingeniería Informática", "institution": "Universidad de Granada", "year": "2019"}
+      {
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Granada",
+        "year": "2019",
+        "details": "TFG / proyecto final con nota destacada; asignaturas de sistemas y datos."
+      },
+      {
+        "degree": "Curso de especialización",
+        "institution": "Plataforma online (Coursera / edX)",
+        "year": "2020",
+        "details": "Formación continua alineada con el stack actual."
+      }
+    ],
+    "phone": "+34 650896832",
+    "linkedin": "linkedin.com/in/laura-perez",
+    "projects": [
+      {
+        "name": "Herramienta interna de reporting",
+        "description": "Dashboard y ETL ligero con Python para métricas de equipo."
+      },
+      {
+        "name": "Open source / side project",
+        "description": "Librería utilitaria publicada y mantenida en tiempo libre con foco en Python."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   },
   {
@@ -679,21 +2761,92 @@
     "email": "michael.foster@demo-cvs.local",
     "locale": "en",
     "headline": "Python Software Engineer",
-    "summary": "Building data-intensive applications with Python and PostgreSQL.",
+    "summary": "Michael is a Python Software Engineer with 9 years of experience shipping production systems. Strong hands-on background with Python, PostgreSQL, Redis, FastAPI, collaborating across product and engineering. Interested in roles with technical ownership and measurable impact in Austin, USA.",
     "location": "Austin, USA",
-    "skills": ["Python", "PostgreSQL", "Redis", "FastAPI", "pytest"],
-    "languages": ["English"],
+    "skills": [
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "FastAPI",
+      "pytest",
+      "Django",
+      "Docker",
+      "AWS",
+      "Kafka",
+      "gRPC"
+    ],
+    "languages": [
+      "English"
+    ],
     "experience": [
       {
         "title": "Software Engineer",
         "company": "DataPipe",
         "start": "2018",
         "end": "Present",
-        "bullets": ["Built ingestion services in Python", "Maintained high-throughput PostgreSQL schemas"]
+        "bullets": [
+          "Built ingestion services in Python",
+          "Maintained high-throughput PostgreSQL schemas",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ],
+        "location": "Austin, USA"
+      },
+      {
+        "title": "Software Engineer",
+        "company": "NovaLabs",
+        "location": "Austin, USA",
+        "start": "2015",
+        "end": "2017",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
+      },
+      {
+        "title": "Junior Developer",
+        "company": "BrightStack",
+        "location": "Austin, USA",
+        "start": "2011",
+        "end": "2014",
+        "bullets": [
+          "Partnered with product to ship incremental value using Python",
+          "Improved code quality through reviews and automated tests",
+          "Documented technical decisions and runbooks for the team",
+          "Cut delivery time by automating workflows with Python"
+        ]
       }
     ],
     "education": [
-      {"degree": "BSc Computer Science", "institution": "University of Texas at Austin", "year": "2017"}
+      {
+        "degree": "BSc Computer Science",
+        "institution": "University of Texas at Austin",
+        "year": "2017",
+        "details": "Capstone project with distinction; coursework in systems and data."
+      },
+      {
+        "degree": "Professional specialization course",
+        "institution": "Online platform (Coursera / edX)",
+        "year": "2018",
+        "details": "Continuing education aligned with current stack."
+      }
+    ],
+    "phone": "+1 (555) 2998-4714",
+    "linkedin": "linkedin.com/in/michael-foster",
+    "projects": [
+      {
+        "name": "Internal reporting toolkit",
+        "description": "Lightweight ETL and dashboard built with Python for team metrics."
+      },
+      {
+        "name": "Open-source side project",
+        "description": "Maintained a small utility library focused on Python patterns."
+      }
+    ],
+    "certifications": [
+      "AWS Cloud Practitioner"
     ]
   }
 ]

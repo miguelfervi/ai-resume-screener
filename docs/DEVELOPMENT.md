@@ -63,7 +63,9 @@ pnpm dev   # http://localhost:5173
 ```bash
 # From repo root, with backend venv active
 pip install -r backend/requirements.txt
-python scripts/generate_cvs.py          # seed JSON → 28 PDFs + manifest
+python scripts/enrich_profiles.py       # expand seed with fuller experience/skills (idempotent-ish)
+python scripts/generate_cvs.py          # seed → 30 PDFs; AI photos for 6 sample CVs
+python scripts/generate_cvs.py --photos all   # photos for every CV (slow)
 python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent exists)
 ```
 
@@ -81,24 +83,42 @@ python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent e
 
 ## Testing
 
+### Backend
+
 ```bash
 cd backend
 pytest -v
 ```
 
-Coverage targets: invariants (unit), agents (mocked LLM), API (TestClient).
+Coverage targets: invariants (unit), chunker/store/retriever, agents (mocked LLM), API (TestClient). No live Gemini calls in CI.
+
+### Frontend
+
+```bash
+cd frontend
+pnpm test        # Vitest — once setup (plan #50)
+pnpm build
+```
+
+Coverage targets: `api.ts` mock/real paths, `useChat`, smoke RTL for chat components.
+
+### CI (planned)
+
+GitHub Actions on PR: `pytest` + `pnpm test` + `pnpm build`.
 
 ## Phase checkpoints
 
 | Phase | Commits | Verify |
 |-------|---------|--------|
 | Backend core | 3–8 | `GET /health` → `{"status":"ok"}` |
-| CV generation | 9–13 | 28 PDFs + `manifest.json` |
+| CV generation | 9–13 | PDFs + `manifest.json` |
+| Frontend UI | 25–32 | Chat UI with mock + source badges |
 | RAG ingest | 14–17 | `scripts/ingest.py` completes |
 | Chat + API | 18–21 | `POST /api/chat` returns sources |
-| Tests | 22–24 | `pytest` green |
-| Frontend | 25–32 | Chat UI with source badges |
-| Docs + CI | 33–35 | README complete, Actions pass |
+| Connect | 33–34 | `USE_MOCK=false`, docs synced |
+| Backend tests | 40–46 | `pytest` green |
+| Frontend tests | 50–53 | `pnpm test` green |
+| CI | 60 | Actions pass |
 
 ## Cursor rules
 

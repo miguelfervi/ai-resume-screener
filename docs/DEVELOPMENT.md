@@ -102,9 +102,14 @@ pnpm build
 
 Coverage targets: `api.ts` mock/real paths, `useChat`, smoke RTL for chat components.
 
-### CI (planned)
+### CI
 
-GitHub Actions on PR: `pytest` + `pnpm test` + `pnpm build`.
+GitHub Actions (`.github/workflows/ci.yml`) on push/`main` and PRs:
+
+- Backend: Python 3.12 · `pip install -r requirements.txt` · `pytest -v`
+- Frontend: Node 22 · pnpm 10 · `pnpm test` · `pnpm build`
+
+No live Gemini calls — tests mock embeddings/LLM.
 
 ## Phase checkpoints
 

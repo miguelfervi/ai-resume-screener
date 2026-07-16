@@ -322,7 +322,7 @@ export function ChatPanel() {
             Grounded in indexed CVs
             <span className="hidden sm:inline">
               {' '}
-              · Enter to send · Click a source to open the résumé
+              · Enter to send · Click a source to open the resume
             </span>
           </p>
         </form>

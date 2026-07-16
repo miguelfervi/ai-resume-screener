@@ -7,7 +7,7 @@ import type {
 } from '@/types/api'
 
 // flip to false when POST /api/chat exists
-export const USE_MOCK = true
+export const USE_MOCK = false
 
 export class ApiError extends Error {
   status: number

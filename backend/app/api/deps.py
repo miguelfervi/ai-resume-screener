@@ -14,8 +14,17 @@ def get_cached_settings() -> Settings:
 
 
 def index_ready(settings: Settings) -> bool:
-    """True when ChromaDB collection directory exists and has persisted data."""
+    """True when ChromaDB has an indexed collection with documents."""
     chroma_dir = settings.chroma_dir
     if not chroma_dir.is_dir():
         return False
-    return any(chroma_dir.iterdir())
+    # ignore placeholder files like .gitkeep
+    has_data = any(p.name != ".gitkeep" and not p.name.startswith(".") for p in chroma_dir.iterdir())
+    if not has_data:
+        return False
+    try:
+        from ..rag.store import ChromaStore
+
+        return ChromaStore(chroma_dir).count() > 0
+    except Exception:
+        return False

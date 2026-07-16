@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "jane-doe",
+    "full_name": "Jane Doe",
+    "email": "jane.doe@demo-cvs.local",
+    "file": "jane-doe.pdf",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "AWS",
+      "Docker"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "carlos-mendez",
+    "full_name": "Carlos Méndez",
+    "email": "carlos.mendez@demo-cvs.local",
+    "file": "carlos-mendez.pdf",
+    "skills": [
+      "Python",
+      "Spark",
+      "SQL",
+      "Airflow",
+      "TensorFlow"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "emma-wright",
+    "full_name": "Emma Wright",
+    "email": "emma.wright@demo-cvs.local",
+    "file": "emma-wright.pdf",
+    "skills": [
+      "React",
+      "TypeScript",
+      "CSS",
+      "Vite",
+      "Testing Library"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "lucia-fernandez",
+    "full_name": "Lucía Fernández",
+    "email": "lucia.fernandez@demo-cvs.local",
+    "file": "lucia-fernandez.pdf",
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "React",
+      "MongoDB",
+      "GraphQL"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "marcus-chen",
+    "full_name": "Marcus Chen",
+    "email": "marcus.chen@demo-cvs.local",
+    "file": "marcus-chen.pdf",
+    "skills": [
+      "Kubernetes",
+      "Terraform",
+      "Go",
+      "AWS",
+      "Prometheus"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "ana-torres",
+    "full_name": "Ana Torres",
+    "email": "ana.torres@demo-cvs.local",
+    "file": "ana-torres.pdf",
+    "skills": [
+      "Selenium",
+      "Cypress",
+      "Python",
+      "Jira",
+      "Postman"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "david-kumar",
+    "full_name": "David Kumar",
+    "email": "david.kumar@demo-cvs.local",
+    "file": "david-kumar.pdf",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "MLflow",
+      "Kubernetes",
+      "SQL"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "sofia-ruiz",
+    "full_name": "Sofía Ruiz",
+    "email": "sofia.ruiz@demo-cvs.local",
+    "file": "sofia-ruiz.pdf",
+    "skills": [
+      "Product Strategy",
+      "Agile",
+      "Figma",
+      "Analytics",
+      "Roadmapping"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "james-oconnor",
+    "full_name": "James O'Connor",
+    "email": "james.oconnor@demo-cvs.local",
+    "file": "james-oconnor.pdf",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "PostgreSQL",
+      "Maven"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "elena-vidal",
+    "full_name": "Elena Vidal",
+    "email": "elena.vidal@demo-cvs.local",
+    "file": "elena-vidal.pdf",
+    "skills": [
+      "Figma",
+      "Sketch",
+      "Prototyping",
+      "User Research",
+      "Design Systems"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "ryan-patel",
+    "full_name": "Ryan Patel",
+    "email": "ryan.patel@demo-cvs.local",
+    "file": "ryan-patel.pdf",
+    "skills": [
+      "Python",
+      "Django",
+      "Celery",
+      "Redis",
+      "Linux"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "maria-santos",
+    "full_name": "María Santos",
+    "email": "maria.santos@demo-cvs.local",
+    "file": "maria-santos.pdf",
+    "skills": [
+      "Python",
+      "Flask",
+      "MySQL",
+      "Git",
+      "Linux"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "oliver-brown",
+    "full_name": "Oliver Brown",
+    "email": "oliver.brown@demo-cvs.local",
+    "file": "oliver-brown.pdf",
+    "skills": [
+      "Security",
+      "OWASP",
+      "Python",
+      "Burp Suite",
+      "SIEM"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "paula-garcia",
+    "full_name": "Paula García",
+    "email": "paula.garcia@demo-cvs.local",
+    "file": "paula-garcia.pdf",
+    "skills": [
+      "SQL",
+      "Tableau",
+      "Excel",
+      "R",
+      "Power BI"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "nina-andersson",
+    "full_name": "Nina Andersson",
+    "email": "nina.andersson@demo-cvs.local",
+    "file": "nina-andersson.pdf",
+    "skills": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Core Data",
+      "Combine"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "hugo-martin",
+    "full_name": "Hugo Martín",
+    "email": "hugo.martin@demo-cvs.local",
+    "file": "hugo-martin.pdf",
+    "skills": [
+      "Kubernetes",
+      "Python",
+      "Grafana",
+      "Linux",
+      "CI/CD"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "lisa-hoffman",
+    "full_name": "Lisa Hoffman",
+    "email": "lisa.hoffman@demo-cvs.local",
+    "file": "lisa-hoffman.pdf",
+    "skills": [
+      "Technical Writing",
+      "Markdown",
+      "API Docs",
+      "Git",
+      "Confluence"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "diego-lopez",
+    "full_name": "Diego López",
+    "email": "diego.lopez@demo-cvs.local",
+    "file": "diego-lopez.pdf",
+    "skills": [
+      "Python",
+      "Git",
+      "pytest",
+      "HTML",
+      "CSS"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "sarah-mitchell",
+    "full_name": "Sarah Mitchell",
+    "email": "sarah.mitchell@demo-cvs.local",
+    "file": "sarah-mitchell.pdf",
+    "skills": [
+      "Leadership",
+      "Python",
+      "System Design",
+      "Hiring",
+      "Agile"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "ivan-petrov",
+    "full_name": "Ivan Petrov",
+    "email": "ivan.petrov@demo-cvs.local",
+    "file": "ivan-petrov.pdf",
+    "skills": [
+      "Rust",
+      "C++",
+      "Linux",
+      "Networking",
+      "WASM"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "carmen-ortiz",
+    "full_name": "Carmen Ortiz",
+    "email": "carmen.ortiz@demo-cvs.local",
+    "file": "carmen-ortiz.pdf",
+    "skills": [
+      "Business Analysis",
+      "BPMN",
+      "SQL",
+      "Jira",
+      "Stakeholder Management"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "tom-wilson",
+    "full_name": "Tom Wilson",
+    "email": "tom.wilson@demo-cvs.local",
+    "file": "tom-wilson.pdf",
+    "skills": [
+      "AWS",
+      "Python",
+      "CloudFormation",
+      "Lambda",
+      "VPC"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "beatriz-navarro",
+    "full_name": "Beatriz Navarro",
+    "email": "beatriz.navarro@demo-cvs.local",
+    "file": "beatriz-navarro.pdf",
+    "skills": [
+      "Python",
+      "FastAPI",
+      "DDD",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "alex-thompson",
+    "full_name": "Alex Thompson",
+    "email": "alex.thompson@demo-cvs.local",
+    "file": "alex-thompson.pdf",
+    "skills": [
+      "Unity",
+      "C#",
+      "Game Design",
+      "Blender",
+      "Shader Graph"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "rosa-diaz",
+    "full_name": "Rosa Díaz",
+    "email": "rosa.diaz@demo-cvs.local",
+    "file": "rosa-diaz.pdf",
+    "skills": [
+      "Scrum",
+      "Kanban",
+      "Facilitation",
+      "Coaching",
+      "Jira"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "kevin-zhang",
+    "full_name": "Kevin Zhang",
+    "email": "kevin.zhang@demo-cvs.local",
+    "file": "kevin-zhang.pdf",
+    "skills": [
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "Prisma",
+      "AWS"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "marta-iglesias",
+    "full_name": "Marta Iglesias",
+    "email": "marta.iglesias@demo-cvs.local",
+    "file": "marta-iglesias.pdf",
+    "skills": [
+      "Python",
+      "NLP",
+      "Hugging Face",
+      "scikit-learn",
+      "Pandas"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "chris-evans",
+    "full_name": "Chris Evans",
+    "email": "chris.evans@demo-cvs.local",
+    "file": "chris-evans.pdf",
+    "skills": [
+      "PostgreSQL",
+      "SQL",
+      "Linux",
+      "Backup",
+      "Replication"
+    ],
+    "locale": "en"
+  },
+  {
+    "slug": "laura-perez",
+    "full_name": "Laura Pérez",
+    "email": "laura.perez@demo-cvs.local",
+    "file": "laura-perez.pdf",
+    "skills": [
+      "Python",
+      "Bash",
+      "Docker",
+      "PostgreSQL",
+      "FastAPI"
+    ],
+    "locale": "es"
+  },
+  {
+    "slug": "michael-foster",
+    "full_name": "Michael Foster",
+    "email": "michael.foster@demo-cvs.local",
+    "file": "michael-foster.pdf",
+    "skills": [
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "FastAPI",
+      "pytest"
+    ],
+    "locale": "en"
+  }
+]

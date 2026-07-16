@@ -14,24 +14,34 @@ export function MessageBubble({ message, children }: MessageBubbleProps) {
 
   return (
     <div
-      className={cn('flex w-full', isUser ? 'justify-end' : 'justify-start')}
+      className={cn(
+        'animate-fade-up flex w-full',
+        isUser ? 'justify-end' : 'justify-start',
+      )}
     >
       <div
         className={cn(
-          'max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed',
+          'w-full max-w-[100%] px-3.5 py-2.5 text-[0.9375rem] leading-relaxed sm:max-w-[min(42rem,92%)] sm:px-4 sm:py-3 sm:text-sm',
           isUser
-            ? 'bg-primary text-primary-foreground'
-            : 'bg-muted text-foreground',
+            ? 'bg-primary text-primary-foreground ml-6 rounded-2xl rounded-br-md shadow-sm sm:ml-12'
+            : 'border-border/70 bg-card/90 text-foreground mr-4 rounded-2xl rounded-bl-md border shadow-sm backdrop-blur-sm sm:mr-12',
         )}
       >
+        {!isUser ? (
+          <p className="text-muted-foreground mb-1 text-[0.65rem] font-medium tracking-[0.14em] uppercase">
+            Answer
+          </p>
+        ) : null}
+
         {isUser ? (
-          <p className="whitespace-pre-wrap">{message.content}</p>
+          <p className="whitespace-pre-wrap break-words">{message.content}</p>
         ) : (
-          <div className="prose prose-sm dark:prose-invert max-w-none [&_p]:my-1 [&_ul]:my-1 [&_ol]:my-1 [&_li]:my-0.5 [&_pre]:my-2 [&_code]:rounded [&_code]:bg-background/60 [&_code]:px-1 [&_code]:py-0.5">
+          <div className="prose prose-sm max-w-none break-words prose-headings:font-heading prose-p:my-1.5 prose-ul:my-1.5 prose-li:my-0.5 prose-code:rounded prose-code:bg-muted prose-code:px-1 prose-code:py-0.5">
             <ReactMarkdown>{message.content}</ReactMarkdown>
           </div>
         )}
-        {children ? <div className="mt-2">{children}</div> : null}
+
+        {children ? <div className="mt-2.5 sm:mt-3">{children}</div> : null}
       </div>
     </div>
   )

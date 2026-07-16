@@ -72,3 +72,4 @@ class ManifestEntry(BaseModel):
     skills: list[str] = Field(default_factory=list)
     locale: str = "en"
     photo: str | None = None
+    template: str | None = None

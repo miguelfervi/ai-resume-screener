@@ -92,7 +92,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "carlos-mendez",
@@ -187,7 +188,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "emma-wright",
@@ -281,7 +283,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "lucia-fernandez",
@@ -377,7 +380,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "marcus-chen",
@@ -473,7 +477,8 @@
     "certifications": [
       "CKA (Certified Kubernetes Administrator)",
       "HashiCorp Terraform Associate"
-    ]
+    ],
+    "template": "coral"
   },
   {
     "slug": "ana-torres",
@@ -568,7 +573,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "david-kumar",
@@ -664,7 +670,8 @@
     "certifications": [
       "Deep Learning Specialization",
       "AWS ML Specialty"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "sofia-ruiz",
@@ -760,7 +767,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "james-oconnor",
@@ -854,7 +862,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "elena-vidal",
@@ -949,7 +958,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "coral"
   },
   {
     "slug": "ryan-patel",
@@ -1043,7 +1053,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "maria-santos",
@@ -1137,7 +1148,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "oliver-brown",
@@ -1232,7 +1244,8 @@
     "certifications": [
       "CompTIA Security+",
       "OSCP (in progress)"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "paula-garcia",
@@ -1327,7 +1340,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "nina-andersson",
@@ -1422,7 +1436,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "coral"
   },
   {
     "slug": "hugo-martin",
@@ -1517,7 +1532,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "lisa-hoffman",
@@ -1612,7 +1628,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "diego-lopez",
@@ -1706,7 +1723,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "sarah-mitchell",
@@ -1800,7 +1818,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "ivan-petrov",
@@ -1896,7 +1915,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "coral"
   },
   {
     "slug": "carmen-ortiz",
@@ -1991,7 +2011,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "tom-wilson",
@@ -2086,7 +2107,8 @@
     "certifications": [
       "AWS Solutions Architect Associate",
       "AWS Developer Associate"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "beatriz-navarro",
@@ -2181,7 +2203,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "alex-thompson",
@@ -2276,7 +2299,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "rosa-diaz",
@@ -2372,7 +2396,8 @@
     "certifications": [
       "PSM II",
       "PSPO I"
-    ]
+    ],
+    "template": "coral"
   },
   {
     "slug": "kevin-zhang",
@@ -2467,7 +2492,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "classic"
   },
   {
     "slug": "marta-iglesias",
@@ -2563,7 +2589,8 @@
     "certifications": [
       "Deep Learning Specialization",
       "AWS ML Specialty"
-    ]
+    ],
+    "template": "sidebar"
   },
   {
     "slug": "chris-evans",
@@ -2658,7 +2685,8 @@
     "certifications": [
       "PostgreSQL Professional",
       "AWS Database Specialty"
-    ]
+    ],
+    "template": "banner"
   },
   {
     "slug": "laura-perez",
@@ -2753,7 +2781,8 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "minimal"
   },
   {
     "slug": "michael-foster",
@@ -2847,6 +2876,7 @@
     ],
     "certifications": [
       "AWS Cloud Practitioner"
-    ]
+    ],
+    "template": "coral"
   }
 ]

@@ -64,7 +64,7 @@ pnpm dev   # http://localhost:5173
 # From repo root, with backend venv active
 pip install -r backend/requirements.txt
 python scripts/enrich_profiles.py       # expand seed with fuller experience/skills (idempotent-ish)
-python scripts/generate_cvs.py          # seed → 30 PDFs; AI photos for 6 sample CVs
+python scripts/generate_cvs.py          # seed → 30 PDFs across 5 templates; AI photos for 6 sample CVs
 python scripts/generate_cvs.py --photos all   # photos for every CV (slow)
 python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent exists)
 ```

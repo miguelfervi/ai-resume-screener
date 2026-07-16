@@ -22,7 +22,6 @@ class Settings(BaseSettings):
     # Data paths (resolved relative to backend/)
     chroma_path: str = "../data/chroma"
     cvs_path: str = "../data/cvs"
-    templates_path: str = "../data/templates"
 
     # RAG
     retrieval_top_k: int = 6
@@ -44,10 +43,6 @@ class Settings(BaseSettings):
     @property
     def cvs_dir(self) -> Path:
         return self.resolve_path(self.cvs_path)
-
-    @property
-    def templates_dir(self) -> Path:
-        return self.resolve_path(self.templates_path)
 
 
 @lru_cache

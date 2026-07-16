@@ -17,10 +17,8 @@ pymupdf==1.28.0
 # Vector store
 chromadb==0.6.3
 
-# CV generation (offline agent)
-jinja2==3.1.5
-playwright==1.49.1
-pillow==12.3.0
+# CV generation (seed → PDF)
+reportlab==4.2.5
 
 # HTTP client (tests + API)
 httpx==0.28.1

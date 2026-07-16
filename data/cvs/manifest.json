@@ -17,6 +17,7 @@
       "gRPC"
     ],
     "locale": "en",
+    "photo": "photos/jane-doe.jpg",
     "template": "classic"
   },
   {
@@ -37,6 +38,7 @@
       "Docker"
     ],
     "locale": "es",
+    "photo": "photos/carlos-mendez.jpg",
     "template": "sidebar"
   },
   {
@@ -57,6 +59,7 @@
       "Accessibility"
     ],
     "locale": "en",
+    "photo": "photos/emma-wright.jpg",
     "template": "banner"
   },
   {
@@ -77,6 +80,7 @@
       "AWS"
     ],
     "locale": "es",
+    "photo": "photos/lucia-fernandez.jpg",
     "template": "minimal"
   },
   {
@@ -97,6 +101,7 @@
       "Python"
     ],
     "locale": "en",
+    "photo": "photos/marcus-chen.jpg",
     "template": "coral"
   },
   {
@@ -117,6 +122,7 @@
       "SQL"
     ],
     "locale": "es",
+    "photo": "photos/ana-torres.jpg",
     "template": "classic"
   },
   {

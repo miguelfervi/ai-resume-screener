@@ -66,6 +66,7 @@ Open [http://localhost:5173](http://localhost:5173).
 |---|--------|------|---------|
 | 1 | `5643bde` | 2026-07-16 | Project scaffold — folders, .gitignore, README skeleton |
 | 2 | `37af187` | 2026-07-16 | Cursor rules + docs/DEVELOPMENT.md |
+| 3 | `7a50c26` | 2026-07-16 | Backend config, requirements.txt, .env.example |
 
 ## License
 

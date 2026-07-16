@@ -26,6 +26,17 @@ After each commit:
 2. Smoke-test: `curl http://localhost:8000/health` (backend) or `npm run dev` (frontend).
 3. At phase boundaries, add a **Changelog** entry (see README).
 
+## Backend layout
+
+```
+backend/app/
+├── main.py              # app factory — mounts routers only
+├── schemas/             # Pydantic types by domain (chat, cv, rag)
+├── api/routes/          # FastAPI routers (health, chat, reindex)
+├── agents/              # LangGraph pipelines
+└── rag/                 # chunker, store, retriever
+```
+
 ## Local setup
 
 ### Backend
@@ -51,8 +62,9 @@ npm run dev   # http://localhost:5173
 
 ```bash
 # From repo root, with backend venv active
-python scripts/generate_cvs.py --count 28
-python scripts/ingest.py
+pip install -r backend/requirements.txt
+python scripts/generate_cvs.py          # seed JSON → 28 PDFs + manifest
+python scripts/ingest.py                # PDFs → ChromaDB (once ingest agent exists)
 ```
 
 ## Environment variables

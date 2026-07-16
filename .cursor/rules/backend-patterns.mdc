@@ -39,11 +39,19 @@ Never use bare `assert` — use `check()` so failures produce `InvariantError` w
 - LLM/retrieval failures → log with `logger.warning` and return a safe degraded response.
 - Invariant violations → let `InvariantError` propagate — it signals a bug.
 
-## Pydantic models (`models.py`)
+## Pydantic schemas (`schemas/`)
 
-- API models use explicit field names; frontend mirrors them in camelCase via serialization aliases.
-- Keep `description=` strings concise — they may be injected into LLM prompts.
-- Comment at top of `models.py`: sync with `frontend/src/types/api.ts`.
+- `schemas/chat.py` — API request/response types (ChatRequest, Source, HealthResponse)
+- `schemas/cv.py` — CV generation domain (CVContent, ManifestEntry)
+- `schemas/rag.py` — RAG domain (DocumentChunk, RetrievedChunk)
+- Frontend mirrors `schemas/chat.py` in `frontend/src/types/api.ts` (camelCase aliases)
+
+## API layer (`api/`)
+
+- `api/deps.py` — FastAPI dependencies (settings, index checks)
+- `api/routes/health.py` — health endpoint
+- `api/routes/chat.py` — chat endpoint (added in commit 21)
+- `main.py` — app factory only; mounts routers
 
 ## Settings
 

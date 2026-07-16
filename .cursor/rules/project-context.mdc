@@ -17,19 +17,22 @@ Full-stack RAG chat: ask natural-language questions about a collection of CV PDF
 | Embeddings | Google `text-embedding-004` |
 | Vector store | ChromaDB (local, persistent) |
 | PDF extraction | pymupdf4llm |
-| CV generation | Jinja2 HTML · Playwright PDF · Gemini image (Pillow fallback) |
+| CV generation | Seed JSON · ReportLab · `scripts/generate_cvs.py` (no LLM) |
 
-## Three LangGraph agents
+## Two LangGraph agents
 
 ```
-generate_agent: plan_profiles → generate_content → generate_photo → render_pdf → validate_manifest
 ingest_agent:   extract_text → chunk_by_section → embed → store_chroma → verify_index
 chat_agent:     retrieve → validate_context → generate_answer → cite_sources
 ```
 
+CV PDFs are generated offline from `data/seed/profiles.json` — not via LangGraph.
+
 ## Key files
 
-- `backend/app/agents/generate_agent.py` — offline CV PDF generation
+- `data/seed/profiles.json` — 28 hand-crafted demo candidates
+- `scripts/generate_cvs.py` — seed → PDF + manifest
+- `backend/app/cv_renderer.py` — ReportLab PDF builder
 - `backend/app/agents/ingest_agent.py` — offline RAG indexing
 - `backend/app/agents/chat_agent.py` — runtime Q&A with grounded citations
 - `backend/app/invariants.py` — runtime guards (`InvariantError`)
@@ -37,7 +40,7 @@ chat_agent:     retrieve → validate_context → generate_answer → cite_sourc
 - `backend/app/rag/` — chunker, store, retriever
 - `frontend/src/hooks/use-chat.ts` — chat state, send, cancel
 - `frontend/src/lib/api.ts` — typed API client + `ApiError`
-- `frontend/src/types/api.ts` — mirrors `backend/app/models.py` (camelCase)
+- `frontend/src/types/api.ts` — mirrors `backend/app/schemas/chat.py` (camelCase)
 
 ## Architecture docs
 
@@ -50,5 +53,5 @@ chat_agent:     retrieve → validate_context → generate_answer → cite_sourc
 - `check_sources_from_retrieved` ensures every citation maps to a real chunk.
 - ChromaDB path `data/chroma/` is gitignored; PDFs in `data/cvs/` are committed for demo.
 - Agents are compiled once and cached per module.
-- Frontend types in `types/api.ts` must stay in sync with `models.py` (comment in models.py).
+- Frontend types in `types/api.ts` must stay in sync with `schemas/chat.py`.
 - Tests: `cd backend && pytest -v` from project root with `PYTHONPATH=.` or `pytest.ini`.

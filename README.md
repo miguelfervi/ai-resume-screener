@@ -14,7 +14,7 @@ Full-stack application that lets recruiters ask natural-language questions about
 | Backend | FastAPI · Python 3.11+ · LangGraph |
 | LLM / Embeddings | Google Gemini (configurable) |
 | Vector store | ChromaDB (local, persistent) |
-| CV generation | Jinja2 HTML template · Playwright PDF export |
+| CV generation | Seed JSON · ReportLab PDF · `scripts/generate_cvs.py` |
 
 ## Project structure
 
@@ -24,7 +24,7 @@ ai-resume-screener/
 ├── frontend/          # React chat UI
 ├── data/
 │   ├── cvs/           # Generated PDF resumes + manifest
-│   ├── templates/     # HTML template for CV rendering
+│   ├── seed/          # Hand-crafted candidate profiles (JSON)
 │   └── chroma/        # Vector index (gitignored)
 ├── scripts/           # CLI: generate CVs, ingest index
 └── docs/              # Architecture and design notes

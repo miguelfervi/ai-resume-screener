@@ -140,7 +140,7 @@ ai-resume-screener/
 │   ├── seed/            # profiles.json
 │   └── chroma/          # vector index (gitignored)
 ├── scripts/             # llm_rewrite, generate_cvs, ingest
-└── docs/                # ARCHITECTURE, DEVELOPMENT, VIDEO_SCRIPT
+└── docs/                # ARCHITECTURE, DEVELOPMENT
 ```
 
 ## Design highlights
@@ -154,7 +154,6 @@ ai-resume-screener/
 
 - [Architecture](docs/ARCHITECTURE.md) — flows and data layout
 - [Development](docs/DEVELOPMENT.md) — commit workflow and env vars
-- [Video script](docs/VIDEO_SCRIPT.md) — Loom outline for the assessment demo
 
 ## Environment
 

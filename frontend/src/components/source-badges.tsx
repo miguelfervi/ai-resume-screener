@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FileText } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
@@ -17,6 +17,11 @@ export function SourceBadges({
   onSelectSource,
 }: SourceBadgesProps) {
   const [openId, setOpenId] = useState<string | null>(null)
+
+  // Closing the CV clears selection; drop local highlight/snippet with it.
+  useEffect(() => {
+    if (!selectedFile) setOpenId(null)
+  }, [selectedFile])
 
   if (!sources.length) return null
 
@@ -51,7 +56,7 @@ export function SourceBadges({
                   variant="outline"
                   className={cn(
                     'h-auto min-h-9 w-full max-w-full cursor-pointer justify-start gap-1.5 rounded-md px-2.5 py-2 text-left text-xs font-normal transition-colors sm:min-h-0 sm:w-auto sm:py-1',
-                    (open || selected) &&
+                    selected &&
                       'border-primary/45 bg-accent text-accent-foreground shadow-sm',
                   )}
                 >

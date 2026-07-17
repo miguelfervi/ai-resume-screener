@@ -72,10 +72,10 @@
         "details": "Earned an MSc in Computer Science from Universitat Politècnica de Catalunya (UPC) in 2016, graduating with distinction on a capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2017",
-        "details": "Completed a professional specialization course via online platforms in 2017 to advance expertise in modern backend stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Manchester",
+        "year": "2012",
+        "details": "Undergraduate studies at University of Manchester, foundational degree before MSc Computer Science."
       }
     ],
     "phone": "+1 (555) 0466-1495",
@@ -90,9 +90,7 @@
         "description": "Maintained an open-source utility library dedicated to implementing efficient Python design patterns."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -169,10 +167,10 @@
         "details": "Graduado con mención destacada en el proyecto final, con especialización en sistemas distribuidos y gestión de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2019",
-        "details": "Programa de formación continua enfocado en la actualización técnica sobre el stack de datos actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universitat Politècnica de Catalunya (UPC)",
+        "year": "2014",
+        "details": "Formación de grado en Universidad Politécnica de Madrid (UPM), base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 640970425",
@@ -187,9 +185,7 @@
         "description": "Creación y mantenimiento de una librería de utilidades en Python publicada como proyecto open source."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "sidebar",
     "llm_rewritten": true
   },
@@ -265,10 +261,10 @@
         "details": "Earned a BSc in Computer Science with a distinction-level capstone project focused on systems and data architecture."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2021",
-        "details": "Completed a professional specialization course to stay current with industry-standard frontend technologies and best practices."
+        "degree": "BSc Software Engineering",
+        "institution": "University of Edinburgh",
+        "year": "2016",
+        "details": "Undergraduate studies at University of Edinburgh, foundational degree before BSc Computer Science."
       }
     ],
     "phone": "+1 (555) 6095-8013",
@@ -283,9 +279,7 @@
         "description": "Maintained an open-source utility library dedicated to advancing reusable React design patterns and component logic."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "banner",
     "llm_rewritten": true
   },
@@ -363,10 +357,10 @@
         "details": "Obtuve el Grado en Ingeniería Informática por la Universitat de Barcelona (UB) con mención destacada en el proyecto final."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2020",
-        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas en el stack actual."
+        "degree": "Grado en Ingeniería del Software",
+        "institution": "Universidad de Granada",
+        "year": "2015",
+        "details": "Formación de grado en Universidad de Granada, base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 634578639",
@@ -381,9 +375,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar procesos de desarrollo con JavaScript."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -460,10 +452,10 @@
         "details": "Earned a BSc in Information Systems from MIT in 2017, graduating with distinction on a capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2018",
-        "details": "Completed a professional specialization course in 2018 to advance technical proficiency in modern cloud-native stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Toronto",
+        "year": "2013",
+        "details": "Undergraduate studies at University of Toronto, foundational degree before BSc Information Systems."
       }
     ],
     "phone": "+1 (555) 5764-6537",
@@ -553,15 +545,15 @@
     "education": [
       {
         "degree": "Grado en Ingeniería Informática",
-        "institution": "UPC",
+        "institution": "Universitat Politècnica de Catalunya (UPC)",
         "year": "2018",
         "details": "Obtuve el Grado en Ingeniería Informática por la UPC con mención destacada en el proyecto final y especialización en sistemas."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2019",
-        "details": "Completé formación especializada en plataformas online para actualizar competencias técnicas en el stack actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Zaragoza",
+        "year": "2014",
+        "details": "Formación de grado en Universidad de Zaragoza, base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 600375889",
@@ -576,9 +568,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la automatización con Selenium."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -655,10 +645,10 @@
         "details": "Completed MSc in Artificial Intelligence with a distinction-awarded capstone project and advanced coursework in systems and data."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2020",
-        "details": "Engaged in professional specialization coursework to maintain technical proficiency with modern industry-standard tools."
+        "degree": "BSc Informatics",
+        "institution": "University of Amsterdam",
+        "year": "2015",
+        "details": "Undergraduate studies at University of Amsterdam, foundational degree before MSc Artificial Intelligence."
       }
     ],
     "phone": "+1 (555) 6371-2338",
@@ -754,10 +744,10 @@
         "details": "Obtuve el MBA con una calificación destacada en el proyecto final, especializándome en sistemas de información y análisis de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2017",
-        "details": "Completé formación continua en plataformas digitales para mantener mis competencias técnicas alineadas con el stack actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Málaga",
+        "year": "2012",
+        "details": "Formación de grado en Universidad de Málaga, base académica previa al título de MBA."
       }
     ],
     "phone": "+34 652603515",
@@ -772,9 +762,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto, aplicando metodologías de Product Strategy para su escalabilidad."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "banner",
     "llm_rewritten": true
   },
@@ -850,10 +838,10 @@
         "details": "Earned a BSc in Software Engineering with distinction for a capstone project focused on complex data systems."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2015",
-        "details": "Completed professional specialization coursework to maintain proficiency in modern backend development stacks."
+        "degree": "BSc Computer Engineering",
+        "institution": "University of Illinois",
+        "year": "2010",
+        "details": "Undergraduate studies at Trinity College Dublin, foundational degree before BSc Software Engineering."
       }
     ],
     "phone": "+1 (555) 6621-8088",
@@ -868,9 +856,7 @@
         "description": "Maintained an open-source utility library dedicated to implementing clean Java design patterns."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -942,15 +928,15 @@
     "education": [
       {
         "degree": "Grado en Diseño Digital",
-        "institution": "UB",
+        "institution": "Universitat de Barcelona (UB)",
         "year": "2017",
         "details": "Obtuve el Grado en Diseño Digital por la UB con una calificación destacada en el proyecto final y formación en sistemas y datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2018",
-        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack actual."
+        "degree": "Grado en Ciencia de Datos",
+        "institution": "Universidad Carlos III de Madrid (UC3M)",
+        "year": "2013",
+        "details": "Formación de grado en Universitat de Barcelona (UB), base académica previa al título de Grado en Diseño Digital."
       }
     ],
     "phone": "+34 674354407",
@@ -965,9 +951,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar flujos de trabajo en Figma."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "coral",
     "llm_rewritten": true
   },
@@ -1043,10 +1027,10 @@
         "details": "Earned a BSc in Computer Science with a focus on systems architecture and data structures."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2019",
-        "details": "Completed professional specialization coursework to stay current with modern backend development stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Texas at Austin",
+        "year": "2014",
+        "details": "Undergraduate studies at University of Texas at Austin, foundational degree before BSc Computer Science."
       }
     ],
     "phone": "+1 (555) 3774-9110",
@@ -1061,9 +1045,7 @@
         "description": "Maintained an open-source utility library dedicated to implementing efficient Python design patterns."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -1134,15 +1116,15 @@
     "education": [
       {
         "degree": "Grado en Ingeniería Informática",
-        "institution": "UPM",
+        "institution": "Universidad Politécnica de Madrid (UPM)",
         "year": "2019",
         "details": "Obtuve el Grado en Ingeniería Informática por la UPM, destacando en el proyecto final y en el área de sistemas y datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2020",
-        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universitat Politècnica de València (UPV)",
+        "year": "2015",
+        "details": "Formación de grado en Universitat Politècnica de València (UPV), base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 641455202",
@@ -1157,9 +1139,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes mediante Python."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "sidebar",
     "llm_rewritten": true
   },
@@ -1235,10 +1215,10 @@
         "details": "Completed an MSc in Cybersecurity at the University of Edinburgh with a distinction-level capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2017",
-        "details": "Engaged in professional specialization coursework to maintain expertise in evolving security technologies."
+        "degree": "BSc Computing",
+        "institution": "Imperial College London",
+        "year": "2012",
+        "details": "Undergraduate studies at Imperial College London, foundational degree before MSc Cybersecurity."
       }
     ],
     "phone": "+1 (555) 3071-1867",
@@ -1333,10 +1313,10 @@
         "details": "Obtuve el Grado en Estadística en la UPV/EHU con mención destacada en el proyecto final y formación avanzada en sistemas."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2018",
-        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad del País Vasco (UPV/EHU)",
+        "year": "2013",
+        "details": "Formación de grado en Universidad del País Vasco (UPV/EHU), base académica previa al título de Grado en Estadística."
       }
     ],
     "phone": "+34 631161308",
@@ -1351,9 +1331,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la optimización de consultas SQL."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -1430,10 +1408,10 @@
         "details": "Earned a BSc in Computer Science from KTH Royal Institute in 2019, graduating with distinction on a capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2020",
-        "details": "Completed a professional specialization course in 2020 to refine expertise in modern mobile development stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Waterloo",
+        "year": "2015",
+        "details": "Undergraduate studies at University of Waterloo, foundational degree before BSc Computer Science."
       }
     ],
     "phone": "+1 (555) 0308-4329",
@@ -1448,9 +1426,7 @@
         "description": "Maintained an open-source utility library focused on implementing reusable and efficient Swift design patterns."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "coral",
     "llm_rewritten": true
   },
@@ -1522,15 +1498,15 @@
     "education": [
       {
         "degree": "Grado en Ingeniería Informática",
-        "institution": "UPC",
+        "institution": "Universitat Politècnica de Catalunya (UPC)",
         "year": "2018",
         "details": "Obtuvo el Grado en Ingeniería Informática por la UPC, destacando en el proyecto final y en el área de sistemas."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2019",
-        "details": "Completó formación especializada en plataformas online para actualizar competencias técnicas en el stack actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Sevilla",
+        "year": "2014",
+        "details": "Formación de grado en Universidad de Sevilla, base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 606412025",
@@ -1545,9 +1521,7 @@
         "description": "Creación y mantenimiento de una librería de código abierto enfocada en la automatización de tareas en Kubernetes."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -1624,10 +1598,10 @@
         "details": "Earned a BA in Communications from the University of Amsterdam in 2015, completing a capstone project with distinction."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2016",
-        "details": "Completed a professional specialization course via Coursera/edX in 2016 to advance technical documentation skills."
+        "degree": "BSc Information Systems",
+        "institution": "Northeastern University",
+        "year": "2011",
+        "details": "Undergraduate studies at Northeastern University, foundational degree before BA Communications."
       }
     ],
     "phone": "+1 (555) 4964-0709",
@@ -1642,9 +1616,7 @@
         "description": "Maintained an open-source utility library focused on establishing standardized Technical Writing patterns for developer tools."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "sidebar",
     "llm_rewritten": true
   },
@@ -1720,10 +1692,10 @@
         "details": "Obtuve el Grado en Ingeniería Informática con una calificación destacada en el TFG y una sólida base en sistemas y gestión de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2024",
-        "details": "Completé un curso de especialización técnica para actualizar mis competencias en el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad Autónoma de Madrid (UAM)",
+        "year": "2019",
+        "details": "Formación de grado en Universidad Autónoma de Madrid (UAM), base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 691932270",
@@ -1738,9 +1710,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar procesos mediante Python."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "banner",
     "llm_rewritten": true
   },
@@ -1816,10 +1786,10 @@
         "details": "Completed an MSc in Computer Science with a focus on systems and data, graduating with a distinction for the capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2013",
-        "details": "Engaged in professional specialization coursework to maintain technical proficiency with modern industry stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Melbourne",
+        "year": "2008",
+        "details": "Undergraduate studies at University of Melbourne, foundational degree before MSc Computer Science."
       }
     ],
     "phone": "+1 (555) 6058-8008",
@@ -1834,9 +1804,7 @@
         "description": "Maintained an open-source utility library, focusing on implementing scalable design patterns and robust code architecture."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -1914,10 +1882,10 @@
         "details": "Earned an MSc in Computer Science with a distinction-awarded capstone project focused on systems architecture."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2018",
-        "details": "Completed a professional specialization course to maintain technical proficiency with modern systems programming stacks."
+        "degree": "BSc Software Engineering",
+        "institution": "TU Delft",
+        "year": "2013",
+        "details": "Undergraduate studies at TU Delft, foundational degree before MSc Computer Science."
       }
     ],
     "phone": "+1 (555) 8877-1268",
@@ -1932,9 +1900,7 @@
         "description": "Maintained an open-source utility library dedicated to demonstrating idiomatic Rust design patterns."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "coral",
     "llm_rewritten": true
   },
@@ -2011,10 +1977,10 @@
         "details": "Obtuve el Grado en ADE con una calificación destacada en el proyecto final, enfocándome en sistemas de información y análisis de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2017",
-        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universitat Pompeu Fabra (UPF)",
+        "year": "2012",
+        "details": "Formación de grado en Universitat Pompeu Fabra (UPF), base académica previa al título de Grado en ADE."
       }
     ],
     "phone": "+34 612860579",
@@ -2029,9 +1995,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en la optimización de tareas de Business Analysis."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -2107,10 +2071,10 @@
         "details": "Earned a BSc in Information Technology with a focus on systems architecture and data management."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2015",
-        "details": "Completed professional specialization coursework to maintain proficiency in modern cloud technologies."
+        "degree": "BSc Computer Science",
+        "institution": "ETH Zurich",
+        "year": "2010",
+        "details": "Undergraduate studies at ETH Zurich, foundational degree before BSc Information Technology."
       }
     ],
     "phone": "+1 (555) 9499-8499",
@@ -2125,10 +2089,7 @@
         "description": "Maintained an open-source utility library focused on simplifying common AWS architectural patterns."
       }
     ],
-    "certifications": [
-      "AWS Solutions Architect Associate",
-      "AWS Developer Associate"
-    ],
+    "certifications": [],
     "template": "sidebar",
     "llm_rewritten": true
   },
@@ -2200,15 +2161,15 @@
     "education": [
       {
         "degree": "Grado en Ingeniería Informática",
-        "institution": "UPC",
+        "institution": "Universitat Politècnica de Catalunya (UPC)",
         "year": "2020",
         "details": "Obtuve el Grado en Ingeniería Informática por la UPC, destacando en el proyecto final y en el área de sistemas y datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2021",
-        "details": "Completé un curso de especialización en plataformas online para actualizar mis competencias técnicas con el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Salamanca",
+        "year": "2016",
+        "details": "Formación de grado en Universidad de Salamanca, base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 666427481",
@@ -2223,9 +2184,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes de desarrollo en Python."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "banner",
     "llm_rewritten": true
   },
@@ -2302,10 +2261,10 @@
         "details": "Earned a Diploma in Game Development with distinction, focusing on complex systems architecture and data structures."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2019",
-        "details": "Completed a professional specialization course to stay current with industry-standard development patterns and tools."
+        "degree": "BSc Data Science",
+        "institution": "University of Helsinki",
+        "year": "2014",
+        "details": "Undergraduate studies at University of Helsinki, foundational degree before Diploma Game Development."
       }
     ],
     "phone": "+1 (555) 3829-0547",
@@ -2320,9 +2279,7 @@
         "description": "Maintained an open-source utility library focused on modular Unity design patterns and reusable code components."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -2393,16 +2350,10 @@
     ],
     "education": [
       {
-        "degree": "Certificación PSM II",
-        "institution": "Scrum.org",
-        "year": "2019",
-        "details": "Obtuve la certificación PSM II tras completar el proyecto final con calificación sobresaliente en sistemas y datos."
-      },
-      {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2020",
-        "details": "Completé formación especializada en plataformas online para actualizar competencias técnicas y metodológicas."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad Complutense de Madrid (UCM)",
+        "year": "2018",
+        "details": "Graduado en Universidad Complutense de Madrid (UCM)."
       }
     ],
     "phone": "+34 675128162",
@@ -2417,10 +2368,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto con un enfoque centrado en principios Scrum."
       }
     ],
-    "certifications": [
-      "PSM II",
-      "PSPO I"
-    ],
+    "certifications": [],
     "template": "coral",
     "llm_rewritten": true
   },
@@ -2497,10 +2445,10 @@
         "details": "Graduated with a BSc in Computer Engineering from NUS, featuring a distinction-awarded capstone project."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2020",
-        "details": "Completed professional specialization coursework via online platforms to maintain expertise in the modern web stack."
+        "degree": "BSc Computer Science",
+        "institution": "University of Copenhagen",
+        "year": "2015",
+        "details": "Undergraduate studies at University of Copenhagen, foundational degree before BSc Computer Engineering."
       }
     ],
     "phone": "+1 (555) 2500-0357",
@@ -2515,9 +2463,7 @@
         "description": "Maintained an open-source utility library focused on advanced TypeScript design patterns and type safety."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "classic",
     "llm_rewritten": true
   },
@@ -2594,10 +2540,10 @@
         "details": "Obtuve el título de MSc Data Science con una calificación destacada en el proyecto final, especializándome en sistemas complejos y análisis de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2021",
-        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas en el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad de Alicante",
+        "year": "2016",
+        "details": "Formación de grado en Universidad de Alicante, base académica previa al título de MSc Data Science."
       }
     ],
     "phone": "+34 679525744",
@@ -2612,10 +2558,7 @@
         "description": "Creación y mantenimiento de una librería de utilidades en Python publicada como proyecto open source para la comunidad de desarrollo."
       }
     ],
-    "certifications": [
-      "Deep Learning Specialization",
-      "AWS ML Specialty"
-    ],
+    "certifications": [],
     "template": "sidebar",
     "llm_rewritten": true
   },
@@ -2691,10 +2634,10 @@
         "details": "Earned a BSc in Information Systems from Boston University in 2013, focusing on systems architecture and data management."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2014",
-        "details": "Completed a professional specialization course via online platforms in 2014 to advance technical proficiency in modern database stacks."
+        "degree": "BSc Computer Science",
+        "institution": "University of Manchester",
+        "year": "2009",
+        "details": "Undergraduate studies at University of Manchester, foundational degree before BSc Information Systems."
       }
     ],
     "phone": "+1 (555) 4541-4934",
@@ -2709,10 +2652,7 @@
         "description": "Maintained an open-source utility library designed to simplify and standardize common PostgreSQL design patterns."
       }
     ],
-    "certifications": [
-      "PostgreSQL Professional",
-      "AWS Database Specialty"
-    ],
+    "certifications": [],
     "template": "banner",
     "llm_rewritten": true
   },
@@ -2789,10 +2729,10 @@
         "details": "Obtuve el Grado en Ingeniería Informática con una calificación destacada en el proyecto final, especializándome en sistemas y gestión de datos."
       },
       {
-        "degree": "Curso de especialización",
-        "institution": "Plataforma online (Coursera / edX)",
-        "year": "2020",
-        "details": "Completé formación especializada en plataformas online para actualizar mis competencias técnicas en el stack tecnológico actual."
+        "degree": "Grado en Ingeniería Informática",
+        "institution": "Universidad Politécnica de Madrid (UPM)",
+        "year": "2015",
+        "details": "Formación de grado en Universidad Politécnica de Madrid (UPM), base académica previa al título de Grado en Ingeniería Informática."
       }
     ],
     "phone": "+34 650896832",
@@ -2807,9 +2747,7 @@
         "description": "Creación y mantenimiento de una librería utilitaria de código abierto enfocada en optimizar tareas comunes de desarrollo en Python."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "minimal",
     "llm_rewritten": true
   },
@@ -2885,10 +2823,10 @@
         "details": "Earned a BSc in Computer Science with a focus on systems architecture and data structures, graduating in 2017."
       },
       {
-        "degree": "Professional specialization course",
-        "institution": "Online platform (Coursera / edX)",
-        "year": "2018",
-        "details": "Completed a professional specialization course in 2018 to advance expertise in modern backend development stacks."
+        "degree": "BSc Software Engineering",
+        "institution": "University of Edinburgh",
+        "year": "2013",
+        "details": "Undergraduate studies at University of Edinburgh, foundational degree before BSc Computer Science."
       }
     ],
     "phone": "+1 (555) 2998-4714",
@@ -2903,9 +2841,7 @@
         "description": "Maintained an open-source utility library focused on implementing efficient Python design patterns and reusable code structures."
       }
     ],
-    "certifications": [
-      "AWS Cloud Practitioner"
-    ],
+    "certifications": [],
     "template": "coral",
     "llm_rewritten": true
   }

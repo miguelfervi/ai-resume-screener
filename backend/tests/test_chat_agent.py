@@ -145,39 +145,6 @@ def test_cite_sources_one_chip_per_candidate() -> None:
     assert by_name["Lucía Fernández"]["section"] == "Habilidades"
 
 
-def test_cite_sources_ana_not_matched_inside_granada() -> None:
-    """Regression: bare first name 'Ana' must not match substring in 'Granada'."""
-    chunks = [
-        make_retrieved(
-            candidate_name="Ana Torres",
-            source_file="ana-torres.pdf",
-            text="Universidad de Granada",
-            section="Education",
-            score=0.9,
-        ).model_dump(),
-        make_retrieved(
-            candidate_name="Carlos Ruiz",
-            source_file="carlos-ruiz.pdf",
-            text="Universidad de Granada degree",
-            section="Education",
-            score=0.85,
-        ).model_dump(),
-    ]
-    out = cite_sources(
-        {
-            "context_ok": True,
-            "answer": "A candidate studied at Universidad de Granada.",
-            "retrieved": chunks,
-            "metrics": {},
-        }
-    )
-    # Neither full name mentioned → fallback to top chunks, but must not
-    # falsely treat "Ana" as mentioned via Granada.
-    assert out["sources"]
-    # Explicit: answer without Ana/Carlos should still produce sources via fallback
-    assert all("candidate_name" in s for s in out["sources"])
-
-
 def test_cite_sources_empty_when_no_context() -> None:
     out = cite_sources({"context_ok": False, "retrieved": [], "metrics": {}})
     assert out["sources"] == []

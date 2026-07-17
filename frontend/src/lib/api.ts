@@ -101,7 +101,8 @@ export async function getHealth(): Promise<HealthResponse> {
 /** URL for inline PDF preview (proxied to backend in dev). */
 export function cvUrl(filename: string): string {
   const name = filename.split(/[/\\]/).pop() || filename
-  return `/api/cvs/${encodeURIComponent(name)}`
+  // Chrome/Edge: hide thumbnail sidebar + open at 100% zoom.
+  return `/api/cvs/${encodeURIComponent(name)}#navpanes=0&zoom=100`
 }
 
 export async function sendChat(request: ChatRequest): Promise<ChatResponse> {

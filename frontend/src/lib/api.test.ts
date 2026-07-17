@@ -9,8 +9,8 @@ afterEach(() => {
 
 describe('cvUrl', () => {
   it('builds a proxied PDF path', () => {
-    expect(cvUrl('jane-doe.pdf')).toBe('/api/cvs/jane-doe.pdf')
-    expect(cvUrl('folder/jane-doe.pdf')).toBe('/api/cvs/jane-doe.pdf')
+    expect(cvUrl('jane-doe.pdf')).toBe('/api/cvs/jane-doe.pdf#navpanes=0&zoom=100')
+    expect(cvUrl('folder/jane-doe.pdf')).toBe('/api/cvs/jane-doe.pdf#navpanes=0&zoom=100')
   })
 })
 

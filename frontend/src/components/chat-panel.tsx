@@ -25,10 +25,10 @@ type SelectedCv = {
   candidateName: string
 }
 
-const PREVIEW_WIDTH_KEY = 'cv-preview-width'
+const PREVIEW_WIDTH_KEY = 'cv-preview-width-v2'
 const PREVIEW_MIN = 320
 const PREVIEW_MAX_RATIO = 0.72
-const PREVIEW_DEFAULT = 480
+const PREVIEW_DEFAULT = 600
 
 function clampPreviewWidth(width: number, viewport = window.innerWidth) {
   const max = Math.max(PREVIEW_MIN, Math.floor(viewport * PREVIEW_MAX_RATIO))

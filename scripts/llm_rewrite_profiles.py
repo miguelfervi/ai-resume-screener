@@ -60,7 +60,7 @@ def _prompt_for(profile: dict) -> str:
         "education": profile.get("education", []),
         "projects": profile.get("projects", []),
     }
-    return f"""You rewrite résumé narrative text for a recruiting demo.
+    return f"""You rewrite resume narrative text for a recruiting demo.
 
 Language for ALL rewritten fields: {lang}.
 Keep facts unchanged: person name, job titles, companies, locations, date ranges,

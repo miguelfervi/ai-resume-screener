@@ -1,6 +1,6 @@
 # AI Resume Screener
 
-RAG chat prototype for screening a collection of PDF résumés.
+RAG chat prototype for screening a collection of PDF resumes.
 
 Ask natural-language questions about ~30 demo CVs → the backend retrieves grounded chunks from ChromaDB → Gemini answers with **source citations**. Click a source to open the CV PDF in a side panel.
 
@@ -147,7 +147,7 @@ ai-resume-screener/
 
 - **Two LangGraph agents** — offline ingest vs runtime chat (clear separation).
 - **Retrieval boosters** — name, skills, role, section intent, institution/acronym, PDF slug; adaptive scoring without blindly lowering the global threshold.
-- **Source indication + PDF preview** — citations map to real chunks; click opens the résumé.
+- **Source indication + PDF preview** — citations map to real chunks; click opens the resume.
 - **Invariant checks** — citations must come from retrieved evidence.
 
 ## Docs

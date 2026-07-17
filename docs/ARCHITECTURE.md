@@ -9,7 +9,7 @@ flowchart TB
   subgraph Offline["1 · Offline data preparation"]
     Seed["data/seed/profiles.json\n(Gemini narratives)"]
     Gen["scripts/generate_cvs.py\n+ ReportLab (+ optional AI photos)"]
-    PDFs["data/cvs/*.pdf\n30 résumés · 5 layouts"]
+    PDFs["data/cvs/*.pdf\n30 resumes · 5 layouts"]
     Seed --> Gen --> PDFs
   end
 
@@ -112,7 +112,7 @@ backend/app/
 ## Data layout
 
 - `data/seed/profiles.json` — candidate profiles
-- `data/cvs/*.pdf` — 30 generated résumés (committed)
+- `data/cvs/*.pdf` — 30 generated resumes (committed)
 - `data/cvs/photos/` — AI headshots for sample CVs
 - `data/cvs/manifest.json` — generation metadata
 - `data/chroma/` — vector index (gitignored)

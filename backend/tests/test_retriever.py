@@ -32,11 +32,19 @@ def test_detect_skills_and_institutions() -> None:
 def test_spanish_intent_and_vague_cues() -> None:
     secs = preferred_sections("Resume el perfil de Jane Doe")
     assert "Resumen" in secs or "Summary" in secs
+    assert "Skills" in secs or "Habilidades" in secs
+    assert "Education" in secs or "Formación" in secs
     edu = preferred_sections("¿Quién se graduó de la UPC?")
     assert "Education" in edu or "Formación" in edu
     from app.rag.retriever import adaptive_floor
 
     assert adaptive_floor("¿Alguien del equipo?", 0.65) < 0.65
+
+
+def test_preferred_sections_for_profile_summary() -> None:
+    secs = preferred_sections("Summarize the profile of Jane Doe.")
+    assert "Experience" in secs or "Experiencia" in secs
+    assert "Skills" in secs or "Habilidades" in secs
 
 
 def test_preferred_sections_for_education() -> None:
@@ -71,10 +79,12 @@ def test_retrieve_top_k_and_name_boost(tmp_chroma: Path, fake_embeddings: FakeEm
     )
     hits = retrieve(store, "Summarize the profile of Jane Doe.", top_k=3, min_score=0.65)
     assert hits
-    assert len(hits) <= 3
+    assert len(hits) <= 8  # profile queries may raise top_k
     assert any(h.candidate_name == "Jane Doe" for h in hits)
     # named boosts should clear the threshold
     assert any(h.score >= 0.65 and h.candidate_name == "Jane Doe" for h in hits)
+    # Named profile summary should not be drowned by other candidates' headers.
+    assert all(h.candidate_name == "Jane Doe" for h in hits)
 
 
 def test_retrieve_respects_top_k_with_mock_store() -> None:

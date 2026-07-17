@@ -114,13 +114,28 @@ _ROLE_PATTERNS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
     ),
 ]
 
+_PROFILE_INTENT = re.compile(
+    r"\b(summar(?:y|ise|ize)|overview|profile|about|resumen|perfil|sobre)\b",
+    re.I,
+)
+_PROFILE_SECTIONS = (
+    "Summary",
+    "Resumen",
+    "Header",
+    "Experience",
+    "Experiencia",
+    "Skills",
+    "Habilidades",
+    "Education",
+    "Formación",
+    "Projects",
+    "Proyectos",
+)
+
 _INTENT_SECTIONS: list[tuple[re.Pattern[str], tuple[str, ...]]] = [
     (
-        re.compile(
-            r"\b(summar(?:y|ise|ize)|overview|profile|about|resumen|perfil|sobre)\b",
-            re.I,
-        ),
-        ("Summary", "Resumen", "Header", "Experience", "Experiencia"),
+        _PROFILE_INTENT,
+        _PROFILE_SECTIONS,
     ),
     (
         re.compile(r"\b(certificat\w*|credentials?|certificacion(?:es)?)\b", re.I),
@@ -393,33 +408,44 @@ def retrieve(
     if institutions and not any(s in _EDU_SECTIONS for s in section_targets):
         section_targets = list(dict.fromkeys([*_EDU_SECTIONS, *section_targets]))
 
-    fetch_k = max(top_k * 3, 12)
+    named = match_candidate_names(question, store.candidate_names())
+    profile_query = bool(_PROFILE_INTENT.search(question) and named)
+    # Profile summaries need several sections from the same CV.
+    result_k = max(top_k, 8) if profile_query else top_k
+    fetch_k = max(result_k * 3, 12)
     general = store.query(question, top_k=fetch_k, min_score=0.0)
 
     focused: list[RetrievedChunk] = []
 
-    for name in match_candidate_names(question, store.candidate_names()):
+    for name in named:
+        per_name_k = max(result_k, 8) if profile_query else top_k
+        query_text = (
+            f"{name} professional summary experience skills education"
+            if profile_query
+            else question
+        )
         hits = store.query(
-            question,
-            top_k=top_k,
+            query_text,
+            top_k=per_name_k,
             min_score=0.0,
             candidate_name=name,
-            sections=section_targets or None,
+            sections=list(_PROFILE_SECTIONS) if profile_query else (section_targets or None),
         )
         usable = [h for h in hits if h.score >= _NAME_MATCH_FLOOR]
-        if not usable and section_targets:
+        if not usable and (section_targets or profile_query):
             # Named + intent section can score low but is still the right evidence.
             usable = [h for h in hits if h.score >= 0.28]
         if not usable:
             hits = store.query(
                 question,
-                top_k=top_k,
+                top_k=per_name_k,
                 min_score=0.0,
                 candidate_name=name,
             )
             usable = [h for h in hits if h.score >= _NAME_MATCH_FLOOR]
         for hit in usable:
-            focused.append(_promote(hit, pass_score))
+            boost = _SECTION_BOOST if profile_query else 0.0
+            focused.append(_promote(hit, pass_score, boost))
 
     known_files: set[str] = set()
     try:
@@ -501,4 +527,15 @@ def retrieve(
             if c.section not in _EDU_SECTIONS or _chunk_mentions_terms(c, institutions)
         ]
 
-    return _dedupe_merge(focused, boosted_general, top_k=top_k)
+    # Named profile summaries: keep that candidate's sections; don't let other
+    # people's Header chunks crowd them out of top_k.
+    if profile_query and named:
+        named_set = set(named)
+        primary = _dedupe_merge(
+            [c for c in focused if c.candidate_name in named_set],
+            top_k=result_k,
+        )
+        if primary:
+            return primary
+
+    return _dedupe_merge(focused, boosted_general, top_k=result_k)

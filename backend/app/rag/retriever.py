@@ -346,6 +346,35 @@ def _dedupe_merge(*groups: list[RetrievedChunk], top_k: int) -> list[RetrievedCh
     return merged[:top_k]
 
 
+def _diversify_by_candidate(
+    chunks: list[RetrievedChunk],
+    top_k: int,
+    *,
+    max_per_candidate: int = 1,
+    prefer_sections: tuple[str, ...] = (),
+) -> list[RetrievedChunk]:
+    """Spread top_k across people so one CV cannot fill the whole context."""
+    ranked = sorted(
+        chunks,
+        key=lambda c: (
+            0 if prefer_sections and c.section in prefer_sections else 1,
+            -c.score,
+        ),
+    )
+    counts: dict[str, int] = {}
+    out: list[RetrievedChunk] = []
+    for chunk in ranked:
+        key = chunk.candidate_name or chunk.source_file
+        n = counts.get(key, 0)
+        if n >= max_per_candidate:
+            continue
+        counts[key] = n + 1
+        out.append(chunk)
+        if len(out) >= top_k:
+            break
+    return out
+
+
 def _promote(chunk: RetrievedChunk, pass_score: float, boost: float = 0.0) -> RetrievedChunk:
     chunk.score = round(min(1.0, max(chunk.score + boost, pass_score)), 4)
     return chunk
@@ -537,5 +566,19 @@ def retrieve(
         )
         if primary:
             return primary
+
+    # Skill "who knows X" queries: one strong chunk per person beats six from one CV.
+    if skills and not named and not profile_query:
+        pool = _dedupe_merge(
+            focused,
+            boosted_general,
+            top_k=max(result_k * 4, 24),
+        )
+        return _diversify_by_candidate(
+            pool,
+            result_k,
+            max_per_candidate=1,
+            prefer_sections=("Skills", "Habilidades"),
+        )
 
     return _dedupe_merge(focused, boosted_general, top_k=result_k)

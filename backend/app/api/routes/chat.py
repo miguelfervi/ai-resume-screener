@@ -24,7 +24,12 @@ def chat(
 
     history = [{"role": m.role, "content": m.content} for m in body.history]
     try:
-        result = run_chat(body.question, history, settings=settings)
+        result = run_chat(
+            body.question,
+            history,
+            model=body.model,
+            settings=settings,
+        )
     except Exception as exc:
         if is_quota_error(exc):
             raise HTTPException(status_code=429, detail=QUOTA_DETAIL) from exc

@@ -80,17 +80,31 @@ def test_chat_success(client: TestClient) -> None:
     }
     with (
         patch("app.api.routes.chat.index_ready", return_value=True),
-        patch("app.api.routes.chat.run_chat", return_value=fake_result),
+        patch("app.api.routes.chat.run_chat", return_value=fake_result) as mocked,
     ):
         res = client.post(
             "/api/chat",
-            json={"question": "Who knows Python?", "history": []},
+            json={
+                "question": "Who knows Python?",
+                "history": [],
+                "model": "gemini-flash-lite-latest",
+            },
         )
     assert res.status_code == 200
     body = res.json()
     assert "Jane Doe" in body["answer"]
     assert body["sources"][0]["candidateName"] == "Jane Doe"
     assert body["metrics"]["success"] is True
+    assert mocked.call_args.kwargs["model"] == "gemini-flash-lite-latest"
+
+
+def test_chat_rejects_unknown_model(client: TestClient) -> None:
+    with patch("app.api.routes.chat.index_ready", return_value=True):
+        res = client.post(
+            "/api/chat",
+            json={"question": "Who knows Python?", "history": [], "model": "gpt-4o"},
+        )
+    assert res.status_code == 422
 
 
 def test_chat_maps_quota_to_429(client: TestClient) -> None:

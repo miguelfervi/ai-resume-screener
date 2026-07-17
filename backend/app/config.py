@@ -9,6 +9,13 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 _BACKEND_DIR = Path(__file__).resolve().parent.parent
 
+# Models the chat UI may pick; keep in sync with frontend/src/lib/models.ts
+# Only list models available on the project's Gemini free-tier key.
+CHAT_MODELS: tuple[str, ...] = (
+    "gemini-flash-latest",
+    "gemini-flash-lite-latest",
+)
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(

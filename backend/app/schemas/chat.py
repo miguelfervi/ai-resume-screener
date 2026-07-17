@@ -7,7 +7,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
+
+from ..config import CHAT_MODELS
 
 
 class ChatMessage(BaseModel):
@@ -18,6 +20,21 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     question: str = Field(min_length=1, max_length=2000)
     history: list[ChatMessage] = Field(default_factory=list)
+    model: str | None = Field(
+        default=None,
+        description="Optional Gemini chat model id from the allowlist",
+    )
+
+    @field_validator("model")
+    @classmethod
+    def validate_chat_model(cls, value: str | None) -> str | None:
+        if value is None or value.strip() == "":
+            return None
+        model = value.strip()
+        if model not in CHAT_MODELS:
+            allowed = ", ".join(CHAT_MODELS)
+            raise ValueError(f"Unsupported model '{model}'. Allowed: {allowed}")
+        return model
 
 
 class Source(BaseModel):

@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { ChatPanel } from '@/components/chat-panel'
 import { MessageBubble } from '@/components/message-bubble'
-import { getHealth } from '@/lib/api'
+import { getHealth, sendChat } from '@/lib/api'
 
 vi.mock('@/lib/api', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@/lib/api')>()
@@ -38,9 +38,11 @@ vi.mock('@/lib/api', async (importOriginal) => {
 })
 
 const mockedGetHealth = vi.mocked(getHealth)
+const mockedSendChat = vi.mocked(sendChat)
 
 beforeEach(() => {
   mockedGetHealth.mockResolvedValue({ status: 'ok', indexReady: true })
+  localStorage.clear()
 })
 
 describe('MessageBubble', () => {
@@ -94,6 +96,7 @@ describe('ChatPanel', () => {
     })
 
     expect(screen.getByText('Ask the resume set')).toBeInTheDocument()
+    expect(screen.getByLabelText('Chat model')).toBeInTheDocument()
 
     await user.click(
       screen.getByRole('button', { name: /Who has experience with Python/i }),
@@ -103,6 +106,40 @@ describe('ChatPanel', () => {
       expect(
         screen.getByText(/Jane Doe lists Python among her skills/),
       ).toBeInTheDocument()
+    })
+    expect(mockedSendChat).toHaveBeenCalledWith(
+      expect.objectContaining({
+        question: 'Who has experience with Python?',
+        model: 'gemini-flash-latest',
+      }),
+    )
+  })
+
+  it('lets the user pick a model before asking', async () => {
+    const user = userEvent.setup()
+    render(<ChatPanel />)
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Chat model')).toBeInTheDocument()
+    })
+
+    await user.selectOptions(
+      screen.getByLabelText('Chat model'),
+      'gemini-flash-lite-latest',
+    )
+    await user.type(
+      screen.getByRole('textbox', { name: 'Chat question' }),
+      'Who knows React?',
+    )
+    await user.click(screen.getByRole('button', { name: 'Send' }))
+
+    await waitFor(() => {
+      expect(mockedSendChat).toHaveBeenCalledWith(
+        expect.objectContaining({
+          question: 'Who knows React?',
+          model: 'gemini-flash-lite-latest',
+        }),
+      )
     })
   })
 

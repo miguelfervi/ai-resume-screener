@@ -7,7 +7,7 @@ import {
   type KeyboardEvent,
   type PointerEvent as ReactPointerEvent,
 } from 'react'
-import { ArrowUp } from 'lucide-react'
+import { ArrowUp, ChevronDown } from 'lucide-react'
 
 import { CvPreviewPanel } from '@/components/cv-preview-panel'
 import { MessageBubble } from '@/components/message-bubble'
@@ -17,6 +17,13 @@ import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { useChat } from '@/hooks/use-chat'
 import { getHealth } from '@/lib/api'
+import {
+  CHAT_MODELS,
+  DEFAULT_CHAT_MODEL,
+  readStoredChatModel,
+  storeChatModel,
+  type ChatModelId,
+} from '@/lib/models'
 import { cn } from '@/lib/utils'
 import type { Source } from '@/types/api'
 
@@ -49,6 +56,7 @@ function readStoredPreviewWidth(): number {
 export function ChatPanel() {
   const { messages, loading, error, ask, clear } = useChat()
   const [draft, setDraft] = useState('')
+  const [model, setModel] = useState<ChatModelId>(DEFAULT_CHAT_MODEL)
   const [selectedCv, setSelectedCv] = useState<SelectedCv | null>(null)
   const [previewWidth, setPreviewWidth] = useState(PREVIEW_DEFAULT)
   const [resizing, setResizing] = useState(false)
@@ -60,7 +68,13 @@ export function ChatPanel() {
 
   useEffect(() => {
     setPreviewWidth(readStoredPreviewWidth())
+    setModel(readStoredChatModel())
   }, [])
+
+  function onModelChange(next: ChatModelId) {
+    setModel(next)
+    storeChatModel(next)
+  }
 
   const refreshHealth = useCallback(async () => {
     setHealthChecking(true)
@@ -138,7 +152,7 @@ export function ChatPanel() {
     const next = text.trim()
     if (!next || loading || indexReady === false) return
     setDraft('')
-    await ask(next)
+    await ask(next, model)
     if (window.matchMedia('(pointer: fine)').matches) {
       inputRef.current?.focus()
     }
@@ -311,35 +325,68 @@ export function ChatPanel() {
         >
           <div
             className={cn(
-              'border-border/80 bg-card flex w-full items-end gap-2 rounded-2xl border p-1.5 shadow-sm sm:p-2',
+              'border-border/80 bg-card flex w-full flex-col rounded-2xl border shadow-sm',
               previewOpen ? 'max-w-xl' : 'mx-auto max-w-2xl',
             )}
           >
-            <Textarea
-              ref={inputRef}
-              value={draft}
-              onChange={(e) => setDraft(e.target.value)}
-              onKeyDown={onKeyDown}
-              placeholder={
-                chatLocked
-                  ? 'Index empty — run ingest before asking…'
-                  : 'Ask about skills, education, or a candidate…'
-              }
-              rows={1}
-              disabled={composerDisabled}
-              enterKeyHint="send"
-              className="max-h-32 min-h-11 flex-1 resize-none border-0 bg-transparent text-base shadow-none focus-visible:ring-0 sm:max-h-36 sm:text-sm"
-              aria-label="Chat question"
-            />
-            <Button
-              type="submit"
-              size="icon"
-              disabled={composerDisabled || !draft.trim()}
-              className="size-11 shrink-0 rounded-xl sm:size-10"
-              aria-label="Send"
-            >
-              <ArrowUp className="size-4" />
-            </Button>
+            <div className="flex items-end gap-2 p-1.5 sm:p-2">
+              <Textarea
+                ref={inputRef}
+                value={draft}
+                onChange={(e) => setDraft(e.target.value)}
+                onKeyDown={onKeyDown}
+                placeholder={
+                  chatLocked
+                    ? 'Index empty — run ingest before asking…'
+                    : 'Ask about skills, education, or a candidate…'
+                }
+                rows={1}
+                disabled={composerDisabled}
+                enterKeyHint="send"
+                className="max-h-32 min-h-11 flex-1 resize-none border-0 bg-transparent text-base shadow-none focus-visible:ring-0 sm:max-h-36 sm:text-sm"
+                aria-label="Chat question"
+              />
+              <Button
+                type="submit"
+                size="icon"
+                disabled={composerDisabled || !draft.trim()}
+                className="size-11 shrink-0 rounded-xl sm:size-10"
+                aria-label="Send"
+              >
+                <ArrowUp className="size-4" />
+              </Button>
+            </div>
+            <div className="border-border/50 flex items-center border-t px-2.5 py-1">
+              <label htmlFor="chat-model" className="sr-only">
+                Chat model
+              </label>
+              <div className="relative inline-flex max-w-full items-center">
+                <select
+                  id="chat-model"
+                  value={model}
+                  disabled={composerDisabled}
+                  onChange={(e) => onModelChange(e.target.value as ChatModelId)}
+                  className={cn(
+                    'text-muted-foreground hover:text-foreground',
+                    'h-5 cursor-pointer appearance-none bg-transparent py-0 pr-4 pl-0',
+                    'truncate text-[0.65rem] leading-none outline-none',
+                    'disabled:cursor-not-allowed disabled:opacity-50',
+                  )}
+                  aria-label="Chat model"
+                  title={CHAT_MODELS.find((o) => o.id === model)?.hint}
+                >
+                  {CHAT_MODELS.map((option) => (
+                    <option key={option.id} value={option.id}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown
+                  className="text-muted-foreground pointer-events-none absolute top-1/2 right-0 size-2.5 -translate-y-1/2"
+                  aria-hidden
+                />
+              </div>
+            </div>
           </div>
           <p
             className={cn(

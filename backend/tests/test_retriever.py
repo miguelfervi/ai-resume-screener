@@ -104,3 +104,37 @@ def test_retrieve_respects_top_k_with_mock_store() -> None:
     ]
     hits = retrieve(store, "Python skills", top_k=4, min_score=0.65)
     assert len(hits) <= 4
+
+
+def test_retrieve_skill_query_diversifies_candidates() -> None:
+    store = MagicMock()
+    store.candidate_names.return_value = []
+    store.collection.get.return_value = {"metadatas": []}
+
+    def _chunk(name: str, section: str, score: float, text: str) -> RetrievedChunk:
+        return RetrievedChunk(
+            text=text,
+            candidate_name=name,
+            source_file=f"{name.casefold().replace(' ', '-')}.pdf",
+            section=section,
+            score=score,
+            snippet=text,
+        )
+
+    # Many high-score React chunks from Emma would otherwise crowd out others.
+    store.query.return_value = [
+        _chunk("Emma Wright", "Experience", 0.95, "React at Pixel Labs"),
+        _chunk("Emma Wright", "Projects", 0.94, "React dashboard"),
+        _chunk("Emma Wright", "Skills", 0.93, "React TypeScript"),
+        _chunk("Lucía Fernández", "Habilidades", 0.88, "React Node.js"),
+        _chunk("Tom Wilson", "Skills", 0.86, "React AWS"),
+        _chunk("Rosa Diaz", "Experience", 0.84, "Built UI with React"),
+    ]
+    hits = retrieve(store, "quién sabe React", top_k=4, min_score=0.65)
+    names = [h.candidate_name for h in hits]
+    assert len(hits) == 4
+    assert len(set(names)) == 4
+    # Prefer Skills/Habilidades when available for that candidate.
+    by_name = {h.candidate_name: h for h in hits}
+    assert by_name["Emma Wright"].section == "Skills"
+    assert by_name["Lucía Fernández"].section == "Habilidades"

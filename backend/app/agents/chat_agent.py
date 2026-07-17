@@ -14,7 +14,7 @@ from ..invariants import (
 )
 from ..llm import build_embeddings, invoke_chat_with_fallback
 from ..metrics import RunMetrics, Timer
-from ..rag.retriever import retrieve
+from ..rag.retriever import detect_skills, retrieve
 from ..rag.store import ChromaStore
 from ..schemas import RetrievedChunk, Source
 
@@ -23,11 +23,44 @@ logger = logging.getLogger("resume_screener.chat")
 _NO_EVIDENCE = (
     "I could not find enough evidence in the indexed CVs to answer that confidently."
 )
+_PROFILE_QUESTION = re.compile(
+    r"\b(summar(?:y|ise|ize)|overview|profile|about|resumen|perfil|sobre)\b",
+    re.I,
+)
+
+
+def _answer_style(question: str) -> str:
+    """Tone/length guidance: skill lists stay short; profiles get more detail."""
+    skills = detect_skills(question)
+    if skills and not _PROFILE_QUESTION.search(question):
+        skill_list = ", ".join(skills)
+        return (
+            f"This is a skill-matching question about: {skill_list}. "
+            "Answer as a short list of matching candidates only. "
+            "For each person give the name and one brief evidence line "
+            "(role or where they used the skill). "
+            "Do NOT dump full profiles, locations, education, full skill stacks, "
+            "or project catalogues. "
+            "Omit anyone without clear evidence for the asked skill."
+        )
+    if _PROFILE_QUESTION.search(question):
+        return (
+            "This is a profile or summarize question. Cover role, location, experience, "
+            "skills, and education only when those topics appear in the excerpts. "
+            "Do not invent empty sections, and never write 'I lack evidence' per section — "
+            "omit topics that are not supported. "
+            "Do not stop at contact details or the header alone if other excerpts exist."
+        )
+    return (
+        "Give a useful, compact answer with only the details needed for the question. "
+        "Prefer a short structured reply over a full CV dump."
+    )
 
 
 class ChatState(TypedDict, total=False):
     question: str
     history: list[dict[str, str]]
+    model: str | None
     retrieved: list[dict[str, Any]]
     context_ok: bool
     answer: str
@@ -102,30 +135,27 @@ def generate_answer(state: ChatState, settings: Settings) -> dict:
     for msg in state.get("history") or []:
         history_txt += f"{msg.get('role', 'user')}: {msg.get('content', '')}\n"
 
+    style = _answer_style(state["question"])
     prompt = (
         "You are a recruiting assistant. Answer ONLY using the CV excerpts below. "
         "If the excerpts do not support an answer, say you lack evidence. "
-        "Give a useful, well-structured answer with the relevant details from the excerpts "
-        "(role, experience, skills, education, etc. when present). "
-        "For profile or summarize questions, cover role, location, experience, skills, "
-        "and education only when those topics appear in the excerpts. "
-        "Do not invent empty sections, and never write 'I lack evidence' per section — "
-        "omit topics that are not supported. "
-        "Do not stop at contact details or the header alone if other excerpts exist. "
+        f"{style} "
         "Do not list the same skill, technology, or fact more than once; "
         "deduplicate and mention each item only once. "
         "Only name candidates when the excerpts clearly support the answer for them. "
         "Do not mention candidates who lack evidence, and do not add a 'no evidence for X' "
-        "footnote for people who merely appear in unrelated excerpts. "
-        "When answering about a skill or technology, mention it once per candidate "
-        "(e.g. companies or years), not once per bullet that repeats the same word.\n\n"
+        "footnote for people who merely appear in unrelated excerpts.\n\n"
         f"Conversation so far:\n{history_txt or '(none)'}\n"
         f"Question: {state['question']}\n\n"
         f"CV excerpts:\n{context}\n"
     )
 
     with Timer(metrics.node_timings_ms, "generate"):
-        result = invoke_chat_with_fallback(prompt, settings)
+        result = invoke_chat_with_fallback(
+            prompt,
+            settings,
+            model=state.get("model"),
+        )
         response = result.response
         metrics.model = result.model
         answer = getattr(response, "content", None) or str(response)
@@ -223,6 +253,7 @@ def run_chat(
     question: str,
     history: list[dict[str, str]] | None = None,
     *,
+    model: str | None = None,
     settings: Settings | None = None,
 ) -> ChatState:
     settings = settings or get_settings()
@@ -231,6 +262,7 @@ def run_chat(
         {
             "question": question,
             "history": history or [],
+            "model": model,
             "metrics": RunMetrics(provider="gemini").to_dict(),
         }
     )

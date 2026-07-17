@@ -78,6 +78,55 @@ def test_generate_answer_calls_llm() -> None:
     assert out["metrics"]["model"] == "gemini-flash-latest"
     assert out["metrics"]["input_tokens"] == 10
     mocked.assert_called_once()
+    prompt = mocked.call_args.args[0]
+    assert "skill-matching" in prompt
+    assert "short list" in prompt
+    assert "full profiles" in prompt
+
+
+def test_generate_answer_profile_prompt_keeps_detail() -> None:
+    settings = _settings()
+    response = SimpleNamespace(
+        content="Jane Doe is a backend engineer in Madrid.",
+        usage_metadata={},
+    )
+    invoke_result = SimpleNamespace(response=response, model="gemini-flash-latest")
+    state = {
+        "question": "Summarize the profile of Jane Doe",
+        "history": [],
+        "context_ok": True,
+        "retrieved": [make_retrieved().model_dump()],
+        "metrics": {},
+    }
+    with patch(
+        "app.agents.chat_agent.invoke_chat_with_fallback",
+        return_value=invoke_result,
+    ) as mocked:
+        generate_answer(state, settings)
+    prompt = mocked.call_args.args[0]
+    assert "profile or summarize" in prompt
+    assert "skill-matching" not in prompt
+
+
+def test_generate_answer_passes_selected_model() -> None:
+    settings = _settings()
+    response = SimpleNamespace(content="ok", usage_metadata={})
+    invoke_result = SimpleNamespace(response=response, model="gemini-flash-lite-latest")
+    state = {
+        "question": "Who knows Python?",
+        "history": [],
+        "model": "gemini-flash-lite-latest",
+        "context_ok": True,
+        "retrieved": [make_retrieved().model_dump()],
+        "metrics": {},
+    }
+    with patch(
+        "app.agents.chat_agent.invoke_chat_with_fallback",
+        return_value=invoke_result,
+    ) as mocked:
+        out = generate_answer(state, settings)
+    assert out["metrics"]["model"] == "gemini-flash-lite-latest"
+    assert mocked.call_args.kwargs["model"] == "gemini-flash-lite-latest"
 
 
 def test_cite_sources_prefers_mentioned_candidates() -> None:

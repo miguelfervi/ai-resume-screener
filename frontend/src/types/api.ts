@@ -8,6 +8,8 @@ export interface ChatMessage {
 export interface ChatRequest {
   question: string
   history: ChatMessage[]
+  /** Optional Gemini chat model id (allowlisted on the backend). */
+  model?: string
 }
 
 export interface Source {

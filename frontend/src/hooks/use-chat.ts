@@ -18,7 +18,7 @@ export function useChat() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  async function ask(question: string) {
+  async function ask(question: string, model?: string) {
     const trimmed = question.trim()
     if (!trimmed || loading) return
 
@@ -39,7 +39,11 @@ export function useChat() {
     setLoading(true)
 
     try {
-      const res = await sendChat({ question: trimmed, history })
+      const res = await sendChat({
+        question: trimmed,
+        history,
+        ...(model ? { model } : {}),
+      })
       const assistantMsg: UiMessage = {
         id: newId(),
         role: 'assistant',

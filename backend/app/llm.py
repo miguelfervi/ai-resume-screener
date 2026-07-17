@@ -58,17 +58,24 @@ def build_chat_model(
 def invoke_chat_with_fallback(
     prompt: str,
     settings: Settings | None = None,
+    *,
+    model: str | None = None,
 ) -> ChatInvokeResult:
-    """Invoke the primary Gemini model; on free-tier quota, retry fallback."""
+    """Invoke the chosen (or default) Gemini model.
+
+    Automatic fallback only applies when no explicit model was requested,
+    so the UI selector never silently swaps the user's choice.
+    """
     settings = settings or get_settings()
-    primary = settings.gemini_model
-    fallback = settings.gemini_fallback_model
+    primary = model or settings.gemini_model
+    use_fallback = model is None
+    fallback = settings.gemini_fallback_model if use_fallback else None
 
     try:
         response = build_chat_model(settings, model=primary).invoke(prompt)
         return ChatInvokeResult(response=response, model=primary)
     except Exception as exc:
-        if not is_quota_error(exc):
+        if not use_fallback or not is_quota_error(exc):
             raise
         if not fallback or fallback == primary:
             raise

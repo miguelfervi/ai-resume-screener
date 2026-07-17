@@ -52,6 +52,40 @@ describe('useChat', () => {
     expect(result.current.messages[0]?.role).toBe('user')
     expect(result.current.messages[1]?.content).toContain('Jane Doe')
     expect(result.current.error).toBeNull()
+    expect(mockedSendChat).toHaveBeenCalledWith({
+      question: 'Who knows Python?',
+      history: [],
+    })
+  })
+
+  it('forwards the selected model to sendChat', async () => {
+    mockedSendChat.mockResolvedValue({
+      answer: 'ok',
+      sources: [],
+      metrics: {
+        provider: 'mock',
+        model: 'gemini-flash-lite-latest',
+        totalMs: 1,
+        nodeTimingsMs: {},
+        inputTokens: 0,
+        outputTokens: 0,
+        chunksRetrieved: 0,
+        sourcesCited: 0,
+        success: true,
+      },
+    })
+
+    const { result } = renderHook(() => useChat())
+
+    await act(async () => {
+      await result.current.ask('Who knows React?', 'gemini-flash-lite-latest')
+    })
+
+    expect(mockedSendChat).toHaveBeenCalledWith({
+      question: 'Who knows React?',
+      history: [],
+      model: 'gemini-flash-lite-latest',
+    })
   })
 
   it('sets error from ApiError and keeps the user message', async () => {
